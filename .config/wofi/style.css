@@ -1,0 +1,27 @@
+window {
+	font-size: 17px;
+	font-family: "NotoSans Nerd Font";
+	background-color: rgba(128, 128, 128, 0.9);
+	color: #C0C0C0;
+	margin: 0px;
+	border: 2px solid #C0C0C0;
+    	border-radius: 5px;
+}
+
+#entry:selected {
+	background-color: #808080;
+	border-radius: 0px;
+        margin: 0px 2px 0px 2px; 
+}
+
+#input{
+	background-color: #C0C0C0;
+	color: #808080;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10;
+	border-bottom-right-radius: 10;
+	border-radius: 5px;
+	border: 2px solid #C0C0C0;
+	margin: 20px;
+}
