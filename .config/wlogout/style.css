@@ -1,0 +1,42 @@
+window {
+    background-color: rgba(12, 12, 12, 0.5);
+    font-size: 0pt;
+}
+
+button {
+	color: #ebdbb2;
+
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+
+	background-color: rgba(20, 20, 20, 0.7); 
+	border: 0px solid #ffffff;
+
+
+}
+
+button:focus,
+button:active,
+button:hover {
+    color: #ffffff;
+    	background-color: rgba(40, 40, 40, 0.7);
+	/* border: 2px solid #ebdbb2; */
+}
+
+#lock {
+	background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+	background-image: image(url("icons/logout.png"));
+}
+
+
+#shutdown {
+	background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+	background-image: image(url("icons/reboot.png"));
+}
