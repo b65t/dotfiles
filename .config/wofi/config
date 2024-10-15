@@ -4,7 +4,7 @@ show=drun
 prompt=Apps
 normal_window=true
 layer=overlay
-term=foot
+term=kitty
 columns=2
 
 ## Geometry
@@ -28,11 +28,11 @@ parse_search=false
 insensitive=false
 
 ## Other
-hide_scroll=true
-no_actions=true
-sort_order=default
-gtk_dark=true
-filter_rate=100
+# hide_scroll=true
+# no_actions=true
+# sort_order=default
+# gtk_dark=true
+# filter_rate=100
 
 ## Keys
 key_expand=Tab
