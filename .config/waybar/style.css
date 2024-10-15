@@ -4,7 +4,7 @@
 }
 
 window#waybar {
-    background-color: rgba(128, 128, 128, 0.8);
+    background-color: rgba(64, 64, 64, 0.6);
    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
@@ -48,14 +48,13 @@ window#waybar.chromium {
 
 
  #workspaces {
-  /* margin-left: 4px; */
    padding-right: 4px;
    padding-left: 4px;
   /* margin-right: 4px; */
    margin-bottom: 4px;
-  /* margin-top: 4px;*/
+   margin-top: 4px;
    font-weight: Bold;
-   border-radius: 5px 5px 15px 15px;
+   border-radius: 8px;
    background: #2b2b2b;
 }
 
@@ -113,6 +112,8 @@ window#waybar.chromium {
 #custom-spotify,
 #custom-logo {
     padding: 0 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     color: #cad3f5;
 }
 
@@ -128,10 +129,10 @@ window#waybar.chromium {
 #clock {
     background-color: #2b2b2b;
     color: #C0C0C0;
-    border-radius: 5px 0px 0px 15px;
-   /* margin-top: 3px; */
-    margin-bottom: 3px;
-   /* margin-right: 3px; */
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 4px;
     margin-left: 4px;
     font-weight: bold;
 }
@@ -205,9 +206,9 @@ label:focus {
 
 #network {
 	  background-color: #2b2b2b;
-	  border-radius: 5px 0px 0px 15px;
+	  border-radius: 8px 0px 0px 8px;
 	  color: #C0C0C0;
-   /* margin-top: 4px; */
+    margin-top: 4px;
     margin-left: 4px;
     margin-bottom: 4px;
 } 
@@ -218,9 +219,9 @@ label:focus {
 
 #pulseaudio {
     background-color: #2b2b2b;
-    border-radius: 0px 5px 15px 0px;
+    border-radius: 0px 8px 8px 0px;
     color: #C0C0C0;
-   /* margin-top: 4px; */
+    margin-top: 4px;
     margin-bottom: 4px;
     font-weight: bold;
 }
@@ -262,9 +263,10 @@ label:focus {
 
 #tray {
    background-color: #2b2b2b;
-   border-radius: 5px 5px 15px 15px;
+   border-radius: 8px;
    margin-bottom: 3px;
    margin-right: 4px;
+   margin-top: 4px;
 }
 
 #tray > .passive {
@@ -306,8 +308,8 @@ label:focus {
     background-color: #2b2b2b;
     color: #c0c0c0;
     font-weight: bold;
-    border-radius: 5px 5px 15px 15px;
-   /* margin-top: 4px; */
+    border-radius: 8px;
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 
@@ -370,8 +372,8 @@ label:focus {
     background-color: #2b2b2b;
     color: #c0c0c0;
     font-weight: bold;
-    border-radius: 5px 5px 15px 15px;
-   /* margin-top: 4px; */
+    border-radius: 8px;
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 
@@ -379,8 +381,9 @@ label:focus {
     background-color: #2b2b2b;
     color: #C0C0C0;
     font-weight: bold;
-    border-radius: 0px 5px 15px 0px;
-   /* margin-top: 4px; */
-    margin-bottom: 4px;
+    border-radius: 0px 14px 0px 0px;
+   /* margin-top: 4px; 
+    margin-bottom: 4px; */
     margin-right: 4px;
+   /* margin-left: 4px; */
 }
