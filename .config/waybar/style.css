@@ -1,4 +1,4 @@
- @import '../../.cache/wal/colors-waybar.css';
+     @import '../../.cache/wal/colors-waybar.css';
  * {
     font-family:"noto sans nerd font"; 
     font-size: 13px;
@@ -6,27 +6,39 @@
 }
 
 window#waybar {
-    background-color: @background;
+    background-color: transparent;
     transition-duration: .5s;
-    border-radius: 10px;
+    border-radius: 7px;
+   /* border: 2px solid @color1; */
 }
 
 #workspaces {
   /* padding-right: 4px;
    padding-left: 4px; */
    font-weight: bold;
-   background: @background;
-   margin-top: 2px;
-   margin-bottom: 2px;
+   min-height: 0px;
+   padding: 2px 15px 2px 15px;
+   background-color: @background;
+   border-radius: 10px;
+   font-size: 0px;
 }
 
 #workspaces button {
    color: @color2;
-   padding: 0px;
+   background: @color1;
+   border-radius: 8px;
    font-weight: bold;
+   min-width: 0px;
+   padding: 0px 10px 0px 10px;
+   margin-top: 2px;
+   margin-bottom: 2px;
+   margin-right: 2.5px;
+   margin-left: 2.5px;
+   font-size: 0px;
 }
 
 #workspaces button.empty {
+   background-color: @foreground;
    color: @foreground;
    font-weight: bold;
 }
@@ -34,7 +46,9 @@ window#waybar {
 #workspaces button.active {
    /* background: @color1;  */
    color: @color1;
-   border-radius: 0px;
+   background: @color1;
+   padding-right: 23px;
+   padding-left: 20px;
    font-weight: bold;
 }
 
@@ -51,22 +65,23 @@ window#waybar {
 #custom-picker,
 #custom-weather,
 #custom-screen-shot,
+#custom-playerlabel,
+#custom-search,
+#custom-monitor,
 #custom-notification {
    padding: 0 10px;
    padding-top: 0px;
    padding-bottom: 0px;
-   /* background: @foreground; */
-    color: @foreground;
-    margin-top: 2px;
-    margin-bottom: 2px;
+   color: @foreground;
 }
 
 #clock {
-    background-color: @background;
-    border-radius: 0px;
    /* margin-top: 4px;
     margin-bottom: 4px; */
     font-weight: bold;
+    background-color: @background;
+    border-radius: 10px;
+    margin-left: 5px;
 }
 
 #cpu {
@@ -87,11 +102,11 @@ window#waybar {
 
 #network {
 	  color: @color1;
-	  background-color: @background;
-	  border-radius: 0px;
-         /* margin-top: 4px;
-          margin-bottom: 4px; */
-          font-size: 14px;
+    /* margin-top: 4px;
+    margin-bottom: 4px; */
+    font-size: 14px;
+    background-color: @background;
+    border-radius: 10px 0px 0px 10px;
 } 
 
  #network.disconnected {
@@ -100,12 +115,9 @@ window#waybar {
 
 #pulseaudio {
     color: @color1;
-    background-color: @background;
-    border-radius: 0px 0px 0px 0px;
-   /* margin-top: 4px;
-    margin-bottom: 4px; */
     font-weight: bold;
     font-size: 14px;
+    background-color: @background;
 }
 
 #pulseaudio.muted {
@@ -113,13 +125,12 @@ window#waybar {
 }
 
 #tray {
-   background-color: @background;
-   border-radius: 0px;
-   margin-bottom: 2px;
-   margin-top: 2px;
    padding: 0px 10px;
    padding-top: 3px;
    padding-bottom: 3px;
+   background: @background;
+   border-radius: 10px;
+   margin-right: 5px;
 }
 
 #tray > .passive {
@@ -132,12 +143,12 @@ window#waybar {
 }
 
 #language {
-    background-color: @background; 
     font-weight: bold;
-    border-radius: 0px 0px 0px 0px;
    /* margin-top: 4px;
     margin-right: 4px;
     margin-bottom: 4px; */
+    background-color: @background;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #custom-power {
@@ -159,73 +170,103 @@ window#waybar {
 }
 
 #custom-logo {
-    color: @color1;
+   background: @color1;
+    border-radius: 11px 11px 6px 11px;
+    color: @foreground;
     font-weight: bold;
-   /* border-radius: 0px; */
-    margin-left: 2px; 
-   /* margin-top: 4px; 
-    margin-bottom: 4px; */
-    background: @background;
-    border-radius: 10px 0px 0px 10px;
     font-size: 18px;
 }
 
 #window {
     font-weight: bold;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    background: @background;
     color: @foreground;
+    background: @background;
+    margin-left: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    border-radius: 10px;
 }
 
 #custom-cava {
-  /* margin-top: 4px;
-   margin-bottom: 4px; */
-   border-radius: 0px;
-   background: @background;
-   color: @color1;
+   color: @foreground;
+   background: linear-gradient(45deg, @color1,@color2,@color1);
    min-height: 0px;
+   border-radius: 10px;
+   margin-right: 5px;
+   font-family: Hack Nerd font;
 }
 
 #custom-separator {
-	background: @background;
-	margin-top: 2px;
-	margin-bottom: 2px;
 	color: #49464f;
+  background-color: @background;
 }
 
 #custom-notification {
-	color: @color1;
-	margin-right: 4px;
-	background: @background;
-	border-radius: 0px 10px 10px 0px;
+	color: @foreground;
 	font-size: 14px;
+  background: @color1;
+  margin-left: 5px;
+  border-radius: 11px 11px 11px 6px;
 }
 
 #custom-picker {
         color: @color1;
+        background-color: @background;
+        border-radius: 10px 0px 0px 10px;
+        margin-left: 5px;
 }
 
 #custom-playerctl-forward,
 #custom-playerctl-play,
 #custom-playerctl-backward {
-	padding: 0 5px;
+	padding: 0 3px;
 }
 
 #custom-playerctl-forward,
 #custom-playerctl-backward {
 	color: @color1;
 }
-
 #custom-playerctl-play {
+  background: @background;
 	color: @foreground;
+}
+#custom-playerctl-backward {
+  background: @background;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 5px;
+}
+#custom-playerctl-forward {
+  background: @background;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #custom-weather {
-	color: @color1;
+	color: @foreground;
 	font-weight: bold;
+  background-color: @background;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #custom-screen-shot {
 	color: @color1;
+  background-color: @background;
+}
+
+#custom-playerlabel {
+	color: @foreground;
+	background: @background;
+	border-radius: 10px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+#custom-search {
+	color: @color1;
+	background: @background;
+	border-radius: 0px 10px 10px 0px;
+	font-weight: bold;
+}
+#custom-monitor {
+	color: @color1;
+	background: @background;
+	font-weight: bold;
 }

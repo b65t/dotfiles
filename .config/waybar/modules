@@ -9,13 +9,11 @@
             "3": [],
             "4": [],
             "5": [],
-	          "6": [],
-            "7": [],
-	          "8": [],
+	    "6": [],
      },
         "format-icons": {
-          "active": "󱨇",
-          "default": "",
+          "active": " ",
+          "default": " ",
 
 	}
      },
@@ -39,7 +37,7 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%H/%M}"
+        "format": " {:%a %d %b | %H/%M %p}"
     },
 
     "network": {
@@ -58,20 +56,9 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{icon} {volume}",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "default": ["󰋋"]
         },
         "on-click": "pavucontrol"
     },
@@ -125,11 +112,20 @@
     },
 
     "hyprland/window": {
-    "format": " {} ",
-    "max-length": 50,
+    "format": "{initialTitle}",
+    "rewrite": {
+	 "(.*)kitty": "󰄛 kitty",
+         "(.*)Mozilla Firefox": "󰈹 Firefox",
+	 "(.*)Discord": " Discord",
+	 "(.*)vesktop": " Discord",
+	 "(.*)Spotify": "󰓇 Spotify",
+         "(.*)Spotify Free": "󰓇 Spotify",
+	 "(.*)Waypaper": " Waypaper",
+	 "(.*)VSCodium": " VSCodium",
+	 "(.*)qutebrowser": " qutebrowser",
+	 "": " Desktop"
+     },
     "separate-outputs": true,
-    "offscreen-css" : true,
-    "offscreen-css-text": "(inactive)"
 },
 
     "custom/power": {
@@ -148,8 +144,8 @@
     },
 
     "custom/logo": {
-      "format": "",
-       "on-click": "wlogout"
+      "format": "",
+       "on-click": "~/.config/rofi/powermenu.sh"
    },
 
 "custom/cava": {
@@ -196,7 +192,7 @@
 
     "custom/picker": {
       "tooltip": false,
-      "format": "",
+      "format": "",
       "on-click": "hyprpicker -a",
     },
 
@@ -209,7 +205,7 @@
     ]
 },
     "custom/playerctl-backward": {
-        "format": "\uF04A",
+        "format": " ",
         "tooltip": false,
         "on-click": "playerctl previous",
         "on-scroll-up": "playerctl volume .05+",
@@ -229,7 +225,7 @@
         }
     },
     "custom/playerctl-forward": {
-        "format": "\uF04E",
+        "format": " ",
         "tooltip": false,
         "on-click": "playerctl next",
         "on-scroll-up": "playerctl volume .05+",
@@ -246,5 +242,22 @@
         "format": "󰄀",
         "on-click": "~/.config/scripts/partial-screenshot.sh",
         "tooltip": false,
+    },
+       "custom/playerlabel": {
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "format": "󰎈 {}",
+      "max-length": 20,
+      "on-click": "",
+      "return-type": "json"
+    },
+    "custom/search": {
+        "format": "",
+	"on-click": "rofi -show drun",
+        "tooltip": false,
+    },
+    "custom/monitor": {
+        "format": "󰨇",
+	"on-click": "resources",
+	"tooltip": "false",
     }
 }
