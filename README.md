@@ -4,7 +4,7 @@
 
 # what i use
 
-- Fedora `distro`
+- EndeavourOS `distro`
 - Hyprland, Hypridle, Hyprlock `window manager, lock screen`
 - Kitty `term`
 - Rofi `rofi-wayland`
