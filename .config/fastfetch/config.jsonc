@@ -1,46 +1,57 @@
 {
 	"logo": {
-	 "type": "small",
-  //"source": "~/.config/fastfetch/fetch3.jpg",
-	 "width": 17,
-   "height": 9
+	 "type": "kitty",
+   "source": "~/.config/fastfetch/fetch4.jpg",
+	 "width": 20,
+   "height": 10
 	},
 	"display": {
-        "separator": " -> ",
-	  "constants": [
-            " "
-        ]
+        "separator": " ~ "
 },
         "modules": [
-	{
+        "break",
+     {
+            "key": "",
+            "type": "title",
+            "format": "{user-name}@{host-name}",
+            "keyColor": "blue"
+     },
+	   {
             "type": "os",
-            "key": "{$1}",
+            "key": "",
+            "format": "{pretty-name}",
             "keyColor": "blue"
         },
 	{
 	    "type": "kernel",
-            "key": "{$1}",
-            "keyColor": "cyan"
+            "key": "",
+            "keyColor": "blue"
         },
 	{
 	    "type": "packages",
-            "key": "{$1}󰏖",
-            "keyColor": "red"
+            "key": "󰏗",
+            "keyColor": "blue"
         },
 	{
             "type": "wm",
-            "key": "{$1}",
-            "keyColor": "yellow"
+            "key": "",
+            "keyColor": "blue"
         },
 	{
             "type": "shell",
-            "key": "{$1}",
-            "keyColor": "green"
+            "key": "",
+            "keyColor": "blue"
         },
         {
             "type": "terminal",
-            "key": "{$1}",
-            "keyColor": "Magenta"
+            "key": "",
+            "keyColor": "blue"
+        },
+        {
+            "type": "custom",
+            "key": "",
+	    "keyColor": "blue",
+            "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m "
         }
     ]
 }
