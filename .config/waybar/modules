@@ -123,6 +123,7 @@
 	 "(.*)Waypaper": " Waypaper",
 	 "(.*)VSCodium": " VSCodium",
 	 "(.*)qutebrowser": " qutebrowser",
+	 "(.*)Resources": "󰨇 Resources",
 	 "": " Desktop"
      },
     "separate-outputs": true,
@@ -219,9 +220,9 @@
         "on-scroll-up": "playerctl volume .05+",
         "on-scroll-down": "playerctl volume .05-",
         "format-icons": {
-            "Playing": "<span>\uF04C</span>",
-            "Paused": "<span>\uF04B</span>",
-            "Stopped": "<span>\uF04B</span>"
+            "Playing": "",
+            "Paused": "",
+            "Stopped": ""
         }
     },
     "custom/playerctl-forward": {
@@ -238,9 +239,9 @@
         "interval": 3600
     },
 
-    "custom/screen-shot": {
-        "format": "󰄀",
-        "on-click": "~/.config/scripts/partial-screenshot.sh",
+    "custom/nwglook": {
+        "format": "",
+        "on-click": "nwg-look",
         "tooltip": false,
     },
        "custom/playerlabel": {

@@ -11,12 +11,12 @@
     "spacing": 0,
    // "margin": "4 240 4 240",
     "reload_style_on_change": true,
-   // "height": 29,
+    "height": 26,
 
     "modules-left": [
       "custom/logo",
       "custom/picker",
-      "custom/screen-shot",
+      "custom/nwglook",
       "custom/monitor",
       "custom/search",
       "group/music_controller",
