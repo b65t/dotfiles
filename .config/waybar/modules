@@ -37,15 +37,15 @@
         "spacing": 10
     },
     "clock": {
-        "format": " {:%a %d %b | %H/%M %p}"
+        "format": " {:%a %d %b | %H/%M %p}",
+	"on-click": "gnome-calendar"
     },
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{icon}",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected 󰤭",
+	"on-click": "nm-connection-editor",
                 "format-icons": [
             "󰤯",
             "󰤟",
@@ -124,6 +124,7 @@
 	 "(.*)VSCodium": " VSCodium",
 	 "(.*)qutebrowser": " qutebrowser",
 	 "(.*)Resources": "󰨇 Resources",
+	 "(.*)Obsidian": " Obsidian",
 	 "": " Desktop"
      },
     "separate-outputs": true,
@@ -146,22 +147,30 @@
 
     "custom/logo": {
       "format": "",
-       "on-click": "~/.config/rofi/powermenu.sh"
+       "on-click": "~/.config/rofi/powermenu.sh",
+       "tooltip": false
    },
 
 "custom/cava": {
     "exec": "~/.config/scripts/cava.sh",
-    "format": "{}"
+    "format": "{}",
+    "on-click": "cavalier"
     },
 
   "memory" : {
         "interval": 1,
-        "format": " {percentage}%"
+        "format": "{icon}",
+        "rotate": 270,
+        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+	"tooltip": "memory"
 },
 
       "cpu": {
         "interval": 1,
-        "format": " {usage}%"
+	"format": "{icon}",
+        "rotate": 270,
+        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+	"tooltip": "cpu"
    },
 
      "custom/separator": {
@@ -252,7 +261,7 @@
       "return-type": "json"
     },
     "custom/search": {
-        "format": "",
+        "format": "󰀻",
 	"on-click": "rofi -show drun",
         "tooltip": false,
     },

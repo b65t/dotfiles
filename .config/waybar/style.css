@@ -25,11 +25,12 @@ window#waybar {
 
 #workspaces button {
    color: @color2;
-   background: @color1;
-   border-radius: 10px;
+   background: @background;
+   border-radius: 9px;
+   border: 1.5px solid @color1;
    font-weight: bold;
    min-width: 0px;
-   padding: 0px 11px 0px 11px;
+   padding: 0px 9px 0px 9px;
    margin-top: 2px;
    margin-bottom: 2px;
    margin-right: 2.5px;
@@ -38,15 +39,16 @@ window#waybar {
 }
 
 #workspaces button.empty {
-   background-color: @foreground;
+   background-color: @background;
    color: @foreground;
+   border: 1.5px solid @foreground;
    font-weight: bold;
 }
 
 #workspaces button.active {
    /* background: @color1;  */
    color: @color1;
-   background: @color1;
+   background: @background;
    padding-right: 23px;
    padding-left: 20px;
    font-weight: bold;
@@ -84,21 +86,29 @@ window#waybar {
     border-radius: 20px;
     margin-left: 5px;
 }
+#clock:hover {
+    background: @color1;
+}
 
 #cpu {
     font-weight: bold;
-    border-radius: 0;
-    margin-top: 2px;
-    margin-bottom: 2px;
     color: @color1;
+    background: @background;
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 5px;
+    font-size: 20;
+    padding-left: 5px;
+    padding-right: 0px;
 }
 
 #memory {
     font-weight: bold;
-    border-radius: 0px;
-    margin-top: 2px;
-    margin-bottom: 2px;
     color: @color1;
+    background: @background;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 20px;
+    padding-left: 0px;
+    padding-right: 5px;
 }
 
 #network {
@@ -109,6 +119,10 @@ window#waybar {
     background-color: @background;
     border-radius: 20px 0px 0px 20px;
 } 
+#network:hover {
+	color: @foreground;
+	background: @color1;
+}
 
  #network.disconnected {
    /* background-color: #f53c3c; */
@@ -119,6 +133,10 @@ window#waybar {
     font-weight: bold;
     font-size: 14px;
     background-color: @background;
+}
+#pulseaudio:hover {
+    color: @foreground;
+    background: @color1;
 }
 
 #pulseaudio.muted {
@@ -176,6 +194,11 @@ window#waybar {
     color: @foreground;
     font-weight: bold;
     font-size: 18px;
+    margin-right: 5px;
+}
+#custom-logo:hover {
+    background: @foreground;
+    color: @background;
 }
 
 #window {
@@ -196,6 +219,10 @@ window#waybar {
    margin-right: 5px;
    font-family: Hack Nerd font;
 }
+#custom-cava:hover {
+	color: @background;
+	background: @foreground;
+}
 
 #custom-separator {
 	color: #49464f;
@@ -209,6 +236,10 @@ window#waybar {
   margin-left: 5px;
   border-radius: 24px 24px 24px 13px;
 }
+#custom-notification:hover {
+	background: @foreground;
+	color: @background;
+}
 
 #custom-picker {
         color: @color1;
@@ -216,11 +247,23 @@ window#waybar {
         border-radius: 20px 0px 0px 20px;
         margin-left: 5px;
 }
+#custom-picker:hover {
+	color: @foreground;
+	background: @color1;
+}
 
 #custom-playerctl-forward,
 #custom-playerctl-play,
 #custom-playerctl-backward {
 	padding: 0 3px;
+}
+#custom-playerctl-forward:hover,
+#custom-playerctl-backward:hover {
+	color: @foreground;
+}
+
+#custom-playerctl-play:hover {
+	color: @color1;
 }
 
 #custom-playerctl-forward,
@@ -239,7 +282,7 @@ window#waybar {
 }
 #custom-playerctl-forward {
   background: @background;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 24px 24px 0px;
   padding-right: 5px;
 }
 
@@ -252,24 +295,38 @@ window#waybar {
 
 #custom-nwglook {
 	color: @color1;
-  background-color: @background;
+  background: @background;
+}
+#custom-nwglook:hover {
+	color: @foreground;
+	background: @color1;
 }
 
 #custom-playerlabel {
 	color: @foreground;
 	background: @color1;
-	border-radius: 20px;
+	border-radius: 24px;
 	margin-left: 5px;
 	font-weight: bold;
 }
 #custom-search {
-	color: @color1;
-	background: @background;
-	border-radius: 0px 20px 20px 0px;
-	font-weight: bold;
+    background: @color1;
+    border-radius: 24px 24px 13px 24px;
+    color: @foreground;
+    font-weight: bold;
+    font-size: 17;
+}
+#custom-search:hover {
+        background: @foreground;
+	color: @background;
 }
 #custom-monitor {
 	color: @color1;
 	background: @background;
 	font-weight: bold;
+	border-radius: 0px 20px 20px 0px
+}
+#custom-monitor:hover {
+	color: @foreground;
+	background: @color1;
 }

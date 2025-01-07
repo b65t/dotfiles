@@ -14,17 +14,19 @@
     "height": 26,
 
     "modules-left": [
-      "custom/logo",
+      "custom/search",
       "custom/picker",
       "custom/nwglook",
       "custom/monitor",
-      "custom/search",
       "group/music_controller",
-      "custom/playerlabel",
+      "cpu",
+      "memory",
       "hyprland/window",
   ],
     "modules-center": [
+       "custom/logo",
        "hyprland/workspaces",
+       "custom/notification",
     ],
     "modules-right": [
         "custom/cava",
@@ -33,6 +35,5 @@
 	"pulseaudio",
 	"hyprland/language",
 	"clock",
-	"custom/notification",
     ],
 }
