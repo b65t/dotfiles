@@ -1,0 +1,96 @@
+* {
+    background-color: transparent;
+    color: @foreground;
+
+   font: "JetBrainsMono nerd font Bold 11";
+}
+
+window {
+    border-color: @color1;
+    fullscreen: true;
+    background-color: @background;
+}
+
+mainbox {
+   background-color: transparent;
+   padding: 10px;
+   children: [ "inputbar", "message", "listview" ];
+}
+
+message {
+    padding: 5px;
+}
+
+inputbar {
+    text-color: @foreground;
+    padding: 5px;
+    margin: 2px;
+    background-color: @background;
+    border-radius: 10px;
+    border: 2;
+}
+
+entry,prompt,case-indicator {
+  text-font: inherit;
+  text-color: @foreground;
+  background-color: transparent;
+  padding: 5px;
+}
+
+listview {
+    background-color: transparent;
+    border: 0;
+    scrollbar: true;
+    lines: 3;
+    columns: 4;
+    orientation: vertical;
+}
+
+prompt {
+    enabled: true;
+    background-color: @color1;
+    padding: 4px;
+    border-radius: 10px;
+    text-color: @background;
+}
+
+
+element {
+    padding: 8px;
+    color: @foreground;
+    font: inherit;
+    border-radius: 10;
+    background-color: transparent;
+    spacing: 15px;
+    margin: 0px;
+    orientation: vertical;
+}
+
+element-text {
+background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element selected.normal {
+   background-color: @color1;
+   color: @background;
+}
+
+element-icon {
+    background-color: inherit;
+    color: inherit;
+    size: 72px;
+}
+scrollbar {
+    handle-width: 4px ;
+    handle-color: @color1;
+    border-radius: @color1;
+    background-color: @color2;
+    border-radius: 10px;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
