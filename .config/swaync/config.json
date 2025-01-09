@@ -6,8 +6,8 @@
   "control-center-layer": "top",
   "layer-shell": true,
   "cssPriority": "application",
-  "control-center-margin-top": 0,
-  "control-center-margin-bottom": 40,
+  "control-center-margin-top": 5,
+  "control-center-margin-bottom": 5,
   "control-center-margin-right": 5,
   "control-center-margin-left": 0,
   "notification-2fa-action": true,
@@ -86,30 +86,25 @@
             "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰤨 Wi-FI",
+                    "label": "󰤨",
                     "command": "nm-connection-editor"
                 },
                 {
-                    "label": "󰕾 Mute",
+                    "label": "󰕾",
                     "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         
                 },
-		{
-                    "label": "⏻ Power",
-                    "command": "/home/islam/.config/rofi/powermenu.sh"
-
-		},
-		{
-		    "label": " Background",
-		    "command": "waypaper"
-		},
 	        {
-		    "label": "󰃠 sunseton",
+		    "label": "󰃠 ",
 		    "command": "hyprsunset"
 		},
 		{
-		    "label": "󰃠 sunsetoff",
-		    "command": "pkill hyprsunset"
+		   "label": "",
+		   "command": "~/.config/scripts/swww-switcher"
+		},
+		{
+		   "label": "󰞅",
+		   "command": "rofi -show emoji -modi"
 		}
 	     ]
 	}
