@@ -1,0 +1,37 @@
+{
+
+    "include": "~/.config/waybar/bars/bar2/modules",
+    "layer": "top",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "fixed-center": true,
+    "ipc": true,
+   // "margin": 4,
+    "spacing": 0,
+   // "margin": "4 240 4 240",
+    "reload_style_on_change": true,
+    "height": 28,
+
+    "modules-left": [
+      "hyprland/window",
+      "clock",
+  ],
+    "modules-center": [
+       "cpu",
+       "memory",
+       "group/music_controller",
+       "hyprland/workspaces",
+       "custom/picker",
+       "custom/nwglook",
+       "custom/monitor",
+    ],
+    "modules-right": [
+	"tray",
+        "network",
+	"pulseaudio",
+	"pulseaudio/slider",
+	"hyprland/language",
+	"custom/notification",
+    ],
+}

@@ -10,11 +10,13 @@
             "4": [],
             "5": [],
 	    "6": [],
+	    "7": [],
+	    "8": [],
+	    "9": [],
+	    "10": [],
      },
         "format-icons": {
-          "active": " ",
-          "default": " ",
-
+         "active": "󰧞",
 	}
      },
         "river/tags": {
@@ -37,7 +39,7 @@
         "spacing": 10
     },
     "clock": {
-        "format": " {:%a %d %b | %H/%M %p}",
+        "format": " {:%H:%M%p%A,%d/%m}",
 	"on-click": "gnome-calendar"
     },
 
@@ -62,6 +64,13 @@
         },
         "on-click": "pavucontrol"
     },
+   "pulseaudio/slider": {
+    "min": 5,
+    "max": 100,
+    "rotate": 0,
+    "device": "pulseaudio",
+    "scroll-step": 1,
+   },
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -147,7 +156,7 @@
 
     "custom/logo": {
       "format": "󰣇",
-       "on-click": "~/.config/rofi/powermenu.sh",
+       "on-click": "~/.config/scripts/powermenu.sh",
        "tooltip": false
    },
 
@@ -170,7 +179,6 @@
 	"format": "{icon}",
         "rotate": 270,
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
-	"tooltip": "cpu"
    },
 
      "custom/separator": {
