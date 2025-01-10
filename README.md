@@ -4,7 +4,7 @@
 
 # what i use
 
-- EndeavourOS `distro`
+- Arch linux `distro`
 - Hyprland, Hypridle, Hyprlock `window manager, lock screen`
 - Kitty `term`
 - Rofi `rofi-wayland`
