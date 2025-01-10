@@ -9,6 +9,7 @@ just a dotfiles if made for myself
 ![](https://img.shields.io/github/repo-size/b65t/dotfiles?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)
 </a>
 
+</div>
 # what i use
 
 - Arch linux `distro`
