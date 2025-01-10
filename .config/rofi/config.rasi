@@ -4,7 +4,7 @@ configuration {
     display-drun: "  drun";
     display-run: "  run";
     display-filebrowser: "  filebrowse";
-    display-window: "  windows";
+    display-window: " ";
     modi: "drun,run,window,filebrowser";
     location: 0;
 }

@@ -1,6 +1,8 @@
 * {
-    background-color: @background;
+    /*background-color: @background-alt;*/
     color: @foreground;
+
+   font: "JetBrainsMono nerd font Bold 11";
 }
 
 configuration {
@@ -14,22 +16,25 @@ window {
     border: 0px;
     border-color: @color1;
     margin: 0px 0px 0px 5px;
+    background-color: @background-alt;
 }
 
 mainbox {
-   background-color: transparent;
+   background-color: @background-alt;
   /* padding: 10px; */
-   children: [ "listview" ];
+   children: [ "listview", "inputbar" ];
 }
 
 message {
+  background: @background-alt;
 }
 
 inputbar {
     text-color: @foreground;
-    background-color: @background;
+    background-color: @background-alt;
     border-radius: 10px;
-    border: 2;
+    border: 0;
+    margin: 10;
 }
 
 entry,prompt,case-indicator {
@@ -54,10 +59,9 @@ listview {
 
 prompt {
     enabled: true;
-    background-color: @color1;
-    /*padding: 4px;*/
-    border-radius: 10px;
-    text-color: @background;
+    background-color: transparent;
+    text-color: @color1;
+    padding: 0 4;
 }
 
 
@@ -65,7 +69,7 @@ element {
     /*padding: 2px;*/
     color: @foreground;
     font: inherit;
-    background-color: transparent;
+    background-color: @background;
     border-radius: 10px;
 }
 
@@ -75,21 +79,20 @@ element-text {
 
 element selected.normal {
    background-color: @color1;
-   color: @backgound;
+   color: @background;
 }
 
 element-icon {
     background-color: inherit;
     color: inherit;
-    size: 230px;
+    size: 218.9px;
     cursor: inherit;
 }
 
 scrollbar {
     handle-width: 4px ;
     handle-color: @color1;
-    border-radius: @color1;
-    background-color: @color2;
+    background-color: @background-alt;
     border-radius: 10px;
 }
 
