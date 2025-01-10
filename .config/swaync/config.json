@@ -48,11 +48,11 @@
     }
   },
   "widgets": [
-    "title",
+    "buttons-grid",
     "volume",
+    "title",
     "notifications",
-    "mpris",
-    "buttons-grid"
+    "mpris"
   ],
   "widget-config": {
     "inhibitors": {
@@ -86,24 +86,24 @@
             "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰤨",
+                    "label": "󰤨 network",
                     "command": "nm-connection-editor"
                 },
                 {
-                    "label": "󰕾",
+                    "label": "󰕾 volume",
                     "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         
                 },
 	        {
-		    "label": "󰃠 ",
+		    "label": "󰃠 sunset",
 		    "command": "hyprsunset"
 		},
 		{
-		   "label": "",
-		   "command": "~/.config/scripts/swww-switcher"
+		   "label": " background",
+		   "command": "~/.config/scripts/swww-switcher.sh"
 		},
 		{
-		   "label": "󰞅",
+		   "label": "󰞅 emoji",
 		   "command": "rofi -show emoji -modi"
 		}
 	     ]
