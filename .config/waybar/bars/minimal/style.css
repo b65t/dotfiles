@@ -8,7 +8,7 @@
 window#waybar {
     background-color: alpha(@background, 0.90);;
     transition-duration: .5s;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px 10px 0px 0px;
    /* border: 2px solid @color1; */
 }
 
@@ -69,7 +69,7 @@ window#waybar {
 #custom-power,
 #custom-spotify,
 #custom-logo,
-#custom-cava,
+/*#custom-cava,*/
 #custom-picker,
 #custom-weather,
 #custom-nwglook,
@@ -78,7 +78,8 @@ window#waybar {
 #custom-monitor,
 #window,
 #pulseaudio-slider,
-#custom-notification {
+#custom-notification,
+#custom-exit {
    padding: 0 10px;
    padding-top: 0px;
    padding-bottom: 0px;
@@ -224,12 +225,12 @@ window#waybar {
 }
 
 #custom-cava {
-   color: @foreground;
-   background: @color1;
+   color: @color1;
    min-height: 0px;
    border-radius: 20px;
-   margin-right: 5px;
+   margin-top: 35px;
    font-family: Hack Nerd font;
+   font-size: 20px;
 }
 #custom-cava:hover {
 	color: @background;
@@ -269,8 +270,9 @@ window#waybar {
 #custom-playerctl-forward,
 #custom-playerctl-play,
 #custom-playerctl-backward {
-	padding: 0 3px;
-	margin: 4px 0px;
+	padding: 0 5px;
+	margin: 20px 0px;
+	font-size: 20px;
 }
 #custom-playerctl-forward:hover,
 #custom-playerctl-backward:hover {
@@ -293,11 +295,12 @@ window#waybar {
   border-radius: 20px 0px 0px 20px;
   padding-left: 5px;
     background: alpha(@color1, 0.25);
+      	margin-left: 5px;
+
 }
 #custom-playerctl-forward {
   border-radius: 0px 24px 24px 0px;
   padding-right: 5px;
-  margin-right: 5px;
   background: alpha(@color1, 0.25);
 }
 
@@ -323,6 +326,8 @@ window#waybar {
 	border-radius: 24px;
 	margin-left: 5px;
 	margin-right: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-weight: bold;
 }
 #custom-search {
@@ -368,4 +373,17 @@ window#waybar {
   background: alpha(@color1, 0.25);
   margin: 4 0;
   min-height: 0px;
+}
+
+#custom-exit {
+	color: @color1;
+	font-weight: bold;
+	border-radius: 20px;
+	margin: 22 5 22 5;
+    background: alpha(@color1, 0.25);
+}
+#taskbar {
+      background: alpha(@color1, 0.25);
+      margin: 22 5 22 5;
+      border-radius: 20px;
 }

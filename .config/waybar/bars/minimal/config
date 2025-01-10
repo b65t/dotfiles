@@ -1,0 +1,28 @@
+{
+
+    "include": "~/.config/waybar/bars/minimal/modules",
+    "layer": "bottom",
+    "exclusive": true,
+   // "passthrough": false,
+    "position": "bottom",
+   // "fixed-center": true,
+   // "ipc": true,
+ //   "margin": 4,
+    "spacing": 0,
+   // "margin": "4 240 4 240",
+    "reload_style_on_change": true,
+    "height": 80,
+    "visibility": "auto",
+
+   "modules-left": [
+   "group/music_controller",
+       "custom/playerlabel",
+  ],
+    "modules-center": [
+       "custom/cava",
+    ],
+    "modules-right": [
+    "wlr/taskbar",
+    "custom/exit",
+ ],
+}
