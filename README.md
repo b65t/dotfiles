@@ -1,6 +1,7 @@
 <div align="center">
     <h1>Dotfiles</h1>
 </div>
+just a dotfiles if made for myself
 
 # what i use
 
