@@ -3,13 +3,12 @@
 </div>
 just a dotfiles if made for myself
 
-<div align="center"> 
-![](https://img.shields.io/github/last-commit/b65t/dotfiles?&style=for-the-badge&color=FFB1C8&logoColor=D9E0EE&labelColor=292324)
-![](https://img.shields.io/github/stars/b65t/dotfiles?style=for-the-badge&logo=andela&color=FFB686&logoColor=D9E0EE&labelColor=292324)
-![](https://img.shields.io/github/repo-size/b65t/dotfiles?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)
-</a>
-
+<div align="center">
+<h1>![](https://img.shields.io/github/last-commit/b65t/dotfiles?&style=for-the-badge&color=FFB1C8&logoColor=D9E0EE&labelColor=292324)<h1>
+<h1>![](https://img.shields.io/github/stars/b65t/dotfiles?style=for-the-badge&logo=andela&color=FFB686&logoColor=D9E0EE&labelColor=292324)<h1>
+<h1>![](https://img.shields.io/github/repo-size/b65t/dotfiles?color=CAC992&label=SIZE&logo=googledrive&style=for-the-badge&logoColor=D9E0EE&labelColor=292324)<h1>
 </div>
+
 # what i use
 
 - Arch linux `distro`
