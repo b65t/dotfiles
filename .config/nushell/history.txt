@@ -1,0 +1,250 @@
+ls
+cd
+ls
+eza
+sudo
+fastfetch
+clear
+pacman -S nushell
+exa
+eza
+nvim ~/.config/waybar/style.css
+ls | ~/.config
+ls ~/.config
+nvim ~/.config/nushell/config.nu
+nvim ~/.config/nushell/env.nu
+$nu.env-path
+nvim ~/.config/nushell/env.nu
+$nu.env-path
+nvim ~/.config/nushell/env.nu
+nvim ~/.config/nushell/config.nu
+clear
+ls
+clear
+fastfetch
+clear
+fastfetch
+clear
+ls
+clear
+asdfsafbb
+clear
+ls
+clear
+ls
+ps | where cpu
+ps | where cpu > 4
+cd
+clear
+ls
+neofetch
+clear
+ls
+sudo pacman -S hyprsunset
+clear
+fastfetch
+clear
+neofetch
+clear
+fastfetch
+clear
+fastfetch
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+fastfetch
+clear
+fastfetch
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+fastfetch
+clear
+fastfetch
+clear
+dasd
+clear
+cl
+clea
+clear
+wayb
+wayba
+clear
+nvim ~/.config/nushell/config.nu
+clear
+nvim ~/.config/nushell/config.nu
+help config nu
+nvim ~/.config/nushell/config.nu
+config nu
+nvim ~/.config/nushell/env.nu
+nvim ~/.config/nushell/config.nu
+nvim ~/.config/nushell/env.nu
+nvim ~/.config/nushell/config.nu
+nvim ~/.config/nushell/env.nu
+nvim ~/.config/nushell/config.nu
+helix
+nvim ~/.config/nushell/config.nu
+config nu
+nvim ~/.config/nushell/config.nu
+clear
+fastfetch
+clear
+fastfetch
+clear
+fastfetch
+clear
+config nu
+fsfe
+config nu
+fsfe
+clear
+fsfe
+clear
+config nu
+syu
+config nu
+syu
+config nu
+hx
+config nu
+yazi
+config nu
+clear
+-s
+clear
+config nu
+ps
+config nu
+dps
+clear
+dps
+clear
+nvim ~/.config/nushell/config.nu
+config nu
+nvim ~/.config/nushell/config.nu
+clear
+ls ~/.config
+clear
+nvim ~/.config/rofi/
+nvim ~/.config/nushell/config.nu
+let fish_completer = {|spans|<\n>    fish --command $'complete "--do-complete=($spans | str join " ")"'<\n>    | from tsv --flexible --noheaders --no-infer<\n>    | rename value description<\n>}
+ls
+nvim ~/.config/nushell/config.nu
+clear
+ls
+clear
+nvim ~/.config/rofi/window/theme.rasi
+clear
+ls
+fastfetch
+nvim ~/.config/rofi/window/theme.rasi
+config nu
+clear
+nvim ~/.config/rofi/window/theme.rasi
+config nu
+clear
+fastfetch
+clear
+exit
+nu
+exit
+nu
+clear
+exit
+nu
+ls
+clear
+ls
+config nu
+sudo pacman -S zed
+doas pacman -S zed
+x
+xl
+config nu
+ls
+l
+la
+config nu
+xl
+clear
+x
+clear
+x
+clear
+x
+xl
+xa
+clear
+fastfetch
+clear
+fastfetch
+celar
+doas pacman -S zoxide
+nvim ~/.config/nushell/env.nu
+nvim ~/.config/nushell/config.nu
+c
+z
+clear
+z ~/.config/rofi/
+cd
+z 
+z rofi
+clear
+z
+z waybar
+z ~/.config/waybar
+z
+z waybar
+z
+clear
+ls
+clear
+fastfetch
+nvim ~/.config/nushell/config.nu
+clear
+cd rofi
+z
+nvim ~/.config/nushell/config.nu
+z
+sudo pacman -S zoxide
+doas pacman -S zoxide
+z
+z rofi
+nvim ~/.config/nushell/env.nu
+ls
+nvim .zoxide.nu
+z
+nvim ~/.config/nushell/env.nu
+con
+conifg nu
+nvim ~/.config/nushell/config.nu
+conifg nu
+config nu 
+z
+config nu 
+cd
+cd rofi
+config nu 
+cd rofi
+z
+cd rofi
+config nu 
+z
+clear
+config env
+z
