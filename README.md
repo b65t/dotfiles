@@ -11,12 +11,12 @@ just a dotfiles if made for myself
 - Rofi `rofi-wayland`
 - Swaync `notifications`
 - Waybar `bar`
-- swww, Waypaper `background`
+- swww, rofi `background`
 - fastfetch `fetch`
 - neovim `text editor`
 - grim and slurp `screen shot`
 - nwg-look, Orchis-theme `GTK`
-- fish `shell`
+- nushell, fish `shell`
 
 # other
 
