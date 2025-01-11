@@ -45,7 +45,7 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{icon}",
         "format-disconnected": "Disconnected 󰤭",
-	"on-click": "kitty nmtui",
+	"on-click": "nm-connection-editor",
                 "format-icons": [
             "󰤯",
             "󰤟",
@@ -154,7 +154,7 @@
 "custom/cava": {
     "exec": "~/.config/scripts/cava.sh",
     "format": "{}",
-    "on-click": "kitty cava"
+    "on-click": "cavalier"
     },
 
   "memory" : {
