@@ -5,7 +5,7 @@ DATE=$(date +"%Y-%m-%d_%H-%M-%S")
 FILE="/tmp/screenshot_$DATE.png"
 
 # Use slurp to select the region and grim to take a screenshot of the selected area
-grim -g "$(slurp)" "$FILE"
+grim -g "$(slurp -w 0 )" "$FILE"
 
 # Check if the screenshot was successfully taken
 if [ -f "$FILE" ]; then
