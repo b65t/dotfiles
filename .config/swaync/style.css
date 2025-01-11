@@ -271,7 +271,7 @@
   /* The Control Center which contains the old notifications + widgets */
   background: @background;
   color: @foreground;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid @color1;
 }
 
@@ -420,21 +420,20 @@
 
 /* Buttons widget */
 .widget-buttons-grid {
-  font-size: 15px;
+  font-size: 20px;
   padding: 8px;
-  margin: 14px;
-  border-radius: 12px;
-  background-color: alpha (@background, 0.95);
+  margin: 10;
+  border-radius: 20px;
+  background-color: alpha (@color1, 0.50);
  /* border: 2px solid @color1; */
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
-  background: @color1;
-  border-radius: 12px;
-  margin: 2px;
-  margin-left: 12px;
-  padding: 5px;
-  color: @background;
+  background: alpha (@background, 0.20);
+  border-radius: 20px;
+  margin: 0 0 0 9;
+  padding: 9px;
+  color: @foreground;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
@@ -478,35 +477,30 @@
 trough {
   border-radius: 20px;
   background: @background;
-  border: 1px solid @background;
 }
 
 trough highlight {
   /* ´trough´ is the background of the slider, ´highlight´ is the actual slider */
   padding-top: 1px;
-  background: @color4;
-  border: 1px solid @color4;
+  background: @color1;
+  border: 1px solid @color1;
   border-radius: 20px;
 }
 
 trough slider {
-  padding: 1px;
-  background: @color4;
-  border: 1px solid @color4;
+  padding: 3px;
+  background: @color1;
 }
 trough slider:hover {
-  padding: 1px;
-  background: @color4;
+  padding: 3px;
+  background: @color1;
 }
 
 .widget-volume {
-  background-color: alpha(@background, 0.0);
-  border-radius: 20px 20px 0px 0px;
-  font-size: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
+  background-color: transparent;
+  margin-left: 8px;
+  margin-right: 8px;
   padding-bottom: 5px;
-  border: 0px solid transparent;
 }
 
 /* Backlight widget */

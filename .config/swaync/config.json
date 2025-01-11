@@ -48,6 +48,8 @@
     }
   },
   "widgets": [
+    "dnd",
+    "menubar#label",
     "buttons-grid",
     "volume",
     "title",
@@ -57,13 +59,13 @@
   "widget-config": {
     "inhibitors": {
       "text": "Inhibitors",
-      "button-text": "Clear All",
+      "button-text": "",
       "clear-all-button": true
     },
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
-      "button-text": "Clear All"
+      "button-text": ""
     },
     "dnd": {
       "text": "Do Not Disturb"
@@ -86,28 +88,81 @@
             "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰤨 network",
-                    "command": "nm-connection-editor"
+                    "label": "󰤨",
+                    "command": "kitty nmtui"
                 },
                 {
-                    "label": "󰕾 volume",
+                    "label": "󰕾",
                     "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         
                 },
-	        {
-		    "label": "󰃠 sunset",
-		    "command": "hyprsunset"
-		},
 		{
-		   "label": " background",
+                    "label": "󰍭",
+                    "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+                    "type": "toggle"
+                },
+		{
+		   "label": "",
 		   "command": "~/.config/scripts/swww-switcher.sh"
 		},
 		{
-		   "label": "󰞅 emoji",
+		   "label": "󰞅",
 		   "command": "rofi -show emoji -modi"
 		}
 	     ]
+	},
+	"menubar#label": {
+      "menu#power-buttons": {
+        "label": "", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": " Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": " Lock",
+            "command": "swaylock -f --image ~/.config/wallpapers/snow_woods.jpg"
+          },
+          {
+            "label": " Logout",
+            "command": "swaymsg exit"
+          },
+          {
+            "label": " Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      },
+      "menu#settings": {
+	      "label": "",
+	      "position": "right",
+	      "actions": [
+		{
+		  "label": " nwg-look",
+		  "command": "nwg-look"
+		},
+		{
+		  "label": "󰨇 resources",
+		  "command": "resources"
+		}
+	      ]
+	},
+      "menu#sunset": {
+	      "label": "󰃠 ",
+	      "position": "right",
+	      "actions": [
+		{
+		  "label": "󰃠 sunset on",
+		  "command": "hyprsunset"
+		},
+		{
+		  "label": "󰃠 sunset off",
+		  "command": "pkill hyprsunset"
+		}
+               ]
 	}
 
+   }
   }
 }
