@@ -1,3 +1,0 @@
-#!/bin/sh
-
-riverctl border-color-focused 0x{color1.strip}
