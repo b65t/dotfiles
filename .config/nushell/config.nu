@@ -27,10 +27,26 @@ alias c = clear
 
 alias x = eza --icons
 alias xa = eza --icons --all
-alias xl	= eza --long
+alias xl = eza --long
 alias xla = eza --long --all
-alias xt	= eza --icons --tree
+alias xt = eza --icons --tree
 alias xta = eza --icons --tree --all
+
+$env.config.history = {
+  file_format: sqlite
+  max_size: 1_000_000
+  sync_on_enter: true
+  isolation: true
+}
+
+$env.config.use_kitty_protocol = true
+
+$env.config.rm.always_trash = true
+$env.ls.clickable_links = true
+
+$env.config.table = {
+  mode: rounded
+}
 
 use ~/.cache/starship/init.nu
 
