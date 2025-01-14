@@ -1,7 +1,11 @@
 <div align="center">
     <h1>Dotfiles</h1>
 </div>
-just a dotfiles if made for myself
+
+> [WARNING!]
+> I made these dotfiles for myself in the way i likeو I WOULD NOT SUGGEST YOU TO USE THEM
+
+just an hyprland dotfiles
 
 # what i use
 
