@@ -19,8 +19,14 @@ just an hyprland dotfiles
 - fastfetch `fetch`
 - helix, zed `text editor`
 - grim and slurp `screen shot`
-- nwg-look`GTK`
-- nushell`shell`
+- nwg-look `GTK`
+- nushell `shell`
+
+# To do
+
+- [ ] better power menu
+- [ ] rofi for everything (or maybe ags)
+- [ ] more bloat
 
 # other
 
