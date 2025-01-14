@@ -1,7 +1,8 @@
      @import '../../../../.cache/wal/colors-waybar.css';
+
  * {
     font-family:"noto sans nerd font"; 
-    font-size: 13px;
+    /*font-size: 13px;*/
     min-height: 0;
 }
 
@@ -16,41 +17,39 @@ window#waybar {
   /* padding-right: 4px;
    padding-left: 4px; */
    font-weight: bold;
-   min-height: 0px;
+  /* min-height: 0px; */
    padding: 2px 10px 2px 10px;
-   background-color: @background;
+   background-color: alpha(@background, 0.90);
    border-radius: 20px;
-   font-size: 0px;
-   margin-top: 3px;
+   font-size: 0;
 }
 
 #workspaces button {
-   color: @color2;
-   background: @foreground;
-   border-radius: 9px;
+   color: @foreground;
+   background: transparent;
+   border-radius: 0px;
    font-weight: bold;
    min-width: 0px;
-   padding: 0px 8px 0px 8px;
-   margin-top: 2px;
-   margin-bottom: 2px;
-   margin-right: 4px;
+   padding: 0px 1px 0px 1px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-right: 2.9px;
    margin-left: 2.5px;
-   font-size: 0px;
+   font-size: 18;
 }
 
 #workspaces button.empty {
-   background-color: @color8;
-   color: @foreground;
+   color: @color8;
    font-weight: bold;
 }
 
 #workspaces button.active {
    /* background: @color1;  */
    color: @color1;
-   background: @color1;
-   padding-right: 30px;
-   padding-left: 27px;
+   background: transparent;
    font-weight: bold;
+   border-top: 1.9px solid @foreground;
+
 }
 
 #clock,
@@ -75,14 +74,16 @@ window#waybar {
    padding-top: 0px;
    padding-bottom: 0px;
    color: @foreground;
+   font-size: 13px;
 }
 
 #clock {
    /* margin-top: 4px;
     margin-bottom: 4px; */
     font-weight: bold;
-    background-color: @background;
-    border-radius: 0px 0px 20px 20px;
+    background-color: alpha(@background, 0.90);
+    border-radius: 20px;
+    margin-left: 5px;
 }
 #clock:hover {
     background: @color1;
@@ -91,23 +92,22 @@ window#waybar {
 #cpu {
     font-weight: bold;
     color: @color1;
-    background: @background;
+    background-color: alpha(@background, 0.90);
     border-radius: 20px 0px 0px 20px;
+    margin-left: 5px;
     font-size: 20;
     padding-left: 5px;
     padding-right: 0px;
-    margin-top: 3px;
 }
 
 #memory {
     font-weight: bold;
     color: @color1;
-    background: @background;
+    background-color: alpha(@background, 0.90);
     border-radius: 0px 20px 20px 0px;
     font-size: 20px;
     padding-left: 0px;
     padding-right: 5px;
-    margin-top: 3px;
     margin-right: 5px;
 }
 
@@ -116,9 +116,9 @@ window#waybar {
     /* margin-top: 4px;
     margin-bottom: 4px; */
     font-size: 14px;
-    background-color: @background;
-    border-radius: 20px 0px 0px 20px;
-    margin-top: 3px;
+    background-color: alpha(@background, 0.90);;
+    border-radius: 20 0 0 20;
+    margin-left: 5px;
 } 
 #network:hover {
 	color: @foreground;
@@ -134,8 +134,7 @@ window#waybar {
     font-weight: bold;
     font-size: 14px;
     background-color: @background;
-    border-radius: 0px 20px 20px 0px;
-    margin-top: 3px;
+    background-color: alpha(@background, 0.90);
 }
 #pulseaudio:hover {
     color: @foreground;
@@ -151,9 +150,9 @@ window#waybar {
    padding-top: 3px;
    padding-bottom: 3px;
    background: @background;
-   border-radius: 20px;
-   margin-right: 5px;
-   margin-top: 3px;
+   border-radius: 20;
+   margin-left: 5px;
+   background-color: alpha(@background, 0.90);
 }
 
 #tray > .passive {
@@ -170,8 +169,9 @@ window#waybar {
    /* margin-top: 4px;
     margin-right: 4px;
     margin-bottom: 4px; */
-    background-color: @background;
+    background-color: alpha(@background, 0.90);
     border-radius: 0px 20px 20px 0px;
+    font-size: 13px;
 }
 
 #custom-power {
@@ -193,13 +193,12 @@ window#waybar {
 }
 
 #custom-logo {
-   background: @background;
-    border-radius: 0 0 24 0;
-    color: @color1;
+   background: @color1;
+    border-radius: 24px 24px 13px 24px;
+    color: @foreground;
     font-weight: bold;
     font-size: 18px;
     margin-right: 5px;
-    padding-left: 5px;
 }
 #custom-logo:hover {
     background: @foreground;
@@ -214,6 +213,7 @@ window#waybar {
     padding-right: 7px;
     padding-left: 7px;
     border-radius: 20px;
+    font-size: 13px;
 }
 
 #custom-cava {
@@ -235,11 +235,11 @@ window#waybar {
 }
 
 #custom-notification {
-	color: @color1;
-	font-size: 14;
-  background: @background;
+	color: @foreground;
+	font-size: 14px;
+  background: @color1;
   margin-left: 5px;
-  border-radius: 0 0 0 24;
+  border-radius: 24px 24px 24px 13px;
 }
 #custom-notification:hover {
 	background: @foreground;
@@ -249,9 +249,8 @@ window#waybar {
 #custom-picker {
         color: @color1;
         background-color: @background;
-	border-radius: 10px 24px 10px 24px;
-        margin-right: 5px;
-	margin-top: 3px;
+        border-radius: 20px 0px 0px 20px;
+        margin-left: 5px;
 }
 #custom-picker:hover {
 	color: @foreground;
@@ -277,19 +276,20 @@ window#waybar {
 	color: @color1;
 }
 #custom-playerctl-play {
-  background: @background;
+        background-color: alpha(@background, 0.90);
 	color: @foreground;
 }
 #custom-playerctl-backward {
   background: @background;
   border-radius: 20px 0px 0px 20px;
-  margin-left: 5px;
   padding-left: 5px;
+  background-color: alpha(@background, 0.90);
 }
 #custom-playerctl-forward {
-  background: @background;
-  border-radius: 0px 24px 24px 0px;
+  background-color: alpha(@background, 0.90);
+  border-radius: 0 20 20 0;
   padding-right: 5px;
+  margin-right: 5px;
 }
 
 #custom-weather {
@@ -309,10 +309,9 @@ window#waybar {
 }
 
 #custom-playerlabel {
+        background-color: alpha(@background, 0.90);
 	color: @foreground;
-	background: @color1;
-	border-radius: 24px;
-	margin-left: 5px;
+	border-radius: 20;
 	font-weight: bold;
 }
 #custom-search {
@@ -330,9 +329,7 @@ window#waybar {
 	color: @color1;
 	background: @background;
 	font-weight: bold;
-	border-radius: 24px 10px 24px 10px;
-	margin-top: 3px;
-	margin-left: 5px;
+	border-radius: 0px 20px 20px 0px
 }
 #custom-monitor:hover {
 	color: @foreground;

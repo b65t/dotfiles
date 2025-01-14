@@ -180,7 +180,7 @@
    },
 
 "custom/cava": {
-    "exec": "~/.config/scripts/cava.sh",
+    "exec": "~/.config/scripts/sh/cava.sh",
     "format": "{}",
     "on-click": "cavalier"
     },
@@ -230,7 +230,7 @@
     "custom/picker": {
       "tooltip": false,
       "format": "",
-      "on-click": "~/.config/scripts/hyprpicker.sh",
+      "on-click": "~/.config/scripts/nu/hyprpicker.nu",
     },
 
     "group/music_controller": {

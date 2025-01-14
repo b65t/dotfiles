@@ -38,7 +38,26 @@
     },
     "clock": {
         "format": " {:%a %d %b | %H/%M %p}",
-	"on-click": "gnome-calendar"
+	"on-click": "gnome-calendar",
+	"tooltip-format": "<tt>{calendar}</tt>",
+	  "calendar": {
+                "mode": "month",
+                "mode-mon-col": 3,
+                "on-scroll": 1,
+                "on-click-right": "mode",
+                "format": {
+                "months": "<span color='#ffffff'><b>{}</b></span>",
+                "weekdays": "<span color='#ffffff'><b>{}</b></span>",
+                "today": "<span color='#ffffff'><b>{}</b></span>"
+        },
+	     "actions": {
+                "on-click-right": "mode",
+                "on-click-forward": "tz_up",
+                "on-click-backward": "tz_down",
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+            }
+       },
     },
 
     "network": {
@@ -152,7 +171,7 @@
    },
 
 "custom/cava": {
-    "exec": "~/.config/scripts/cava.sh",
+    "exec": "~/.config/scripts/sh/cava.sh",
     "format": "{}",
     "on-click": "cavalier"
     },
@@ -183,14 +202,14 @@
         "tooltip": false,
         "format": "{icon}",
         "format-icons": {
-            "notification": "󱅫",
-            "none": "󰂚",
-            "dnd-notification": "󰂛",
-            "dnd-none": "󰂛",
-            "inhibited-notification": "󱅫",
-            "inhibited-none": "󰂚",
-            "dnd-inhibited-notification": "󰂛",
-            "dnd-inhibited-none": "󰂛"
+            "notification": " 󱅫",
+            "none": " 󰂚",
+            "dnd-notification": " 󰂛",
+            "dnd-none": " 󰂛",
+            "inhibited-notification": " 󱅫",
+            "inhibited-none": " 󰂚",
+            "dnd-inhibited-notification": " 󰂛",
+            "dnd-inhibited-none": " 󰂛"
         },
         "return-type": "json",
         "exec-if": "which swaync-client",
@@ -203,7 +222,7 @@
     "custom/picker": {
       "tooltip": false,
       "format": "",
-      "on-click": "hyprpicker -a",
+      "on-click": "~/.config/scripts/nu/hyprpicker.nu",
     },
 
     "group/music_controller": {

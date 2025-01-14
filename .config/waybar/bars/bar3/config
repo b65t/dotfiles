@@ -7,7 +7,7 @@
     "position": "top",
     "fixed-center": true,
     "ipc": true,
-    "margin": "0 4",
+ //   "margin": "0 4",
     "spacing": 0,
    // "margin": "4 240 4 240",
     "reload_style_on_change": true,

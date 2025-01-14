@@ -10,13 +10,21 @@
             "4": [],
             "5": [],
 	    "6": [],
-	    "7": [],
-	    "8": [],
-	    "9": [],
-	    "10": [],
      },
         "format-icons": {
-         "active": "󰧞",
+         // "active": " ",
+         // "default": " ",
+	 "1": "󰲠",
+	 "2": "󰲢",
+	 "3": "󰲤",
+	 "4": "󰲦",
+	 "5": "󰲨",
+	 "6": "󰲪",
+	 "7": "󰲬",
+	 "8": "󰲮",
+	 "9": "󰲰",
+	 "10": "󰿬",
+
 	}
      },
         "river/tags": {
@@ -38,7 +46,7 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
+ "clock": {
         "format": " {:%H:%M%p%A,%d/%m}",
 	"on-click": "gnome-calendar",
 	"tooltip-format": "<tt>{calendar}</tt>",
@@ -66,7 +74,7 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{icon}",
         "format-disconnected": "Disconnected 󰤭",
-	"on-click": "nm-connection-editor",
+	"on-click": "kitty nmtui",
                 "format-icons": [
             "󰤯",
             "󰤟",
@@ -79,17 +87,10 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}",
         "format-icons": {
-            "default": ["󰋋"]
+            "default": [""]
         },
         "on-click": "pavucontrol"
     },
-   "pulseaudio/slider": {
-    "min": 5,
-    "max": 100,
-    "rotate": 0,
-    "device": "pulseaudio",
-    "scroll-step": 1,
-   },
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -135,8 +136,8 @@
 
       "hyprland/language": {
         "padding": 10,
-	"format-en": "us",
-	"format-ar": "ar",
+	"format-en": "US",
+	"format-ar": "AR",
     },
 
     "hyprland/window": {
@@ -153,6 +154,7 @@
 	 "(.*)qutebrowser": " qutebrowser",
 	 "(.*)Resources": "󰨇 Resources",
 	 "(.*)Obsidian": " Obsidian",
+	 "(.*)Zed": " Zed",
 	 "": " Desktop"
      },
     "separate-outputs": true,
@@ -180,31 +182,10 @@
    },
 
 "custom/cava": {
-    "exec": "~/.config/scripts/sh/cava-long.sh",
+    "exec": "~/.config/scripts/sh/cava.sh",
     "format": "{}",
-    "on-click": "cavalier"
+    "on-click": "kitty cava"
     },
-        "cava": {
-           "cava_config": "~/.config/cava/config",
-          "framerate": 60,
-          "autosens": 1,
-          "bars": 100,
-          "lower_cutoff_freq": 50,
-          "higher_cutoff_freq": 10000,
-          "method": "pulse",
-          "source": "auto",
-          "stereo": true,
-          "reverse": false,
-          "bar_delimiter": 0,
-          "monstercat": false,
-          "waves": false,
-          "noise_reduction": 0.77,
-          "input_delay": 2,
-          "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-          "actions": {
-                     "on-click-right": "mode"
-                     }
-	},
 
   "memory" : {
         "interval": 1,
@@ -219,6 +200,7 @@
 	"format": "{icon}",
         "rotate": 270,
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+	"tooltip": "cpu"
    },
 
      "custom/separator": {
@@ -251,7 +233,7 @@
     "custom/picker": {
       "tooltip": false,
       "format": "",
-      "on-click": "~/.config/scripts/hyprpicker.sh",
+      "on-click": "~/.config/scripts/nu/hyprpicker.nu",
     },
 
     "group/music_controller": {
@@ -317,21 +299,5 @@
         "format": "󰨇",
 	"on-click": "resources",
 	"tooltip": "false",
-    },
-    "custom/exit": {
-        "format": "",
-	"on-click": "~/.config/scripts/waybar.sh",
-    },
-    "wlr/taskbar": {
-    "format": " {icon} ",
-    "icon-size": 30,
-    "all-outputs": false,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-          "rofi",
-          "kitty",
-                   ]
-    },
+    }
 }
