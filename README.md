@@ -17,13 +17,11 @@ just an hyprland dotfiles
 - Waybar `bar`
 - swww, rofi `background`
 - fastfetch `fetch`
-- neovim `text editor`
+- helix, zed `text editor`
 - grim and slurp `screen shot`
-- nwg-look, Orchis-theme `GTK`
-- nushell, fish `shell`
+- nwg-look`GTK`
+- nushell`shell`
 
 # other
-
-i use shyfox for the firefox [theme](https://github.com/Naezr/ShyFox)
 
 [Backgrounds](https://github.com/b65t/Background)
