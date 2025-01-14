@@ -3,7 +3,7 @@
 </div>
 
 >   [!Caution]
->   I made these dotfiles for myself in the way i likeو I WOULD NOT SUGGEST YOU TO USE THEM
+>   I made these dotfiles for myself in the way i like, I WOULD NOT SUGGEST YOU TO USE THEM
 
 just an hyprland dotfiles
 
