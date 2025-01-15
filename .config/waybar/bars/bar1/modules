@@ -37,7 +37,7 @@
         "spacing": 10
     },
  "clock": {
-        "format": " {:%H:%M%p%A,%d/%m}",
+        "format": " {:%H:%M%p%A,%d/%m}",
 	"on-click": "gnome-calendar",
 	"tooltip-format": "<tt>{calendar}</tt>",
 	"calendar": {
@@ -133,21 +133,24 @@
     "hyprland/window": {
     "format": "{initialTitle}",
     "rewrite": {
-	 "(.*)kitty": "󰄛 kitty",
-         "(.*)Mozilla Firefox": "󰈹 Firefox",
-	 "(.*)Discord": " Discord",
-	 "(.*)vesktop": " Discord",
+//	 "(.*)kitty": "󰄛 kitty",
+//         "(.*)Mozilla Firefox": "󰈹 Firefox",
+     "(.*)Mozilla Firefox": "Firefox",
+//	 "(.*)Discord": " Discord",
+//	 "(.*)vesktop": " Discord",
 	 "(.*)Spotify": "󰓇 Spotify",
-         "(.*)Spotify Free": "󰓇 Spotify",
-	 "(.*)Waypaper": " Waypaper",
-	 "(.*)VSCodium": " VSCodium",
-	 "(.*)qutebrowser": " qutebrowser",
-	 "(.*)Resources": "󰨇 Resources",
-	 "(.*)Obsidian": " Obsidian",
-	 "(.*)Zed": " Zed",
+//         "(.*)Spotify Free": "󰓇 Spotify",
+//	 "(.*)Waypaper": " Waypaper",
+//	 "(.*)VSCodium": " VSCodium",
+//	 "(.*)qutebrowser": " qutebrowser",
+//	 "(.*)Resources": "󰨇 Resources",
+//	 "(.*)Obsidian": " Obsidian",
+//	 "(.*)Zed": " Zed",
 	 "": " Desktop"
      },
     "separate-outputs": true,
+    "icon": true,
+    "icon-size": 18,
 },
 
     "custom/power": {
@@ -166,8 +169,8 @@
     },
 
     "custom/logo": {
-      "format": "󰣇",
-       "on-click": "~/.config/scripts/powermenu.sh",
+      "format": "",
+       "on-click": "~/.config/scripts/sh/powermenu.sh",
        "tooltip": false
    },
 

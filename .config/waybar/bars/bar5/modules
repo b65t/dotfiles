@@ -12,19 +12,8 @@
 	    "6": [],
      },
         "format-icons": {
-         // "active": " ",
-         // "default": " ",
-	 "1": "󰲠",
-	 "2": "󰲢",
-	 "3": "󰲤",
-	 "4": "󰲦",
-	 "5": "󰲨",
-	 "6": "󰲪",
-	 "7": "󰲬",
-	 "8": "󰲮",
-	 "9": "󰲰",
-	 "10": "󰿬",
-
+          "active": "",
+          "default": "",
 	}
      },
         "river/tags": {
@@ -47,7 +36,8 @@
         "spacing": 10
     },
  "clock": {
-        "format": " {:%H:%M%p%A,%d/%m}",
+        "format": " {:%H:%M%p}",
+        // {: %A,%d/%m}
 	"on-click": "gnome-calendar",
 	"tooltip-format": "<tt>{calendar}</tt>",
 	"calendar": {
@@ -136,28 +126,31 @@
 
       "hyprland/language": {
         "padding": 10,
-	"format-en": "US",
-	"format-ar": "AR",
+	"format-en": "us",
+	"format-ar": "ar",
     },
 
     "hyprland/window": {
     "format": "{initialTitle}",
     "rewrite": {
-	 "(.*)kitty": "󰄛 kitty",
-         "(.*)Mozilla Firefox": "󰈹 Firefox",
-	 "(.*)Discord": " Discord",
-	 "(.*)vesktop": " Discord",
+//	 "(.*)kitty": "󰄛 kitty",
+//         "(.*)Mozilla Firefox": "󰈹 Firefox",
+     "(.*)Mozilla Firefox": "Firefox",
+//	 "(.*)Discord": " Discord",
+//	 "(.*)vesktop": " Discord",
 	 "(.*)Spotify": "󰓇 Spotify",
-         "(.*)Spotify Free": "󰓇 Spotify",
-	 "(.*)Waypaper": " Waypaper",
-	 "(.*)VSCodium": " VSCodium",
-	 "(.*)qutebrowser": " qutebrowser",
-	 "(.*)Resources": "󰨇 Resources",
-	 "(.*)Obsidian": " Obsidian",
-	 "(.*)Zed": " Zed",
+//         "(.*)Spotify Free": "󰓇 Spotify",
+//	 "(.*)Waypaper": " Waypaper",
+//	 "(.*)VSCodium": " VSCodium",
+//	 "(.*)qutebrowser": " qutebrowser",
+//	 "(.*)Resources": "󰨇 Resources",
+//	 "(.*)Obsidian": " Obsidian",
+//	 "(.*)Zed": " Zed",
 	 "": " Desktop"
      },
     "separate-outputs": true,
+    "icon": true,
+    "icon-size": 18,
 },
 
     "custom/power": {

@@ -1,6 +1,6 @@
 {
 
-    "include": "~/.config/waybar/bars/bar1/modules",
+    "include": "~/.config/waybar/bars/bar5/modules",
     "layer": "top",
     "exclusive": true,
     "passthrough": false,
@@ -15,10 +15,8 @@
 
     "modules-left": [
       "custom/logo",
-      "custom/picker",
-      "custom/nwglook",
-      "custom/monitor",
-      "group/music_controller",
+      "clock",
+  //    "group/music_controller",
       "cpu",
       "memory",
       "hyprland/window",
@@ -27,12 +25,15 @@
        "hyprland/workspaces",
     ],
     "modules-right": [
- //       "custom/cava",
-	"tray",
+ //     "custom/cava",
+	    "tray",
+        "custom/picker",
+        "custom/nwglook",
+        "custom/monitor",
         "network",
-	"pulseaudio",
-	"hyprland/language",
-	"clock",
+	    "pulseaudio",
+	    "hyprland/language",
+//	    "clock",
         "custom/notification",
     ],
 }

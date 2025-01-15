@@ -1,3 +1,3 @@
 {
-    "include": "~/.config/waybar/bars/bar1/config",
+    "include": "~/.config/waybar/bars/bar5/config",
 }
