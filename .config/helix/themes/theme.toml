@@ -1,0 +1,11 @@
+inherits = "base16_default"
+
+"ui.statusline" = { fg = "7", bg = "8"}
+"ui.statusline.inactive" = { fg = "7", bg = "8"}
+"ui.statusline.normal" = { fg = "7", bg = "01"}
+"ui.statusline.insert" = { fg = "7", bg = "2"}
+"ui.statusline.select" = { fg = "7", bg = "3"}
+
+"ui.bufferline" = { fg = "7", bg = "0" }
+"ui.bufferline.active" = { fg = "7", bg = "0", underline = { color = "1", style = "line" } }
+"ui.bufferline.background" = { bg = "0" }
