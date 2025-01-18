@@ -27,7 +27,6 @@ just an hyprland dotfiles
 - [ ] better power menu
 - [ ] rofi for everything (or maybe ags)
 - [ ] more bloat
-- [X] helix config
 
 # other
 
