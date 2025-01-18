@@ -1,9 +1,9 @@
 {
 	"logo": {
-	 "type": "kitty",
-         "source": "~/.config/fastfetch/fetch.jpg",
-	 "width": 17,
-        "height": 13
+//	 "type": "kitty",
+         "source": "~/.config/fastfetch/frieren.txt",
+//	 "width": 17,
+//        "height": 13
 	},
 	"display": {
         "separator": " ~ "
