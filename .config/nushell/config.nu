@@ -18,9 +18,8 @@
 # them for future reference.
 
 $env.config.show_banner = false
-$env.config.buffer_editor = 'helix'
+$env.config.buffer_editor = 'nvim'
 
-alias hx = helix
 alias fm = yazi
 alias py = python
 alias c = clear
@@ -33,7 +32,7 @@ alias xt = eza --icons --tree
 alias xta = eza --icons --tree --all
 
 $env.config.history = {
-  file_format: sqlite
+  file_format: plaintext
   max_size: 1_000_000
   sync_on_enter: true
   isolation: true
