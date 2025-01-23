@@ -1,0 +1,329 @@
+     @import '../../../../.cache/wal/colors-waybar.css';
+ * {
+    font-family:"noto sans nerd font"; 
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    transition-duration: .5s;
+    border-radius: 7px;
+   /* border: 2px solid @color1; */
+}
+
+#workspaces {
+  /* padding-right: 4px;
+   padding-left: 4px; */
+   font-weight: bold;
+   min-height: 0px;
+   padding: 2px 10px 2px 10px;
+   background: @background;
+   border-radius: 5px;
+   font-size: 13px;
+}
+
+#workspaces button {
+   color: @color1;
+   background: transparent;
+   border-radius: 3px;
+   font-weight: bold;
+   min-width: 0px;
+   padding: 0px 0px 0px 0px; 
+   margin-top: 2.9px;
+   margin-bottom: 2.5px;
+   margin-right: 2.9px;
+   margin-left: 2.5px;
+}
+
+#workspaces button.empty {
+   color: @foreground;
+   font-weight: bold;
+}
+
+#workspaces button.active {
+   /* background: @color1;  */
+   color: @color1;
+   background: @color1;
+   padding-right: 21px;
+   padding-left: 18px;
+   margin-top: 1px;
+   margin-bottom: 1px;
+   font-weight: bold;
+} 
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#language,
+#custom-power,
+#custom-spotify,
+#custom-logo,
+#custom-cava,
+#custom-picker,
+#custom-weather,
+#custom-nwglook,
+#custom-playerlabel,
+#custom-search,
+#custom-monitor,
+#custom-window,
+#custom-notification {
+   padding: 0 10px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   color: @foreground;
+}
+
+#clock {
+   /* margin-top: 4px;
+    margin-bottom: 4px; */
+    font-weight: bold;
+    background-color: @background;
+    border-radius: 5px;
+}
+#clock:hover {
+    background: @color1;
+}
+
+#cpu {
+    font-weight: bold;
+    color: @color1;
+    background: @background;
+    border-radius: 5px 0px 0px 5px;
+    margin-left: 5px;
+    font-size: 20;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+#memory {
+    font-weight: bold;
+    color: @color1;
+    background: @background;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 20px;
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+#network {
+	  color: @color1;
+    /* margin-top: 4px;
+    margin-bottom: 4px; */
+    font-size: 14px;
+    background-color: @background;
+    border-radius: 5px 0px 0px 5px;
+} 
+#network:hover {
+	color: @foreground;
+	background: @color1;
+}
+
+ #network.disconnected {
+   /* background-color: #f53c3c; */
+} 
+
+#pulseaudio {
+    color: @color1;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: @background;
+}
+#pulseaudio:hover {
+    color: @foreground;
+    background: @color1;
+}
+
+#pulseaudio.muted {
+    color: #24273a;
+}
+
+#tray {
+   padding: 0px 10px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   background: @background;
+   border-radius: 5px;
+   margin-right: 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+   /* background-color: #eb4d4b; */
+}
+
+#language {
+    font-weight: bold;
+   /* margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px; */
+    background-color: @background;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#custom-power {
+    background-color: #343F44;
+    color: #A7C080;
+    border-radius: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 3px;
+}
+
+#custom-spotify {
+    background-color: #292c3c;
+    font-weight: bold;
+    border-radius: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
+
+#custom-logo {
+    background: @color1;
+    border-radius: 5px;
+    color: @foreground;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 5px;
+}
+#custom-logo:hover {
+    background: @foreground;
+    color: @background;
+}
+
+#window {
+    font-weight: bold;
+    color: @foreground;
+    background: @background;
+    margin-left: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
+    border-radius: 5px;
+}
+
+#custom-cava {
+   color: @foreground;
+   background: @color1;
+   min-height: 0px;
+   border-radius: 20px;
+   margin-right: 5px;
+   font-family: Hack Nerd font;
+}
+#custom-cava:hover {
+	color: @background;
+	background: @foreground;
+}
+
+#custom-separator {
+	color: #49464f;
+  background-color: @background;
+}
+
+#custom-notification {
+	color: @foreground;
+	font-size: 14px;
+  background: @color1;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+#custom-notification:hover {
+	background: @foreground;
+	color: @background;
+}
+
+#custom-picker {
+        color: @color1;
+        background-color: @background;
+        border-radius: 5px 0px 0px 5px;
+}
+#custom-picker:hover {
+	color: @foreground;
+	background: @color1;
+}
+
+#custom-playerctl-forward,
+#custom-playerctl-play,
+#custom-playerctl-backward {
+	padding: 0 3px;
+}
+#custom-playerctl-forward:hover,
+#custom-playerctl-backward:hover {
+	color: @foreground;
+}
+
+#custom-playerctl-play:hover {
+	color: @color1;
+}
+
+#custom-playerctl-forward,
+#custom-playerctl-backward {
+	color: @color1;
+}
+#custom-playerctl-play {
+  background: @background;
+	color: @foreground;
+}
+#custom-playerctl-backward {
+  background: @background;
+  border-radius: 20px 0px 0px 20px;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+#custom-playerctl-forward {
+  background: @background;
+  border-radius: 0px 24px 24px 0px;
+  padding-right: 5px;
+}
+
+#custom-weather {
+	color: @foreground;
+	font-weight: bold;
+  background-color: @background;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#custom-nwglook {
+	color: @color1;
+  background: @background;
+}
+#custom-nwglook:hover {
+	color: @foreground;
+	background: @color1;
+}
+
+#custom-playerlabel {
+	color: @foreground;
+	background: @color1;
+	border-radius: 24px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+#custom-search {
+    background: @color1;
+    border-radius: 24px 24px 13px 24px;
+    color: @foreground;
+    font-weight: bold;
+    font-size: 17;
+}
+#custom-search:hover {
+        background: @foreground;
+	color: @background;
+}
+#custom-monitor {
+	color: @color1;
+	background: @background;
+	font-weight: bold;
+	border-radius: 0px 5px 5px 0px;
+	margin-right: 5px;
+}
+#custom-monitor:hover {
+	color: @foreground;
+	background: @color1;
+}
