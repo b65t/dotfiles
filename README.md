@@ -10,17 +10,17 @@ just an hyprland dotfiles
 # what i use
 
 - Arch linux `distro`
-- Hyprland, Hypridle, Hyprlock `window manager, lock screen`
-- Kitty `term`
+- Sway, Swaylock-effects `window manager, lock screen`
+- foot `term`
 - Rofi `rofi-wayland`
 - Swaync `notifications`
 - Waybar `bar`
 - swww, rofi `background`
 - fastfetch `fetch`
-- helix, zed `text editor`
+- neovim `text editor`
 - grim and slurp `screen shot`
 - nwg-look `GTK`
-- nushell `shell`
+- fish `shell`
 
 # To do
 
