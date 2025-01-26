@@ -10,8 +10,6 @@
             "4": [],
             "5": [],
 	    "6": [],
-	    "7": [],
-	    "8": [],
      },
         "format-icons": {
           "focused": "",
@@ -39,7 +37,7 @@
         "spacing": 10
     },
  "clock": {
-        "format": "{:%H/%M %p}",
+        "format": " {:%H:%M%p}",
         // {: %A,%d/%m}
 	"on-click": "gnome-calendar",
 	"tooltip-format": "<tt>{calendar}</tt>",
@@ -129,8 +127,8 @@
 
       "sway/language": {
         "padding": 10,
-	"format-en": "US",
-	"format-ara": "AR",
+	"format-en": "us",
+	"format-ar": "ar",
     },
 
     "hyprland/window": {

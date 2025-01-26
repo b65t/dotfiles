@@ -1,6 +1,6 @@
 {
 
-    "include": "~/.config/waybar/bars/bar7/modules",
+    "include": "~/.config/waybar/bars/bar8/modules",
     "layer": "top",
     "exclusive": true,
     "passthrough": false,
@@ -9,7 +9,7 @@
     "ipc": true,
  //   "margin": 4,
     "spacing": 0,
-    "margin": "4 180 4 180",
+ //   "margin": "4 200 4 200",
     "reload_style_on_change": true,
     "height": 26,
 
@@ -19,7 +19,7 @@
   //    "group/music_controller",
       "cpu",
       "memory",
- //     "custom/picker",
+      "custom/picker",
       "custom/scratch",
       "sway/mode",
    ],
