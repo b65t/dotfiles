@@ -1,0 +1,9 @@
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term foot
+set $menu rofi -show drun
+set $swww ~/.config/scripts/swww-switcher.sh
+set $lblur blur enable; opacity 0.90 

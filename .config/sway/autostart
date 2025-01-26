@@ -1,0 +1,3 @@
+exec --no-startup-id swww-daemon --format xrgb
+exec --no-startuo-id swaync
+#exec foot --server
