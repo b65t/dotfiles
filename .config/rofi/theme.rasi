@@ -82,8 +82,8 @@ scrollbar {
     handle-width: 4px ;
     handle-color: @color1;
     border-radius: @color1;
-    background-color: @color2;
-    border-radius: 10px;
+    background-color: @background;
+    border-radius: 0px;
 }
 
 @import "~/.cache/wal/colors-rofi-dark.rasi"
