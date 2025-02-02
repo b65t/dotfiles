@@ -39,7 +39,7 @@
         "spacing": 10
     },
  "clock": {
-        "format": "{:%H/%M %p}",
+        "format": "{:%H/%M}",
         // {: %A,%d/%m}
 	"on-click": "gnome-calendar",
 	"tooltip-format": "<tt>{calendar}</tt>",
@@ -133,7 +133,7 @@
 	"format-ara": "AR",
     },
 
-    "hyprland/window": {
+    "sway/window": {
     "format": "{initialTitle}",
     "rewrite": {
 //	 "(.*)kitty": "󰄛 kitty",

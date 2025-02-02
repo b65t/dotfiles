@@ -10,11 +10,14 @@
             "4": [],
             "5": [],
 	    "6": [],
+	    "7": [],
+	    "8": [],
+	    "9": [],
      },
         "format-icons": {
-          "focused": "",
-          "default": "",
-	  "persistent": "",
+         // "focused": "",
+         // "default": "",
+	 // "persistent": "",
 	}
      },
         "river/tags": {
@@ -37,7 +40,7 @@
         "spacing": 10
     },
  "clock": {
-        "format": " {:%H:%M%p}",
+        "format": "{:%H:%M%p}",
         // {: %A,%d/%m}
 	"on-click": "gnome-calendar",
 	"tooltip-format": "<tt>{calendar}</tt>",
@@ -63,7 +66,7 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{icon}",
+        "format-wifi": "{ifname}",
         "format-disconnected": "Disconnected 󰤭",
 	"on-click": "kitty nmtui",
                 "format-icons": [
@@ -76,7 +79,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}",
+        "format": "{volume}%",
         "format-icons": {
             "default": [""]
         },
@@ -182,17 +185,17 @@
     },
 
   "memory" : {
-        "interval": 1,
-        "format": "{icon}",
-        "rotate": 270,
+      //  "interval": 1,
+        "format": "{}%",
+      //  "rotate": 270,
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
 	"tooltip": "memory"
 },
 
       "cpu": {
-        "interval": 1,
-	"format": "{icon}",
-        "rotate": 270,
+       // "interval": 1,
+	"format": "{usage}%",
+       // "rotate": 270,
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
 	"tooltip": "cpu"
    },
@@ -309,5 +312,23 @@
       },
         "sway/mode": {
         "format": "<span style=\"normal\">{}</span>"
+    },
+    "custom/cpuicon": {
+      "format": ""
+    }, 
+    "custom/memoryicon": {
+      "format": ""
+    },
+    "custom/clockicon": {
+      "format": "󰃰"
+    },
+    "custom/volicon": {
+      "format": ""
+    },
+    "custom/langicon": {
+      "format": "󰌌"
+    },
+    "custom/neticon": {
+      "format": "󰤨"
     }
 }

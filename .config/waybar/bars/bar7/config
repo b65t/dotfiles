@@ -19,9 +19,6 @@
   //    "group/music_controller",
       "cpu",
       "memory",
- //     "custom/picker",
-      "custom/scratch",
-      "sway/mode",
    ],
     "modules-center": [
        "sway/workspaces",

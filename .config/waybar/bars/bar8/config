@@ -15,24 +15,29 @@
 
     "modules-left": [
       "custom/logo",
-      "clock",
+      "sway/workspaces",
   //    "group/music_controller",
-      "cpu",
-      "memory",
-      "custom/picker",
       "custom/scratch",
       "sway/mode",
    ],
-    "modules-center": [
-       "sway/workspaces",
-    ],
+//    "modules-center": [
+//       "sway/workspaces",
+//    ],
     "modules-right": [
  //     "custom/cava",
-	    "tray",
+       "custom/cpuicon",
+       "cpu",
+       "custom/memoryicon",
+       "memory",
+        "custom/neticon",
         "network",
+	    "custom/volicon",
 	    "pulseaudio",
+	    "custom/langicon",
 	    "sway/language",
-//	    "clock",
+	    "custom/clockicon",
+	    "clock",
         "custom/notification",
+ 	    "tray",
     ],
 }

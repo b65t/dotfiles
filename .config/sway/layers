@@ -1,4 +1,4 @@
-layer_effects "waybar" blur enable; corner_radius 10 #9
+layer_effects "waybar" blur enable; corner_radius 0 #9
 
 for_window [class="firefox"] $lblur
 for_window [class="Spotify"] $lblur
