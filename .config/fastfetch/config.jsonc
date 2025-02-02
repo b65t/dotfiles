@@ -1,9 +1,9 @@
 {
 	"logo": {
-//	 "type": "kitty",
-         "source": "~/.config/fastfetch/frieren.txt",
-//	 "width": 17,
-//        "height": 13
+	 "type": "sixel",
+         "source": "~/.config/fastfetch/fetch3.png",
+	 "width": 22,
+         "height": 13
 	},
 	"display": {
         "separator": " ~ "
@@ -51,15 +51,20 @@
             "key": "",
             "keyColor": "blue"
         },
-	{
-	    "type": "initsystem",
-	    "key": "",
-	    "keyColor": "blue"
+//	{
+//	    "type": "initsystem",
+//	    "key": "",
+//	    "keyColor": "blue"
+//	},
+        {
+	   "type": "cpu",
+	   "key": "",
+	   "keyColor": "blue"
 	},
 	{
 	    "type": "memory",
 	    "key": "",
-	    "keyColor" : "blue"
+	    "keyColor": "blue"
 	},
         {
             "type": "custom",
