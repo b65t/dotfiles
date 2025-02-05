@@ -17,8 +17,8 @@
 - fastfetch `fetch`
 - neovim `text editor`
 - grim and slurp `screen shot`
-- nwg-look `GTK`
 - fish `shell`
+- kew `music`
 
 # To do
 
