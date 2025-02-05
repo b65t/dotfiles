@@ -1,0 +1,7 @@
+{
+    "custom/logo": {
+      "format": " ",
+       "on-click": "~/.config/scripts/powermenu.sh",
+       "tooltip": false
+   }
+}

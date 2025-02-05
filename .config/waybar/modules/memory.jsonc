@@ -1,0 +1,9 @@
+{
+  "memory" : {
+      //  "interval": 1,
+        "format": "{}%",
+      //  "rotate": 270,
+        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+	"tooltip": "memory"
+ }
+}

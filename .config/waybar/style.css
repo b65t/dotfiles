@@ -1,0 +1,16 @@
+@import '../../.cache/wal/colors-waybar.css';
+@import 'styles/init.css';
+
+* {
+    font-family:"noto sans nerd font"; 
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: alpha(@background, 0.90);
+   /* background: linear-gradient(-45deg, alpha(@background, 0.90) 60%, rgba(0, 0, 0, 0) 20%), alpha(@background, 0.92) no-repeat center; */
+    transition-duration: .5s;
+    border-radius: 0;
+   /* border: 2px solid @color1; */
+}

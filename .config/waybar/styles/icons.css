@@ -1,0 +1,31 @@
+#custom-memoryicon {
+	color: @foreground;
+        background: alpha(@color1, 0.25);
+	padding: 0 5;
+	font-size: 15;
+}
+#custom-cpuicon {
+        background: alpha(@color1, 0.25);
+        padding: 0 5;
+	font-size: 15;
+}
+#custom-clockicon {
+        background: alpha(@color1, 0.25);
+        padding: 0 5;
+	font-size: 15;
+}
+#custom-volicon {
+        background: alpha(@color1, 0.25);
+        padding: 0 5;
+	font-size: 15;
+}
+#custom-langicon {
+        background: alpha(@color1, 0.25);
+        padding: 0 5;
+	font-size: 15;
+}
+#custom-neticon {
+        background: alpha(@color1, 0.25);
+        padding: 0 5;
+	font-size: 15;
+}

@@ -1,0 +1,20 @@
+{
+   "custom/cpuicon": {
+      "format": ""
+    }, 
+    "custom/memoryicon": {
+      "format": ""
+    },
+    "custom/clockicon": {
+      "format": "󰃰"
+    },
+    "custom/volicon": {
+      "format": ""
+    },
+    "custom/langicon": {
+      "format": "󰇧"
+    },
+    "custom/neticon": {
+      "format": "󰤨"
+    }
+}

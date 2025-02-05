@@ -1,0 +1,9 @@
+#memory {
+    font-weight: bold;
+    color: @color1;
+    border-radius: 0px 8px 8px 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}

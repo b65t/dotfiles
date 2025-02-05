@@ -1,0 +1,19 @@
+#workspaces button {
+   color: @color1;
+   background: transparent;
+   border-radius: 0px;
+   font-weight: bold;
+   min-width: 0px;
+   padding: 0px 8px 0px 8px;
+}
+
+#workspaces button.empty {
+   color: @color8;
+   font-weight: bold;
+}
+
+#workspaces button.focused {
+   color: @foreground;
+   background: alpha(@color1, 0.25);
+   font-weight: bold; 
+} 

@@ -1,0 +1,40 @@
+{
+    "include": "~/.config/waybar/modules/init.jsonc",
+
+    "layer": "top",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "fixed-center": true,
+    "ipc": true,
+    "spacing": 0,
+    "reload_style_on_change": true,
+    "height": 26,
+
+    "modules-left": [
+      "custom/logo",
+      "sway/workspaces",
+      "custom/scratch",
+      "sway/mode",
+   ],
+
+    "modules-center": [
+       "custom/clockicon",
+       "clock",
+    ],
+
+    "modules-right": [
+       "custom/cpuicon",
+       "cpu",
+       "custom/memoryicon",
+       "memory",
+       "custom/neticon",
+       "network",
+       "custom/volicon",
+       "pulseaudio",
+       "custom/langicon",
+       "sway/language",
+       "custom/notification",
+       "tray",
+    ],
+}

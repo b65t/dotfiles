@@ -1,0 +1,6 @@
+{
+      "sway/language": {
+        "padding": 10,
+	"tooltip": false
+    }
+}

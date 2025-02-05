@@ -1,0 +1,9 @@
+{
+      "cpu": {
+       // "interval": 1,
+	"format": "{usage}%",
+       // "rotate": 270,
+        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+	"tooltip": "cpu"
+   }
+}

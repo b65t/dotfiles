@@ -1,0 +1,11 @@
+#custom-notification {
+    color: @foreground;
+    font-size: 14px;
+    background: alpha(@color1, 0.25);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+#custom-notification:hover {
+	background: @foreground;
+	color: @background;
+}

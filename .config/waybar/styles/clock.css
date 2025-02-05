@@ -1,0 +1,9 @@
+#clock {
+    font-weight: bold;
+    color: @color1;
+    padding: 0 5;
+}
+#clock:hover {
+    background: @color1;
+    color: @foreground;
+}
