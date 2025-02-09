@@ -1,9 +1,10 @@
 #clock {
     font-weight: bold;
-    color: @color1;
-    padding: 0 5;
+    color: @foreground;
+    padding: 0 10;
+    background: @background;
+    border-radius: 0 0 12 12;
 }
 #clock:hover {
-    background: @color1;
-    color: @foreground;
+    color: @color1;
 }

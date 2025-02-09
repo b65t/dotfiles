@@ -1,0 +1,6 @@
+{
+	"custom/mode": {
+   		"format": "", 
+   		"on-click": "hyprctl dispatch togglefloating",
+ }
+}

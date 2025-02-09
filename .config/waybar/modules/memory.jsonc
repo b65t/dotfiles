@@ -1,8 +1,8 @@
 {
   "memory" : {
-      //  "interval": 1,
-        "format": "{}%",
-      //  "rotate": 270,
+        "interval": 1,
+        "format": "{icon}",
+        "rotate": 270,
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
 	"tooltip": "memory"
  }

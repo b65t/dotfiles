@@ -1,9 +1,13 @@
 #network {
-    color: @foreground;
     font-size: 14px;
     padding: 0 5;
-    color: @color1;
+    color: @foreground;
     font-weight: bold;
+    background: alpha(@color1, 0.25);
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 0 12 12 0;
+    margin-right: 5;
 } 
 #network:hover {
 	color: @foreground;

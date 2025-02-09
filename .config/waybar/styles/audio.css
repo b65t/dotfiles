@@ -2,6 +2,10 @@
     color: @color1;
     font-weight: bold;
     padding: 0 4;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background: alpha(@color1, 0.25);
+    border-radius: 0;
 }
 #pulseaudio:hover {
     color: @foreground;

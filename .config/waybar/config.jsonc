@@ -13,28 +13,27 @@
 
     "modules-left": [
       "custom/logo",
-      "sway/workspaces",
-      "custom/scratch",
-      "sway/mode",
+      "hyprland/workspaces",
+      "custom/mode",
    ],
 
     "modules-center": [
-       "custom/clockicon",
-       "clock",
+      "custom/corners-1",
+      "clock",
+      "custom/corners-2",
     ],
 
     "modules-right": [
+       "tray",
        "custom/cpuicon",
        "cpu",
        "custom/memoryicon",
        "memory",
-       "custom/neticon",
-       "network",
        "custom/volicon",
        "pulseaudio",
        "custom/langicon",
-       "sway/language",
+       "hyprland/language",
+       "network",
        "custom/notification",
-       "tray",
     ],
 }

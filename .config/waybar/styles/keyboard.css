@@ -2,4 +2,7 @@
     font-weight: bold;
     color: @color1;
     padding: 0 5;
+    background: alpha(@color1, 0.25);
+    margin: 3 0;
+    border-radius: 0;
 }

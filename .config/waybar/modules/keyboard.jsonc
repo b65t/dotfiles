@@ -1,6 +1,8 @@
 {
-      "sway/language": {
+      "hyprland/language": {
         "padding": 10,
-	"tooltip": false
+	"tooltip": false,
+        "format-en": "us",
+	"format-ar": "ar",
     }
 }
