@@ -3,16 +3,14 @@ if status is-interactive
 end
 
 function fish_prompt
-     set_color blue
-        printf "-[%s]" (prompt_pwd)
-        echo ' 
-> '
+printf '%s' (set_color normal) (set_color -b black) " " (set_color normal) (set_color -o green) (set_color -b black) (prompt_pwd) (set_color normal) (set_color normal) (set_color -o green) (set_color -b black) " ❯❯ " (set_color normal) " "
 end
 
 alias ls="eza --icons"
-alias tree="eza --icons --tree"
+alias t="eza --icons --tree"
 alias c="clear"
-alias nv="nvim"
-alias fm="yazi"
-
-starship init fish | source
+alias n="nvim"
+alias ..="cd .."
+alias ds="doas pacman -S"
+alias dr="doas pacman -Rns"
+alias dsy="doas pacman -Syu"
