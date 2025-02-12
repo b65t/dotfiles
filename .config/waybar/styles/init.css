@@ -9,5 +9,6 @@
 @import './logo.css';
 @import './icons.css';
 @import './notification.css';
-@import './mode.css';
+@import './buttons.css';
 @import './corners.css';
+@import './disk.css';

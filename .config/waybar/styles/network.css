@@ -3,11 +3,7 @@
     padding: 0 5;
     color: @foreground;
     font-weight: bold;
-    background: alpha(@color1, 0.25);
-    margin-top: 3px;
-    margin-bottom: 3px;
-    border-radius: 0 12 12 0;
-    margin-right: 5;
+    padding-right: 8;
 } 
 #network:hover {
 	color: @foreground;

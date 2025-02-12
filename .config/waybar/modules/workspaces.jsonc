@@ -15,9 +15,9 @@
 	    "9": [],
       },
        "format-icons": {
-          "active": "",
-          "default": "",
-	  "empty": "",
+          "active": "󰻂",
+          "default": "󰻂",
+	  "empty": "󰻂",
 	},
      },
 }

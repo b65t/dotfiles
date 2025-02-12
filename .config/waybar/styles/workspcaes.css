@@ -7,8 +7,9 @@
    background-color: @background;
    border-radius: 20px;
    font-size: 0px; */
- border-radius: 1rem;
-    padding: 0.477rem;
+    border-radius: 0 0 12 12;
+    padding: 0 12;
+    background-color: @background;
 }
 
 #workspaces button {
@@ -17,9 +18,10 @@
    font-weight: bold;
    min-width: 0px;*/
     padding: 0px 3px 0px 3px;
-    border-radius: 1rem;
-    margin: 0 0.0rem;
-    transition: 0.2s;
+  /*  border-radius: 1rem; */
+ /*   margin-top: 0.477rem;
+    margin-bottom: 0.477rem; */
+   font-weight: bold;
 }
 
 #workspaces button.empty {
@@ -28,9 +30,9 @@
 }
 
 #workspaces button.active {
-   color: @color1;
-   background: @color1;
+   color: @foreground;
+ /*  background: @color1; */
    font-weight: bold;
-   padding: 0 1rem;
+  /* padding: 0 1rem; */
 } 
 

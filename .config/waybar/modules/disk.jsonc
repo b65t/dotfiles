@@ -1,0 +1,6 @@
+{
+      "disk": {
+	"format": "{used}",
+	"tooltip": "disk"
+   }
+}

@@ -3,7 +3,7 @@
     color: @foreground;
     padding: 0 10;
     background: @background;
-    border-radius: 0 0 12 12;
+    border-radius: 0 12 0 12;
 }
 #clock:hover {
     color: @color1;

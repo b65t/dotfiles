@@ -16,5 +16,14 @@
     },
     "custom/neticon": {
       "format": "󰤨"
+    },
+    "custom/diskicon": {
+      "format": "󰋊"
+    },
+    "custom/sep1": {
+      "format": "∣"
+    },
+    "custom/sep2": {
+      "format": "∣"
     }
 }

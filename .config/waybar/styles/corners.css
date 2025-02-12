@@ -11,3 +11,17 @@
     border-radius: 100%;
     box-shadow:  -14px -19px 0 2 @background;
 }
+
+#custom-corners-3 {
+    background-color: transparent;
+    padding: 0 10;
+    border-radius: 100%;
+    box-shadow:  14px 19px 0 2 @background;
+}
+
+#custom-corners-4 {
+    background-color: transparent;
+    padding: 0 10;
+    border-radius: 100%;
+    box-shadow:  -14px 19px 0 2 @background;
+}

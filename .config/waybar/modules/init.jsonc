@@ -11,7 +11,8 @@
         "~/.config/waybar/modules/logo.jsonc",
         "~/.config/waybar/modules/icons.jsonc",
         "~/.config/waybar/modules/notification.jsonc",
-        "~/.config/waybar/modules/mode.jsonc",
-        "~/.config/waybar/modules/corners.jsonc"
+        "~/.config/waybar/modules/buttons.jsonc",
+        "~/.config/waybar/modules/corners.jsonc",
+        "~/.config/waybar/modules/disk.jsonc"
     ]
 }
