@@ -1,9 +1,0 @@
-include "$HOME/.cache/wal/colors-sway"
-include ~/.config/sway/set
-include ~/.config/sway/binds
-include ~/.config/sway/style
-include ~/.config/sway/layers
-include ~/.config/sway/autostart
-include ~/.config/sway/settings
-
-include /etc/sway/config.d/*
