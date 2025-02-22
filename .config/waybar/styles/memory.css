@@ -1,0 +1,10 @@
+#memory {
+    font-weight: bold;
+    color: @color1;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: @color8;
+    font-size: 20;
+    border-radius: 0 8 8 0;
+    margin: 3 0 3 0;
+}

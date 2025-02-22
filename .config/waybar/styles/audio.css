@@ -1,0 +1,17 @@
+#pulseaudio {
+    color: @foreground;
+    font-weight: bold;
+    padding: 0 3;
+    border-radius: 8 0 0 8;
+    margin: 3 0 3 0;
+    background: @color8;
+    font-size: 14px;
+}
+#pulseaudio:hover {
+    color: @foreground;
+    background: @color1;
+}
+
+#pulseaudio.muted {
+    color: #24273a;
+}

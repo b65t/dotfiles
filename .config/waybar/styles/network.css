@@ -1,0 +1,12 @@
+#network {
+    font-size: 14px;
+    padding: 0 3;
+    color: @foreground;
+  /*  font-weight: bold; */
+    background: @color8;
+    margin: 3 0 3 0;
+} 
+#network:hover {
+	color: @foreground;
+	background: @color1;
+}

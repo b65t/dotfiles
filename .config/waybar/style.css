@@ -1,0 +1,20 @@
+@import '../../.cache/wal/colors-waybar.css';
+@import 'styles/init.css';
+
+* {
+    font-family: "noto sans nerd font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @background;
+    border-radius: 0 0 10 10;
+}
+
+/*.modules-left {
+    background: @background;
+    transition-duration: .5s;
+    border-radius: 0;
+    min-height: 0;
+}*/

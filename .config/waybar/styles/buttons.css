@@ -1,0 +1,77 @@
+#custom-mode {
+    font-weight: bold;
+    color: @color1;
+    padding-left: 12px;
+    padding-right: 5px;
+    font-size: 15;
+    margin: 3 0;
+}
+
+#custom-mode:hover {
+    color: @foreground;
+}
+
+#custom-clipboard {
+    font-weight: bold;
+    color: @color1;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15;
+    margin: 3 0;
+}
+
+#custom-clipboard:hover {
+    color: @foreground;
+}
+
+#custom-picker {
+    font-weight: bold;
+    color: @color1;
+    padding-left: 5px;
+    padding-right: 12px;
+    font-size: 14;
+    margin: 3 0;
+}
+
+#custom-picker:hover {
+    color: @foreground;
+}
+
+#custom-search {
+    font-weight: bold;
+    color: @color1;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14;
+    margin: 3 0;
+}
+
+#custom-search:hover {
+    color: @foreground;
+}
+
+#custom-files {
+    font-weight: bold;
+    color: @color1;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-size: 16;
+    margin: 3 0;
+}
+
+#custom-files:hover {
+    color: @color1;
+}
+
+#custom-exit {
+    font-weight: bold;
+    color: @color1;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-size: 15;
+    margin: 3 0;
+}
+
+#custom-exit:hover {
+    color: @foreground;
+}

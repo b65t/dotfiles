@@ -1,0 +1,9 @@
+#disk {
+    font-weight: bold;
+    color: @color1;
+    border-radius: 0;
+    padding-left: 2px;
+    padding-right: 9px;
+    background: @background;
+    border-radius: 0 0 12 0;
+}

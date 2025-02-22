@@ -1,0 +1,15 @@
+{
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{icon}",
+        "format-disconnected": "󰤭",
+	"on-click": "kitty nmtui",
+                "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ]
+    },
+}

@@ -1,0 +1,13 @@
+#custom-notification {
+    color: @foreground;
+    font-size: 14px;
+    font-weight: bold;
+    background: @color8;
+    margin: 3 3 3 0;
+    border-radius: 0 8 8 0;
+    padding: 0 3;
+}
+#custom-notification:hover {
+	background: @foreground;
+	color: @background;
+}
