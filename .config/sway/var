@@ -1,0 +1,29 @@
+set {
+
+# Logo key. Use Mod1 for Alt.
+$mod Mod4
+
+# Home row direction keys, like vim
+
+$left h
+$down j
+$up k
+$right l
+
+# Your preferred terminal emulator
+$term foot
+
+# Your preferred application launcher
+$menu rofi -show drun
+
+# Background
+$swww ~/.config/scripts/swww-switcher.sh
+
+# Waybar
+$waybar exec ~/.config/scripts/waybar.sh 
+
+# ScreenShot
+$screenshot grim -| wl-copy && notify-send "Screenshot taken" "check your clipboard"
+$partial-screenshot grim -g "$(slurp)" - | wl-copy && notify-send "Screenshot taken" "check your clipboard"
+
+}
