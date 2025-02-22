@@ -1,8 +1,0 @@
-{
-      "hyprland/language": {
-        "padding": 10,
-	"tooltip": false,
-        "format-en": "us",
-	"format-ar": "ar",
-    }
-}
