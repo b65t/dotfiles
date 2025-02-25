@@ -3,4 +3,4 @@ input * {
     xkb_options "grp:alt_shift_toggle"
 }
 
-xwayland disable
+xwayland enable

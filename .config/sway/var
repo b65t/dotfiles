@@ -26,4 +26,7 @@ $waybar exec ~/.config/scripts/waybar.sh
 $screenshot grim -| wl-copy && notify-send "Screenshot taken" "check your clipboard"
 $partial-screenshot grim -g "$(slurp)" - | wl-copy && notify-send "Screenshot taken" "check your clipboard"
 
+# clipshist
+$clipshist cliphist list | rofi -dmenu -p history | cliphist decode | wl-copy
+
 }

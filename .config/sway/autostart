@@ -2,6 +2,8 @@ exec {
     waybar
     swww-daemon --format xrgb
     swaync
+    wl-paste --type text --watch cliphist store
+    wl-paste --type image --watch cliphist store
 }
 
  exec swayidle -w \

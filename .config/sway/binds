@@ -19,6 +19,8 @@ bindsym {
 
     print exec $screenshot
     Shift+print exec $partial-screenshot
+
+    $mod+c exec $clipshist
 }
 
 # Moving around:
