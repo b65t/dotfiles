@@ -1,9 +1,12 @@
 {
 	"logo": {
-	 "type": "sixel",
-         "source": "~/.config/fastfetch/fetch3.png",
-	 "width": 22,
-         "height": 13
+//	 "type": "sixel",
+         "source": "~/.config/fastfetch/coffee.txt",
+//	 "width": 22,
+//       "height": 13
+         "padding": {
+             "top": 2
+         }
 	},
 	"display": {
         "separator": " ~ "
@@ -56,17 +59,17 @@
 //	    "key": "",
 //	    "keyColor": "blue"
 //	},
-        {
-	   "type": "cpu",
-	   "key": "",
-	   "keyColor": "blue"
-	},
-	{
-	    "type": "memory",
-	    "key": "",
-	    "keyColor": "blue"
-	},
-        {
+//        {
+//	   "type": "cpu",
+//	   "key": "",
+//	   "keyColor": "blue"
+//	},
+//	{
+//	    "type": "memory",
+//	    "key": "",
+//	    "keyColor": "blue"
+//	},
+       {
             "type": "custom",
 	    "keyColor": "blue",
             "format": "\u001b[90m▂▂  \u001b[31m▂▂  \u001b[32m▂▂  \u001b[33m▂▂  \u001b[34m▂▂  \u001b[35m▂▂  \u001b[36m▂▂  \u001b[37m▂▂ "
