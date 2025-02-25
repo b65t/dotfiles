@@ -24,6 +24,7 @@
    margin-top: 0.333rem;
    margin-bottom: 0.333rem;
    font-weight: bold;
+   box-shadow: 0px 0px 3px @background;
 }
 
 #workspaces button.empty {
@@ -40,4 +41,9 @@
    margin-bottom: 0.5px; */
    font-weight: bold;
    background: @color1;
+}
+
+#workspaces button:hover {
+    transition: all 0.25s;
+    background: @color1;
 }

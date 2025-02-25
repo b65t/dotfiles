@@ -12,6 +12,13 @@ window#waybar {
     border-radius: 0 0 10 10;
 }
 
+tooltip {
+  margin: 2px;
+  background: @background;
+  color: @foreground;
+  border: 1px solid @foreground;
+}
+
 /*.modules-left {
     background: @background;
     transition-duration: .5s;

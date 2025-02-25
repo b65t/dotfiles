@@ -28,6 +28,7 @@
 
     "modules-right": [
       "group/drawer1",
+      "privacy",
       "pulseaudio",
       "network",
       "custom/notification",

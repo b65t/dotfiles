@@ -5,3 +5,10 @@
    margin-top: 3px;
    margin-bottom: 3px;
 }
+
+#tray menu {
+  background: @background;
+  margin: 2px;
+  padding: 5px;
+  border: 1px solid @foreground;
+}

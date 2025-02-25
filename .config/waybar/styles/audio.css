@@ -6,10 +6,12 @@
     margin: 3 0 3 0;
     background: @color8;
     font-size: 14px;
+    text-shadow: 2px 2px 2px @background;
 }
 #pulseaudio:hover {
     color: @foreground;
     background: @color1;
+    transition: all 0.25s linear;
 }
 
 #pulseaudio.muted {

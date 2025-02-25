@@ -7,4 +7,5 @@
     background: @color8;
     font-size: 20;
     margin: 3 0 3 5;
+    text-shadow: 2px -2px 3px @background;
 }

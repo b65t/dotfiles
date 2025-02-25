@@ -5,8 +5,10 @@
   /*  font-weight: bold; */
     background: @color8;
     margin: 3 0 3 0;
+    text-shadow: 2px 2px 2px @background;
 } 
 #network:hover {
-	color: @foreground;
-	background: @color1;
+    color: @foreground;
+    background: @color1;
+    transition: all 0.25s linear;
 }
