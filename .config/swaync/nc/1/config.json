@@ -88,26 +88,22 @@
             "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰤨",
-                    "command": "kitty nmtui"
+                    "label": "󰤨 network",
+                    "command": "foot nmtui"
                 },
                 {
-                    "label": "󰕾",
+                    "label": "󰕾 sound",
                     "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         
                 },
 		{
-                    "label": "󰍭",
+                    "label": "󰍭 mute",
                     "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
                     "type": "toggle"
                 },
 		{
-		   "label": "",
+		   "label": " background",
 		   "command": "~/.config/scripts/swww-switcher.sh"
-		},
-		{
-		   "label": "󰞅",
-		   "command": "rofi -show emoji -modi"
 		}
 	     ]
 	},

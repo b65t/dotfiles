@@ -16,7 +16,7 @@
 
 
 * {
-  font-size: 16px;
+  font-size: 15px;
   font-family: "noto sans nerd font";
 }
 
@@ -41,7 +41,6 @@
   border-radius: 100%;
   margin-top: 5px;
   margin-right: 5px;
-  box-shadow: none;
   border: none;
   min-width: 24px;
   min-height: 24px;
@@ -56,11 +55,12 @@
 
 .notification-row .notification-background .notification {
   /* The actual notification */
-  border-radius: 14px;
+  border-radius: 15px;
   border: 2px solid @color1;
   padding: 0;
   transition: background 0.15s ease-in-out;
   background: @background;
+  box-shadow: 5px 5px 2px @background;
 }
 
 .notification-row .notification-background .notification.low {
@@ -92,18 +92,18 @@
 
 .notification-row .notification-background .notification .notification-default-action {
   /* The large action that also displays the notification summary and body */
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .notification-row .notification-background .notification .notification-default-action:not(:only-child) {
   /* When alternative actions are visible */
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content {
   background: transparent;
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 4px;
 }
 
@@ -180,7 +180,7 @@
   margin-left: 4px;
   background: @background;
   border: 2px solid @color1;
-  border-radius: 12px;
+  border-radius: 0px;
   color: @foreground;
 }
 
@@ -198,7 +198,7 @@
 .notification-row .notification-background .notification .notification-action {
   /* The alternative actions below the default action */
   border-top: 2px solid @color1;
-  border-radius: 0px;
+  border-radius: 15px;
   border-right: 2px solid @color1;
 }
 
@@ -271,8 +271,9 @@
   /* The Control Center which contains the old notifications + widgets */
   background: @background;
   color: @foreground;
-  border-radius: 20px;
+  border-radius: 15px;
   border: 2px solid @color1;
+  font-size: 11px;
 }
 
 .control-center .control-center-list-placeholder {
@@ -325,9 +326,9 @@
   color: @foreground;
   text-shadow: none;
   background: @background;
-  border: 2px solid @color1;
   box-shadow: none;
-  border-radius: 11px;
+  border: 0;
+  border-radius: 15px;
   padding: 5px;
 }
 
@@ -344,7 +345,7 @@
 
 .widget-dnd > switch {
   font-size: initial;
-  border-radius: 12px;
+  border-radius: 15px;
   background: @background;
   border: 2px solid @color1;
   box-shadow: none;
@@ -356,7 +357,7 @@
 
 .widget-dnd > switch slider {
   background: @color2;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 /* Label widget */
@@ -420,20 +421,22 @@
 
 /* Buttons widget */
 .widget-buttons-grid {
-  font-size: 20px;
-  padding: 8px;
-  margin: 10;
-  border-radius: 20px;
-  background-color: alpha (@color1, 0.50);
+  font-size: 88px;
+  padding: 5px;
+  margin: 5;
+  border-radius: 15px;
+ /* background-color: alpha (@color8, 0.50); */
  /* border: 2px solid @color1; */
+  background-color: transparent;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
-  background: alpha (@background, 0.20);
-  border-radius: 20px;
-  margin: 0 0 0 9;
-  padding: 9px;
+  background: @color1;
+  border-radius: 15px;
+  margin: 0 0 0 3;
+  padding: 10px;
   color: @foreground;
+  box-shadow: 2px 2px 3px #000000;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
@@ -475,7 +478,7 @@
 /* Volume widget */
 
 trough {
-  border-radius: 20px;
+  border-radius: 15px;
   background: @background;
 }
 
@@ -484,7 +487,7 @@ trough highlight {
   padding-top: 1px;
   background: @color1;
   border: 1px solid @color1;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 trough slider {
@@ -530,3 +533,4 @@ trough slider:hover {
 .widget-inhibitors > button:hover {
   background: @color2;
 }
+
