@@ -6,11 +6,12 @@
 }
 
 window {
-    width: 420px;
-    height: 237px;
-    border-radius: 10;
-    border: 2px;
+    width: 400px;
+    border-radius: 15;
+    border: 0px;
     border-color: @color1;
+    y-offset: 50px;
+    background-color: @background;
 }
 
 mainbox {
@@ -25,10 +26,11 @@ message {
 
 inputbar {
     text-color: @foreground;
-    padding: 5px;
-    margin: 2px;
+    padding: 0px;
+    margin: 0px;
     background-color: @background;
     border-radius: 10px;
+    border-color: @foreground;
     border: 2;
 }
 
@@ -40,26 +42,29 @@ entry,prompt,case-indicator {
 }
 
 listview {
-    padding: 4px;
+    padding: 7px;
     background-color: transparent;
     border: 0;
-    scrollbar: true;
+    scrollbar: false;
+    dynamic: true;
+    lines: 4;
+    fixed-height: false;
 }
 
 prompt {
     enabled: true;
-    background-color: @color1;
-    padding: 4px;
-    border-radius: 10px;
-    text-color: @background;
+    background-color: @background;
+    text-color: @foreground;
+    padding: 5px;
+    border-radius: 100px;
 }
 
 
 element {
-    padding: 8px;
+    padding: 6px;
     color: @foreground;
     font: inherit;
-    border-radius: 10;
+    border-radius: 13;
     background-color: transparent;
 }
 
@@ -76,8 +81,14 @@ element selected.normal {
 element-text, element-icon {
     background-color: inherit;
     color: inherit;
-    size: 21px;
+    size: 30px;
 }
+
+element-text {
+    margin: 3 0 0 0;
+    size: 50px;
+}
+
 scrollbar {
     handle-width: 4px ;
     handle-color: @color1;
