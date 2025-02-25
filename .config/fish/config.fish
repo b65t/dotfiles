@@ -4,10 +4,11 @@ end
 
 function fish_prompt
 printf  '%s' \
-   (set_color normal) (set_color -b green) " " \
+   (set_color normal) (set_color -o green) "" \
+   (set_color normal) (set_color -o black) (set_color -b green) " " \
    (set_color normal) (set_color -o black) (set_color -b green) (prompt_pwd) \
-   (set_color normal) (set_color -o black) (set_color -b green) " ❯❯ " \
-   (set_color normal) " " 
+   (set_color normal) (set_color -o green) "" \
+   (set_color normal) (set_color -o green) " ❯❯ " 
 end
 
 alias ls="eza --icons"
