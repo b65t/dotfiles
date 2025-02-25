@@ -1,9 +1,9 @@
 {
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}%",
+        "format": "{icon}",
         "format-icons": {
-            "default": [""]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     },

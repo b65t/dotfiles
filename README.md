@@ -8,7 +8,7 @@
 # what i use
 
 - Arch linux `distro`
-- Hyprland, Hyprlock, Hypridle `window manager, lock screen`
+- sway, swaylock `window manager, lock screen`
 - foot `term`
 - Rofi `rofi-wayland`
 - Swaync `notifications`

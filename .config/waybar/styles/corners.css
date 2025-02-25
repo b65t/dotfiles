@@ -2,26 +2,26 @@
     background-color: transparent;
     padding: 0 10;
     border-radius: 100%;
-    box-shadow: 14px -19px 0px 2px @background;
+    box-shadow: 14px -19px 0px 2px @color8;
 } 
 
 #custom-corners-2 {
     background-color: transparent;
     padding: 0 10;
     border-radius: 100%;
-    box-shadow:  -14px -19px 0 2 @background;
+    box-shadow:  -14px -19px 0 2 @color8;
 }
 
 #custom-corners-3 {
     background-color: transparent;
     padding: 0 10;
     border-radius: 100%;
-    box-shadow:  14px 19px 0 2 @background;
+    box-shadow:  14px 19px 0 2 @color8;
 }
 
 #custom-corners-4 {
     background-color: transparent;
     padding: 0 10;
     border-radius: 100%;
-    box-shadow:  -14px 19px 0 2 @background;
+    box-shadow:  -14px 19px 0 2 @color8;
 }

@@ -3,7 +3,7 @@
     color: @color1;
     padding-left: 12px;
     padding-right: 5px;
-    font-size: 16;
+    font-size: 15;
     margin: 3 0;
 }
 
@@ -16,7 +16,7 @@
     color: @color1;
     padding-left: 5px;
     padding-right: 5px;
-    font-size: 16;
+    font-size: 15;
     margin: 3 0;
 }
 
@@ -68,7 +68,7 @@
     color: @color1;
     padding-left: 5px;
     padding-right: 7px;
-    font-size: 16;
+    font-size: 15;
     margin: 3 0;
 }
 

@@ -1,9 +1,11 @@
 #memory {
     font-weight: bold;
     color: @color1;
-    padding-left: 2px;
-    padding-right: 2px;
-    background: @background;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: @color8;
     font-size: 20;
-    border-radius: 0 0 0 0;
+    border-radius: 0 8 8 0;
+    margin: 3 0 3 0;
+    text-shadow: 2px -2px 3px @background;
 }

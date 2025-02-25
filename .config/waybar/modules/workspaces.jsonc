@@ -1,5 +1,5 @@
 {
-       "hyprland/workspaces": {
+       "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
         "format": "{icon}",
@@ -10,14 +10,11 @@
             "4": [],
             "5": [],
 	    "6": [],
-	    "7": [],
-	    "8": [],
-	    "9": [],
       },
        "format-icons": {
-          "active": "󰻂",
-          "default": "󰻂",
-	  "empty": "󰻂",
+          "focused": "",
+          "default": "",
+	  "empty": "",
 	},
      },
 }

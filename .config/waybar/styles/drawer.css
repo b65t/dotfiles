@@ -1,0 +1,7 @@
+#custom-drawer1 {
+   /* font-weight: bold; */
+    color: @foreground;
+    font-size: 14;
+    margin-right: 5;
+    text-shadow: 2px 2px 2px @background;
+}

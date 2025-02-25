@@ -2,15 +2,26 @@
 @import 'styles/init.css';
 
 * {
-    font-family:"noto sans nerd font";
+    font-family: "noto sans nerd font";
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    background: alpha(@background, 0.83);
-   /* background: linear-gradient(-45deg, alpha(@background, 0.90) 60%, rgba(0, 0, 0, 0) 20%), alpha(@background, 0.92) no-repeat center; */
+    background: @background;
+    border-radius: 0 0 10 10;
+}
+
+tooltip {
+  margin: 2px;
+  background: @background;
+  color: @foreground;
+  border: 1px solid @foreground;
+}
+
+/*.modules-left {
+    background: @background;
     transition-duration: .5s;
     border-radius: 0;
-   /* border: 2px solid @color1; */
-}
+    min-height: 0;
+}*/

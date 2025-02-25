@@ -1,9 +1,11 @@
 #cpu {
     font-weight: bold;
-    color: @color1;
-    border-radius: 0;
-    padding-left: 2px;
-    padding-right: 2px;
-    background: @background;
+    color: @color2;
+    border-radius: 8 0 0 8;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: @color8;
     font-size: 20;
+    margin: 3 0 3 5;
+    text-shadow: 2px -2px 3px @background;
 }

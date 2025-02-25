@@ -1,0 +1,20 @@
+{
+"group/drawer1": {
+     "orientation": "horizontal",
+     "drawer": {
+         "transition-duration": 600,
+         "children-class": "drawer1",
+         "transition-left-to-right": false,
+         "click-to-reveal": false
+     },
+     "modules": [
+	     "custom/drawer1",
+	     "tray",
+     ]
+  },
+
+    "custom/drawer1": {
+      "tooltip": false,
+      "format": "",
+    },
+}

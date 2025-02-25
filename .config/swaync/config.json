@@ -1,15 +1,15 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-  "positionX": "center",
-  "positionY": "top",
+  "positionX": "right",
+  "positionY": "bottom",
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
   "cssPriority": "application",
   "control-center-margin-top": 5,
-  "control-center-margin-bottom": 5,
-  "control-center-margin-right": 5,
-  "control-center-margin-left": 0,
+  "control-center-margin-bottom": 50,
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 5,
   "notification-2fa-action": true,
   "notification-inline-replies": false,
   "notification-icon-size": 64,
@@ -51,21 +51,20 @@
     "dnd",
     "menubar#label",
     "buttons-grid",
-    "volume",
     "title",
     "notifications",
-    "mpris"
+    "volume"
   ],
   "widget-config": {
     "inhibitors": {
       "text": "Inhibitors",
-      "button-text": "",
+      "button-text": " Delete",
       "clear-all-button": true
     },
     "title": {
-      "text": "Notifications",
+      "text": "Notifs",
       "clear-all-button": true,
-      "button-text": ""
+      "button-text": " Delete"
     },
     "dnd": {
       "text": "Do Not Disturb"
@@ -88,26 +87,22 @@
             "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰤨",
-                    "command": "kitty nmtui"
+                    "label": "󰤨 network",
+                    "command": "foot nmtui"
                 },
                 {
-                    "label": "󰕾",
+                    "label": "󰕾 sound",
                     "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         
                 },
 		{
-                    "label": "󰍭",
+                    "label": "󰍭 mute",
                     "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
                     "type": "toggle"
                 },
 		{
-		   "label": "",
+		   "label": " background",
 		   "command": "~/.config/scripts/swww-switcher.sh"
-		},
-		{
-		   "label": "󰞅",
-		   "command": "rofi -show emoji -modi"
 		}
 	     ]
 	},

@@ -2,9 +2,13 @@
     font-weight: bold;
     color: @foreground;
     padding: 0 10;
-    background: @background;
-    border-radius: 0 12 0 12;
+    background: @color8;
+    margin: 3 0 3 0;
+    border-radius: 8;
+    text-shadow: 2px 2px 2px @background;
 }
 #clock:hover {
-    color: @color1;
+    color: @foreground;
+    background: @color1;
+    transition: all 0.25s linear;
 }

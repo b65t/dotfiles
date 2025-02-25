@@ -12,11 +12,11 @@ configuration {
 window {
     width: 420px;
     height: 720px;
-    border-radius: 20;
+    border-radius: 15;
     border: 0px;
     border-color: @color1;
     margin: 0px 0px 0px 5px;
-    background-color: @background-alt;
+    background-color: @background;
 }
 
 mainbox {
@@ -26,14 +26,14 @@ mainbox {
 }
 
 message {
-  background: @background-alt;
+  background: @background;
 }
 
 inputbar {
     text-color: @foreground;
-    background-color: @background-alt;
-    border-radius: 10px;
-    border: 0;
+    background-color: @background;
+    border-radius: 15px;
+    border: 0.5;
     margin: 10;
 }
 
@@ -53,7 +53,7 @@ listview {
     columns: 2;
     scrollbar: true;
     border: 0px solid;
-    border-radius: 0px;
+    border-radius: 15px;
     layout: vertical;
 }
 
@@ -70,7 +70,7 @@ element {
     color: @foreground;
     font: inherit;
     background-color: @background;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 element-text {
@@ -93,7 +93,7 @@ scrollbar {
     handle-width: 4px ;
     handle-color: @color1;
     background-color: @background-alt;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 @import "~/.cache/wal/colors-rofi-dark.rasi"

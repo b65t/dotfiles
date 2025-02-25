@@ -7,32 +7,43 @@
    background-color: @background;
    border-radius: 20px;
    font-size: 0px; */
-    border-radius: 0 0 12 12;
-    padding: 0 12;
-    background-color: @background;
+    border-radius: 0;
+   padding: 0px 10px 0px 10px;
+   background: @color8;
+   border-radius: 0 0 8 8;
 }
 
 #workspaces button {
+   background: @foreground;
+   border-radius: 8px;
+   /*border: 1.5px solid @color1;*/
    color: @color1;
-/*   border-radius: 9px;
+   padding: 0px 10px 0px 10px;
+   margin-right: 2px;
+   margin-left: 2px;
+   margin-top: 0.333rem;
+   margin-bottom: 0.333rem;
    font-weight: bold;
-   min-width: 0px;*/
-    padding: 0px 3px 0px 3px;
-  /*  border-radius: 1rem; */
- /*   margin-top: 0.477rem;
-    margin-bottom: 0.477rem; */
-   font-weight: bold;
+   box-shadow: 0px 0px 3px @background;
 }
 
 #workspaces button.empty {
-   color: @color8;
+   /*border: 1.7px solid @foreground;*/
    font-weight: bold;
+   padding: 0px;
 }
 
-#workspaces button.active {
-   color: @foreground;
- /*  background: @color1; */
+#workspaces button.focused {
+   color: @color1;
+   padding-right: 25px;
+   padding-left: 25px;
+  /* margin-top: 0.5px;
+   margin-bottom: 0.5px; */
    font-weight: bold;
-  /* padding: 0 1rem; */
-} 
+   background: @color1;
+}
 
+#workspaces button:hover {
+    transition: all 0.25s;
+    background: @color1;
+}
