@@ -50,4 +50,5 @@
 #custom-sep2 {
 	font-size: 15;
         color: @color8;
+	margin-right: 3px;
 }

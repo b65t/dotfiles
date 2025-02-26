@@ -8,4 +8,8 @@
     border-radius: 0 8 8 0;
     margin: 3 0 3 0;
     text-shadow: 2px -2px 3px @background;
+    background-image: url("../icons/memory.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
 }

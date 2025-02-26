@@ -4,7 +4,7 @@
     "layer": "top",
     "exclusive": true,
     "passthrough": false,
-    "position": "top",
+    "position": "bottom",
     "fixed-center": true,
     "ipc": true,
     "spacing": 0,
@@ -21,14 +21,16 @@
    ],
 
     "modules-center": [
-      "custom/corners-1",
-      "sway/workspaces",
-      "custom/corners-2",
+     // "custom/corners-3",
+      "sway/workspaces"
+     // "custom/corners-4",
     ],
 
     "modules-right": [
       "group/drawer1",
-      "privacy",
+      "sway/language",
+      "custom/picker",
+ //     "privacy",
       "pulseaudio",
       "network",
       "custom/notification",

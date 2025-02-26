@@ -1,6 +1,6 @@
 #language {
     font-weight: bold;
-    color: @color1;
+    color: @foreground;
     padding: 0 5;
     border-radius: 0;
 }

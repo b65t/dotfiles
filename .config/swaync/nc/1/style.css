@@ -56,11 +56,11 @@
 .notification-row .notification-background .notification {
   /* The actual notification */
   border-radius: 15px;
-  border: 2px solid @color1;
+  border: 1px solid @background;
   padding: 0;
   transition: background 0.15s ease-in-out;
   background: @background;
-  box-shadow: 5px 5px 2px @background;
+  box-shadow: 5px 5px 2px #000000;
 }
 
 .notification-row .notification-background .notification.low {

@@ -9,7 +9,7 @@
 
 window#waybar {
     background: @background;
-    border-radius: 0 0 10 10;
+    border-radius: 10 10 0 0;
 }
 
 tooltip {

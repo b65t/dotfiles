@@ -1,7 +1,7 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-  "positionX": "right",
-  "positionY": "bottom",
+  "positionX": "center",
+  "positionY": "top",
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
@@ -9,7 +9,7 @@
   "control-center-margin-top": 5,
   "control-center-margin-bottom": 50,
   "control-center-margin-right": 0,
-  "control-center-margin-left": 5,
+  "control-center-margin-left": 950,
   "notification-2fa-action": true,
   "notification-inline-replies": false,
   "notification-icon-size": 64,
@@ -87,21 +87,21 @@
             "buttons-grid": {
             "actions": [
                 {
-                    "label": "󰤨 network",
+                    "label": "󰤨 network       ",
                     "command": "foot nmtui"
                 },
                 {
-                    "label": "󰕾 sound",
+                    "label": "󰕾 sound               ",
                     "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         
                 },
 		{
-                    "label": "󰍭 mute",
+                    "label": "󰍭 mute          ",
                     "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
                     "type": "toggle"
                 },
 		{
-		   "label": " background",
+		   "label": " background     ",
 		   "command": "~/.config/scripts/swww-switcher.sh"
 		}
 	     ]
