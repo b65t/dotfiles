@@ -1,0 +1,9 @@
+#taskbar {
+   background: transparent;
+   margin-left: 5px;
+}
+
+#taskbar button.active {
+   border-bottom: 0.5px solid @color1;
+   border-radius: 5px;
+}

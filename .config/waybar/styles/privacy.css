@@ -2,7 +2,7 @@
     background: #eb6f92;
     border-radius: 8px;
     color: @background;
-    margin: 3 3 3 0;
+    margin: 3 3 3 5;
     padding: 0 3;
     text-shadow: 0px 0px 3px @foreground;
 }

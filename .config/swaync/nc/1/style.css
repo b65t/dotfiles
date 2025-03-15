@@ -269,11 +269,12 @@
 
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
-  background: @background;
+  background: transparent;
   color: @foreground;
   border-radius: 15px;
-  border: 2px solid @color1;
+  border: 0px solid @color1;
   font-size: 11px;
+ /* margin-top: 130px; */
 }
 
 .control-center .control-center-list-placeholder {
@@ -283,7 +284,7 @@
 
 .control-center .control-center-list {
   /* List of notifications */
-  background: transparent;
+  background: @background;
 }
 
 .control-center .control-center-list .notification {
@@ -297,7 +298,7 @@
 
 .control-center .control-center-list .notification .notification-default-action:hover,
 .control-center .control-center-list .notification .notification-action:hover {
-  background-color: @color2;
+ /* background-color: @color2; */
 }
 
 .blank-window {
@@ -317,8 +318,13 @@
 /* Title widget */
 .widget-title {
   color: @foreground;
-  margin: 8px;
+  /*margin: 8px; */
+  margin: 0px;
   font-size: 1.5rem;
+  background: @background;
+  padding: 0 5 0 5;
+  border-radius: 0 0 15 15;
+  box-shadow: 5px 2px 2px #000000;
 }
 
 .widget-title > button {
@@ -339,8 +345,13 @@
 /* DND widget */
 .widget-dnd {
   color: @foreground;
-  margin: 8px;
+ /* margin: 8px; */
   font-size: 1.1rem;
+  background: @background;
+  margin: 0;
+  padding: 0 5 0 5;
+  border-radius: 15 15 0 0;
+  box-shadow: 5px 2px 2px #000000;
 }
 
 .widget-dnd > switch {
@@ -378,10 +389,10 @@
 
 .widget-mpris .widget-mpris-player {
   padding: 8px;
-  margin: 14px;
+  margin: 14 10 14 10;
   background-color: @mpris-album-art-overlay;
   border-radius: 12px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 2px 3px #000000;
 }
 
 .widget-mpris .widget-mpris-player button:hover {
@@ -423,11 +434,13 @@
 .widget-buttons-grid {
   font-size: 88px;
   padding: 5px;
-  margin: 5;
-  border-radius: 15px;
+  margin: 0 5 0 5;
+  border-radius: 0;
  /* background-color: alpha (@color8, 0.50); */
  /* border: 2px solid @color1; */
-  background-color: transparent;
+  background-color: @background;
+  margin: 0px;
+  box-shadow: 5px 2px 3px #000000;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
@@ -436,7 +449,7 @@
   margin: 0 0 0 3;
   padding: 10px;
   color: @foreground;
-  box-shadow: 2px 2px 3px #000000;
+  box-shadow: 2px 0px 3px #000000;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
@@ -452,6 +465,12 @@
 .widget-menubar > box > .menu-button-bar > button {
   border: none;
   background: transparent;
+}
+
+.widget-menubar {
+  background: @background;
+  border-radius: 15 15 0 0;
+  box-shadow: 5px 2px 2px #000000;
 }
 
 /* .AnyName { Name defined in config after #
@@ -500,10 +519,13 @@ trough slider:hover {
 }
 
 .widget-volume {
-  background-color: transparent;
-  margin-left: 8px;
-  margin-right: 8px;
+  background-color: @background;
+ /* margin-left: 8px;
+  margin-right: 8px; */
   padding-bottom: 5px;
+  margin: 0px;
+  border-radius: 0 0 15 15;
+  box-shadow: 5px 2px 3px #000000;
 }
 
 /* Backlight widget */
