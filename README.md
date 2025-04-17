@@ -8,24 +8,16 @@
 # what i use
 
 - Arch linux `distro`
-- sway, swaylock `window manager, lock screen`
-- foot `term`
+- hyprland, gtkclok `window manager, lock screen`
+- ewww `bar, notifications, powermenu, widgets`
 - Rofi `rofi-wayland`
-- Swaync `notifications`
-- Waybar `bar`
+- foot `term`
 - swww, rofi `background`
 - fastfetch `fetch`
-- neovim `text editor`
+- vim `text editor`
 - grim and slurp `screen shot`
 - fish `shell`
-- kew `music`
 
-# To do
+# To Do
 
-- [ ] better power menu
-- [ ] rofi for everything (or maybe ags)
 - [ ] more bloat
-
-# other
-
-[Backgrounds](https://github.com/b65t/Background)
