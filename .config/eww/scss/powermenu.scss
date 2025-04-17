@@ -1,0 +1,35 @@
+.powermenu {
+  background: $background;
+}
+
+.powermenu-box {
+  background: #1A1B1F;
+  padding: 20 50;
+  border-radius: 15px;
+  box-shadow: 0px 0px 4px #000;
+}
+
+.power-button {
+  background: $color8;
+  padding: 15 20;
+  margin: 0px 10px;
+  font-size: 50px;
+  box-shadow: 0px 0px 4px #000;
+  border-radius: 15px;
+}
+
+.power-button:hover {
+    background-color: $color1;
+}
+
+.power-icon {
+  text-shadow: 0px 0px 4px #000;
+}
+
+.power-text {
+  margin-top: 5px;
+}
+
+.buttons {
+  background: $color5;
+}

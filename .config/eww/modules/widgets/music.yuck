@@ -1,0 +1,58 @@
+(defwindow wmusic
+  :monitor 0
+  :geometry (geometry :x "72.5%"
+                      :y "1%"
+                      :width "380px"
+                      :height "210px")
+  (box :orientation "v"
+    (music)
+  )
+)
+
+(defpoll musicartlink :interval "1s" `playerctl metadata --format "{{ mpris:artUrl }}"`)
+(defpoll musicposition :interval "1s" `playerctl metadata --format "{{ duration(position) }}"`)
+(defpoll musiclength :interval "1s" `playerctl metadata --format "{{ duration(mpris:length)}}"`)
+(defpoll musicpositionpercentage :interval "1s" `playerctl metadata --format "{{ position / (mpris:length / 100) }}"`)
+(defpoll playingorpaused :interval "1s" `playerctl status`)
+(defpoll musictitle :interval "1s" `playerctl metadata --format "{{ title }}"`)
+(defpoll musicartist :interval "1s" `playerctl metadata --format "{{ artist }}"`)
+(defpoll musicstatus :interval "1s" `playerctl metadata --format "{{ status }}"`)
+
+(defwidget music []
+  (revealer :transition "slideup" :reveal {musictitle != ""}
+    (box :orientation "v" :class "music" :space-evenly false
+      (box :orientation "h" :space-evenly false
+        (box :orientation "h" :space-evenly false :class "music-image" 
+             :style {musicartlink != "" ? `background-image: url('${musicartlink}');` : ""})
+        (box :orientation "v" :space-evenly false :class "music-text" :hexpand true
+          (box :orientation "h" :space-evenly false :halign "start" :class "music-name"
+            (label :text "Now Playing"))
+          (box :orientation "v" :space-evenly false
+            (label :halign "start" :class "music-title" :limit-width 20 :text {musictitle})
+            (label :halign "start" :class "music-artist" :limit-width 20 :text {musicartist})
+          )
+        )
+      )
+      (box :orientation "v" :space-evenly false :class "music-scale-box" :visible {musiclength != ""}
+        (scale :min 0 :max 100 :active true 
+               :value {musicpositionpercentage} 
+               :onchange "playerctl position {}" 
+               :class "music-scale")
+        (box :orientation "h" :space-evenly false :hexpand true
+          (label :hexpand true :class "music-strtime" 
+                 :text {musicposition} 
+                 :halign "start")
+          (label :hexpand true :class "music-strtime" 
+                 :text {musiclength} 
+                 :halign "end")
+        )
+      )
+      (box :orientation "h" :space-evenly false :halign "center" :class "music-actions-box"
+        (button :class "music-action" :onclick "playerctl previous" "󰒮")
+        (button :class "music-action" :onclick "playerctl play-pause" 
+                {musicstatus == "Playing" ? "󰓛" : "󰐊"})
+        (button :class "music-action" :onclick "playerctl next" "󰒭")
+      )                    
+    )
+  )
+)

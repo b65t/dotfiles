@@ -1,0 +1,164 @@
+.bar {
+  background-color: $background;
+  color: $foreground;
+}
+
+.cpu-mem {
+  background-color: rgba($color8, 0.4);
+  margin: 3px 0px 3px 5px;
+  padding: 0 5;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px #000000;
+  border: 1.1px solid rgba($color8, 0.5);
+}
+
+.membar {
+  color: $color1;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.iconmem {
+    color: $color1;
+    font-size: 0rem;
+    margin: 0.6rem;
+}
+
+.mem_module {
+   // background-color: rgba($color8, 0.2);
+    border-radius: 0px;
+    padding: 0 0;
+    //margin: 3px 0px 3px 0px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.workspaces {
+  background-color: #000;
+  border-radius: 0 0 13px 13px;
+  padding: 5px 10px;
+  margin-left: 0;
+  transition: 500ms;
+}
+
+.workspaces button {
+  padding: 0px 8px;
+  margin: 3px 1px;
+  font-size: 0px;
+  border-radius: 8px;
+  min-height: 0px;
+  background-color: rgba($foreground, 0.5);
+ // border: 1px solid $foreground;
+}
+
+.workspaces button.active {
+  color: $foreground;
+  background-color: rgba($color1, 1);
+ // border: 1px solid $color1;
+  padding: 1px 20px;
+}
+
+.cpubar {
+  color: $color2;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.iconcpu {
+    color: $color2;
+    font-size: 0rem;
+    margin: 0.6rem;
+}
+
+.cpu_module {
+    border-radius: 0px;
+}
+
+.logo-image {
+    background-image: url("./pp.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    border-radius: 100%;
+    margin: 2px 0px;
+    margin-left: 5px;
+    box-shadow: 2px -2px 3px 0px #000;
+}
+
+.time {
+  margin: 3 5 3 0;
+  padding: 0 5;
+  background: rgba($color8, 0.4);
+  border-radius: 8px;
+  text-shadow: 0px 0px 3px #000000;
+  box-shadow: 0px 0px 3px #000000;
+  border: 1.1px solid rgba($color8, 0.5);
+}
+
+.time:hover {
+  color: $color1;
+}
+
+.barbuttons {
+  background: rgba($color8, 0.4);
+  margin: 3 5 3 0;
+  border-radius: 8px;
+  padding: 0 5;
+  text-shadow: 0px 0px 3px #000000;
+  box-shadow: 0px 0px 3px #000000;
+  border: 1.1px solid rgba($color8, 0.5);
+}
+
+.settingsb {
+  color: $color1;
+}
+
+.settingsb:hover {
+  color: $foreground;
+}
+
+.musicb {
+  color: $color1;
+}
+
+.musicb:hover {
+  color: $foreground;
+}
+
+.tray {
+  margin: 0 5 0 0;
+  icon-shadow: 0px 0px 3px #000000;
+}
+
+.ra1 {
+  background-color: transparent;
+  padding: 0 15;
+  border-radius: 100%;
+  box-shadow: 15px -16px 0px 2px #000000;
+}
+
+.ra2 {
+  background-color: transparent;
+  padding: 0 15;
+  border-radius: 100%;
+  box-shadow:  -15px -16px 0 2 #000000;
+}
+
+.tra1 {
+  background-color: transparent;
+  padding: 0 12;
+  border-radius: 100%;
+  box-shadow: 17px -17px 0 4 $background;
+}
+
+.tra2 {
+  background-color: transparent;
+  padding: 0 12;
+  border-radius: 100%;
+  box-shadow:  -12px -17px 0 2 $background;
+}
+
+.tra {
+  background-color: transparent;
+}

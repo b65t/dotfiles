@@ -1,0 +1,28 @@
+(defwidget center []
+  (box :orientation "h"
+       :halign "center"
+       :space-evenly "false"
+       :spacing 0
+       (ra1)
+       (workspaces :array workspacesArray)
+       (ra2)
+ )
+)
+
+(defwidget workspaces [array]
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly false
+       :spacing 1
+       :halign "start"
+    (for entry in array
+      (button :onclick `hyprctl dispatch workspace ${entry.name}`
+              :class {entry.active ? "active" : ""}
+              `${entry.name}`
+      )
+    )
+  )
+)
+
+;; if you gonna use sway just replace active with focused and change the scripts
+;; also change the active to focused in scss

@@ -1,0 +1,209 @@
+(defwindow settings
+  :monitor 0
+  :geometry (geometry :x "71%"
+                      :y "-1%"
+                      :width "50px"
+                      :height "50px")
+    (sett-box)
+)
+
+(defwidget sett-box []
+  (box :class "sett-box"
+       :orientation "v"
+    (smain)
+ ;;   (stime)
+    (suptime)
+    (s_sysinfo)
+    (volume)
+    (quick_settings)
+  )
+)
+
+(defwidget smain []
+  (box :class "smain" 
+       :orientation "h"
+    (box :orientation "h"
+         :halign "start"
+      (slogo)
+      (suser)
+    )
+    (box :orientation "h"
+         :halign "end"
+      (sbutton1)
+      (sbutton2)
+    )
+  )
+)
+
+(defwidget s_sysinfo []
+  (box :class "s_sysinfo" 
+       :orientation "h"
+    (box :orientation "h"
+      (smem)
+      (sdisk)
+      (scpu)
+    )
+  )
+)
+
+(defpoll stime_raw :interval "10s"
+  "date '+%I:%M %p'")
+
+(defwidget slogo []
+    (button :class "slogo"
+        (box :orientation "h" :space-evenly false :class "slogo-image")
+    )
+)
+
+(defwidget sbutton1 []
+   (button :class "sbutton1" 
+          :onclick "eww open powermenu"
+          "⏻"
+  )
+)
+
+(defwidget sbutton2 []
+   (button :class "sbutton2" 
+          :onclick "eww close settings"
+          ""
+  )
+)
+
+(defwidget suser []
+  (label
+    :class "suser"
+    :text {user_raw}
+  )
+)
+
+(defwidget suptime []
+  (label
+    :class "suptime"
+    :text {uptime_raw}
+  )
+)
+
+(defwidget stime []
+  (label
+    :class "stime"
+    :text {stime_raw}
+  )
+)
+
+(defpoll user_raw :interval "60s" "echo \"$(whoami)\"")
+
+(defpoll uptime_raw :interval "60" "echo  \"$(uptime -p)\"")
+
+(defpoll sdate_raw :interval "60s" "date '+%Y-%m-%d'")
+
+(defwidget volume []
+  (box :orientation "h"
+      :space-evenly "false"
+      :class "vol-slider"
+    (overlay
+        (scale :value volume_value
+               :onchange "~/.config/eww/modules/widgets/scripts/vol.sh set {}"
+               :min 0
+               :max 101)
+        (label :class "vol-label"
+               :text "${volume_icon} "
+               :valign "top"
+               :halign "start")
+    )
+  )  
+)
+
+(defwidget smem []
+  (box :class "smem_module" :vexpand "false" :hexpand "false" 
+    (circular-progress :value memory
+      :class "smembar"
+      :thickness 7
+      (button 
+        :class "siconmem"
+        :limit-width 2
+        :tooltip "using ${memory}%  ram"
+        :show_truncated false
+        :wrap false
+        "")
+    )
+  )
+)
+
+(defwidget scpu []
+  (box :class "scpu_module" :vexpand "false" :hexpand "false"
+    (circular-progress :value cpu
+      :class "scpubar"
+      :thickness 7
+      (button
+        :class "siconcpu"
+        :limit-width 2
+        :tooltip "using ${cpu}% cpu"
+        :show_truncated false
+        :wrap false
+        "")
+    )
+  )
+)
+
+(defwidget sdisk []
+  (box :class "sdisk_module" :vexpand "false" :hexpand "false" 
+    (circular-progress :value disk
+      :class "sdiskbar"
+      :thickness 8
+      (button 
+        :class "sicondisk"
+        :tooltip "using ${disk}% disk"
+        :show_truncated false
+        :wrap false
+        "󰋊")
+    )
+  )
+)
+
+(defwidget quick_settings []
+    (box :orientation "v" :class "quick_settings_box" :space-evenly true
+        (box :orientation "h" :space-evenly true
+            (network)
+            (recorder)
+        )
+    )
+)
+
+(defwidget network []
+  (quick_settings_button  :condition {network.essid == "lo"} 
+        :action {network.essid == "lo" ? "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &" : "nmcli connection down id '${network.essid}'"}
+        :icon {network.essid == "lo" ? "󰤭" : network.signal == "" ? "󰤩" : network.signal < 25 ? "󰤟" : network.signal < 50 ? "󰤢" : network.signal < 75 ? "󰤥" : "󰤨"}
+        :label {network.essid == "lo" ? "Not connected" : network.essid}
+        :class "left-top-plite"
+  )
+)
+
+(defwidget recorder []
+  (quick_settings_button
+    :condition {recording == "false"}
+    :action {recording == "false" ? 
+             "wf-recorder -f ~/Videos/recording_$(date +%Y-%m-%d_%H-%M-%S).mp4 &" 
+             : "pkill -INT wf-recorder; notify-send 'Recording saved'"}
+    :icon "󰻃"
+    :label "Recording"
+    :class "right-bottom-plite"
+  )
+)
+
+(defwidget quick_settings_button [condition action icon label class]
+    (button :onclick {action} :class {condition ? "quick_settings_button ${class}" : "quick_settings_button quick_settings_button_toggled ${class}"}
+        (box :orientation "h" :space-evenly false
+            (box :orientation "h" :space-evenly false :halign "start"
+                (label :class "quick-settings-icon" :text {icon})
+            )
+            (box :orientation "v" :class "quick-settings-info" :space-evenly false :halign "end" :valign "center"
+                (box :orientation "h" :space-evenly false :halign "start"
+                    (label :class "quick-settings-text" :text {label})
+                )
+                (box :orientation "h" :space-evenly false :halign "start"
+                    (label :class {condition ? "quick-settings-state" : "quick-settings-state quick-settings-state-enabled"} :text {condition ? "Off" : "On"})
+                )
+            )
+        )
+    )
+)

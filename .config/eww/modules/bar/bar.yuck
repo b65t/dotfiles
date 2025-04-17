@@ -1,0 +1,74 @@
+(include "modules/bar/left.yuck")
+(include "modules/bar/center.yuck")
+(include "modules/bar/right.yuck")
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :exclusive true
+  :space-evenly true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "10px")
+  (centerbox :orientation "h"
+    (left)
+    (center)
+    (right)
+ )
+)
+
+(defwidget ra1 []
+  (box 
+    :class "ra1"
+    :hexpand false
+    :vexpand false
+  )
+)
+
+(defwidget ra2 []
+  (box
+    :class "ra2"
+    :hexpand false
+    :vexpand false
+  )
+)
+
+(defwindow tra
+  :monitor 0
+  :stacking "bg"
+  :exclusive false
+  :passthrough true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "23px"
+                      :anchor "top center")
+  (centerbox :orientation "h"
+    :space-evenly false
+    (tra2)
+    (box)
+    (tra1)
+ )
+)
+
+(defwidget tra1 []
+  (box
+    :class "tra1"
+    :hexpand false
+    :vexpand false
+    :halign "end"
+  )
+)
+
+
+(defwidget tra2 []
+  (box
+    :class "tra2"
+    :hexpand false
+    :vexpand false
+    :halign "start"
+  )
+)

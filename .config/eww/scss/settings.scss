@@ -1,0 +1,172 @@
+.sett-box {
+ @include window;
+}
+
+.slogo {
+    background-image: url("./pp.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 0rem;
+    min-width: 3rem;
+    border-radius: 100%;
+    margin: 0.7rem 0 0.7rem 0.9rem;
+    box-shadow: 2px -2px 3px #000;
+    font-size: 0;
+    padding: 0;
+}
+
+.sbutton1 {
+    font-size: 1.2rem;
+    color: $color1;
+    text-shadow: 0 0 3px #000;
+    background: rgba($color8, 0.2);
+    margin: 1.2rem 0.3rem;
+    padding: 0 5;
+    border-radius: 0.6rem;
+}
+
+.sbutton1:hover {
+    color: $foreground;
+}
+
+.sbutton2 {
+    font-size: 1.3rem;
+    color: $color1;
+    text-shadow: 0 0 3px #000;
+    background: rgba($color8, 0.2);
+    margin: 1.2rem 0.3rem 1.2rem 0;
+    padding: 0 5px;
+    border-radius: 8px;
+}
+
+.sbutton2:hover {
+    color: $foreground;
+}
+
+.stime {
+  font-size: 3rem;
+  text-shadow: 0 0 3rem #000;
+  background: $color8;
+  min-height: 0px;
+}
+
+.suptime {
+  text-shadow: 0 0 3rem #000;
+  font-size: 1.3rem;
+}
+
+.vol-slider { 
+  margin: 1rem;
+    .vol-label {
+      font-size: 1rem;
+      color: #000000;
+      margin-left: 0.625rem;
+  }
+    & scale trough {
+        all: unset;
+        border-radius: 30px;
+        background-color: #3A404C;
+        border: none;
+        min-height: 2rem;
+        min-width: 340px;
+        margin: 2px;
+        box-shadow: 0px 0px 2px #000; 
+    & highlight {
+        all: unset;
+        background: $color1;
+        color: #000000;
+        border-radius: 30px;
+        box-shadow: 0px 0px 3px #000; 
+    }
+  }
+}
+
+.smembar {
+  color: $color1;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.siconmem {
+    color: $color1;
+    text-shadow: 0px 0px 3px #000; 
+    font-size: 1.7rem;
+}
+
+.smem_module {
+    background-color: rgba($color8, 0.2);
+    padding: 3px 0px 3px 0px;
+    margin: 0 10;
+    box-shadow: 0 0 3px #000;
+    border-radius: 8px;
+}
+
+.scpubar {
+  color: $color1;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.siconcpu {
+    color: $color1;
+    text-shadow: 0px 0px 3px #000;
+    font-size: 1.7rem;
+}
+
+.scpu_module {
+    background-color: rgba($color8, 0.2);
+    padding: 3px 0px 3px 0px;
+    margin: 0 10;
+    box-shadow: 0 0 3px #000;
+    border-radius: 8px;
+}
+
+.sdiskbar {
+  color: $color1;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.sicondisk {
+    color: $color1;
+    text-shadow: 0px 0px 3px #000; 
+    font-size: 1.7rem;
+}
+
+.sdisk_module {
+    background-color: rgba($color8, 0.2);
+    padding: 3px 0px 3px 0px;
+    margin: 0 10;
+    box-shadow: 0 0 3px #000;
+    border-radius: 8px;
+}
+
+.quick_settings_box {
+  margin: 0 10px 15px 10px;
+}
+
+.quick_settings_button {
+    transition: 500ms;
+    background-color: $color8;
+    color: $background;
+    border-radius: 25px;
+    padding: 0rem 0.75rem;
+    font-size: 1.05rem;
+    margin: 0 3px 0px 3px;
+    box-shadow: 0px 0px 3px #000;
+}
+
+.quick_settings_button:hover {
+    background-color: $foreground;
+}
+
+.quick_settings_button_toggled {
+    background-color: $color1;
+    color: $background;
+}
+
+.quick-settings-icon {
+    margin-right: 5px;
+    font-size: 1.3rem;
+}

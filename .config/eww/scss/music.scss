@@ -1,0 +1,67 @@
+.music {
+    @include window;
+}
+
+.music-box {
+  margin: 1rem;
+}
+
+.music-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 6rem;
+    min-width: 6rem;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.music-text {
+    margin: 1rem;
+}
+
+.music-title {
+    font-size: 1.2rem;
+}
+
+.music-artist {
+    color: $color8;
+}
+
+.music-name {
+    background-color: $color1;
+    color: $foreground;
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.music-action {
+    font-size: 2rem;
+    min-width: 3rem;
+}
+
+.music-scale {
+    margin-top: 1rem;
+}
+
+.music-scale trough {
+    background-color: $color8;
+    border-radius: 1rem;
+    min-height: 0.5rem;
+    margin: 0 1rem;
+}
+
+
+.music-scale highlight {
+    background-color: $color1;
+    border-radius: 1rem;
+    min-height: 0.5rem;
+}
+
+.music-strtime {
+    color: $color8;
+    margin: 0 1rem;
+    margin-top: 0.25rem;
+}

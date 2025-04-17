@@ -1,0 +1,50 @@
+* {
+  all: unset; // Unsets everything so you can style everything from scratch
+  min-height: 0;
+  font-family: ubuntu nerd font;
+  font-weight: bold;
+transition: 0.3s;
+}
+
+@mixin window {
+    background-color: $background;
+    border-radius: 8px;
+    color: $foreground;
+    box-shadow: 0px 0px 4px 2px #000;
+    margin: 1rem;
+}
+
+@import "../../.cache/wal/colors-ags";
+@import "scss/bar.scss";
+@import "scss/notifications.scss";
+@import "scss/powermenu.scss";
+@import "scss/calendar.scss";
+@import "scss/settings.scss";
+@import "scss/music.scss";
+@import "scss/osd.scss";
+
+tooltip {
+    background-color: rgba($background, 0.9999999);
+    color: $foreground;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+menu {
+    background-color: $background;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    color: $foreground;
+    font-size: 1.1rem;
+}
+
+
+menu>menuitem {
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+    border-radius: 1rem;
+}
+
+menu>menuitem:hover {
+    background-color: $color1;
+}

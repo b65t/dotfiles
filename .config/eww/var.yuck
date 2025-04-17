@@ -1,0 +1,19 @@
+(defpoll recording :interval "1s" "if pgrep 'wf-recorder' >/dev/null; then echo true; else echo false; fi")
+
+(deflisten network :initial '{"essid": "lo", "signal": ""}' "modules/widgets/scripts/network.sh")
+
+(defpoll volume_icon :interval "1s" "modules/widgets/scripts/vol.sh icon")
+(defpoll volume_value :interval "1s" "modules/widgets/scripts/vol.sh vol")
+(defpoll is_muted :interval "1s" "modules/widgets/scripts/vol.sh muted")
+
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_month :interval "10h" "modules/widgets/scripts/month.sh")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+
+(deflisten notifications :initial "{}" `modules/notifications/scripts/notifications.py`)
+
+(defpoll memory :interval "5s" "scripts/memory.sh")
+(defpoll cpu :interval "5s" "scripts/cpu.sh")
+(defpoll disk :interval "5s" "scripts/disk.sh")
+
+(deflisten workspacesArray :initial "${[1]}" 'modules/bar/scripts/workspaces.sh')

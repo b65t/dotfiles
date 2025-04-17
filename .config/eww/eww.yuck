@@ -1,0 +1,8 @@
+(include "modules/bar/bar.yuck")
+(include "var.yuck")
+(include "modules/notifications/notifications.yuck")
+(include "modules/widgets/powermenu.yuck")
+(include "modules/widgets/calendar.yuck")
+(include "modules/widgets/settings.yuck")
+(include "modules/widgets/music.yuck")
+(include "modules/osd/osd.yuck")

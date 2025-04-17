@@ -1,0 +1,57 @@
+(defwidget right []
+  (box :orientation "h"
+       :halign "end"
+       :space-evenly "false"
+       :spacing 0
+       (tray)
+       (time)
+       (barbuttons)
+ )
+)
+
+(defwidget time []
+  (button
+    :class "time"
+    :onclick "eww open calendar"
+    :onrightclick "eww close calendar"
+    (label :text {time_raw})
+  )
+)
+
+(defpoll time_raw :interval "10s"
+  "date '+%I:%M %p'")
+
+(defwidget barbuttons []
+  (box :class "barbuttons"
+       :orientation "h"
+       :spacing 5
+       (musicb)
+       (settingsb)
+  )
+)
+
+(defwidget settingsb []
+  (button :class "settingsb" 
+          :onclick "eww open settings"
+          :onrightclick "eww close settings"
+          ""
+  )
+)
+
+(defwidget musicb []
+  (button :class "musicb"
+          :onclick "eww open wmusic"
+          :onrightclick "eww close wmusic"
+          ""
+  )
+)
+
+(defwidget tray []
+  (box
+    :class "tray"
+    (systray
+      :icon-size 16
+      :spacing 5
+    )
+  )
+)
