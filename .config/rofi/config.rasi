@@ -1,0 +1,13 @@
+configuration {
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+    display-drun: "";
+    display-run: "  run";
+    display-filebrowser: "  filebrowse";
+    display-window: " ";
+    modi: "drun,run,window,filebrowser";
+    location: 2;
+    anchor: south;
+}
+
+@theme "~/.config/rofi/theme.rasi"
