@@ -19,17 +19,17 @@
 }
 
 .iconmem {
-    color: $color1;
-    font-size: 0rem;
-    margin: 0.6rem;
+  color: $color1;
+  font-size: 0rem;
+  margin: 0.6rem;
 }
 
 .mem_module {
    // background-color: rgba($color8, 0.2);
-    border-radius: 0px;
-    padding: 0 0;
+  border-radius: 0px;
+  padding: 0 0;
     //margin: 3px 0px 3px 0px;
-    border-radius: 8px 0px 0px 8px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .workspaces {
@@ -123,6 +123,14 @@
 }
 
 .musicb:hover {
+  color: $foreground;
+}
+
+.pickerb {
+  color: $color1;
+}
+
+.pickerb:hover {
   color: $foreground;
 }
 

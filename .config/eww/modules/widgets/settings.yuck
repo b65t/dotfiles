@@ -30,6 +30,7 @@
     (box :orientation "h"
          :halign "end"
       (sbutton1)
+      (sbutton3)
       (sbutton2)
     )
   )
@@ -66,6 +67,13 @@
    (button :class "sbutton2" 
           :onclick "eww close settings"
           ""
+  )
+)
+
+(defwidget sbutton3 []
+   (button :class "sbutton3" 
+          :onclick "sleep 0.1 && gtklock &"
+          ""
   )
 )
 

@@ -33,12 +33,14 @@ def print_state():
     for item in notifications:
         string = string + f"""
                   (button :class 'notif' :onclick 'bash ~/.config/eww/modules/notifications/scripts/notifications.sh close {item.id}'
-                   (box :orientation 'horizontal' :space-evenly false
-                      (image :image-width 60 :image-height 60 :path '{item.icon or ''}')
-                      (box :orientation 'vertical'
-                        (label :width 300 :wrap true :text '{item.summary or ''}')
-                        (label :width 50 :wrap true :text '{item.body or ''}')
-                  )))
+                     (box :orientation 'horizontal' :space-evenly false
+                       (image :class 'notif-icon' :image-width 40 :image-height 40 :path '{item.icon or ''}')
+                       (box :orientation 'vertical' :width 300
+                         (label :class 'notif-title' :width 0 :wrap true :halign "start" :text '{item.summary or ''}')
+                         (label :class 'notif-content' :width 0 :wrap true :halign "start" :text '{item.body or ''}')
+                       )
+                     )
+                  )
                   """
     string = string.replace('\n', ' ')
     print(fr"""(box :orientation 'vertical' {string or ''})""", flush=True)

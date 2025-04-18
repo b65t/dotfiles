@@ -5,16 +5,33 @@
 }
 
 .notif {
-    background-color: #000;
-    padding: 5px;
-   // border: 2px solid $background;
-    font-size: 13px;
-    @include window;
-    margin: 0.5rem;
-    margin-bottom: 5px;
-    background-color: #000;
+  background-color: #000;
+  padding: 5px;
+  // border: 2px solid $background;
+  font-size: 13px;
+  @include window;
+  margin: 0.5rem;
+  margin-bottom: 5px;
+  padding-bottom: 25px;
+  background-color: #000;
+}
+
+.notif-header {
+  font-size: 1rem;
+  background: $background;
+}
+
+.notif-title {
+  font-size: 1rem;
+  color: $foreground;
+  border-radius: 8px;
+}
+
+.notif-content {
+  font-size: 0.8rem;
+  color: $color8;
 }
 
 .notif image {
-    padding-right: 10px;
+  padding-right: 10px;
 }

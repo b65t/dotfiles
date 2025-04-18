@@ -25,6 +25,7 @@
   (box :class "barbuttons"
        :orientation "h"
        :spacing 5
+       (pickerb)
        (musicb)
        (settingsb)
   )
@@ -43,6 +44,13 @@
           :onclick "eww open wmusic"
           :onrightclick "eww close wmusic"
           ""
+  )
+)
+
+(defwidget pickerb []
+  (button :class "pickerb"
+          :onclick "sleep 0.1 && ~/.config/eww/modules/bar/scripts/picker.sh &"
+          ""
   )
 )
 

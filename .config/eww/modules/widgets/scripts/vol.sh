@@ -36,9 +36,9 @@ get_percentage () {
 get_icon () {
   local vol=$(get_percentage)
   if [[ $vol == "0%" ]]; then
-    echo "婢"
+    echo ""
   else
-    echo $(percentage "$vol" "" "" "" "")
+    echo $(percentage "$vol" "" "" "" "")
   fi
 }
 
