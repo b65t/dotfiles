@@ -1,0 +1,9 @@
+@mixin window {
+  background-color: $background;
+  border-radius: 8px;
+  color: $foreground;
+  box-shadow: 0px 0px 4px 2px #000;
+  margin: 1rem;
+}
+
+$bar-border: 1.5px dotted rgba($color8, 0.5);

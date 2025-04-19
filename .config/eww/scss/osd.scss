@@ -3,27 +3,27 @@
 }
 
 .vol-slider-osd { 
-    margin: 0rem;
+  margin: 0rem;
     .vol-label-osd {
       font-size: 1.5rem;
       color: rgba(#000, 0.7);
  //     margin-left: 2rem;
   }
     & scale trough {
-        all: unset;
-        border-radius: 30px;
-        background-color: $background;
-        border: 3px solid $background;
-        min-height: 2rem;
-        min-width: 260px;
-        margin: 1rem;
-        box-shadow: 0px 0px 4px 2px #000;
+       all: unset;
+       border-radius: 30px;
+       background-color: $background;
+       border: 3px solid $background;
+       min-height: 2rem;
+       min-width: 260px;
+       margin: 1rem;
+       box-shadow: 0px 0px 4px 2px #000;
     & highlight {
-        all: unset;
-        background: $color1;
-        color: #000000;
-        border-radius: 30px;
-        box-shadow: 0px 0px 3px #000;
+       all: unset;
+       background: $color1;
+       color: #000000;
+       border-radius: 30px;
+       box-shadow: 0px 0px 3px #000;
     }
   }
 }

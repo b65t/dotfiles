@@ -9,7 +9,7 @@
   padding: 0 5;
   border-radius: 8px;
   box-shadow: 0px 0px 3px #000000;
-  border: 1.1px solid rgba($color8, 0.5);
+  border: $bar-border;
 }
 
 .membar {
@@ -36,25 +36,25 @@
   background-color: #000;
   border-radius: 0 0 13px 13px;
   padding: 5px 10px;
-  margin-left: 0;
   transition: 500ms;
 }
 
 .workspaces button {
-  padding: 0px 8px;
-  margin: 3px 1px;
+  padding: 0px 4px;
+  margin: 4px 2px;
   font-size: 0px;
   border-radius: 8px;
   min-height: 0px;
   background-color: rgba($foreground, 0.5);
- // border: 1px solid $foreground;
+  //border: 1px solid $foreground;
 }
 
 .workspaces button.active {
   color: $foreground;
   background-color: rgba($color1, 1);
  // border: 1px solid $color1;
-  padding: 1px 20px;
+  margin: 3px 1px;
+  padding: 0 20px;
 }
 
 .cpubar {
@@ -64,26 +64,26 @@
 }
 
 .iconcpu {
-    color: $color2;
-    font-size: 0rem;
-    margin: 0.6rem;
+  color: $color2;
+  font-size: 0rem;
+  margin: 0.6rem;
 }
 
 .cpu_module {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .logo-image {
-    background-image: url("./pp.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 1.5rem;
-    min-width: 1.5rem;
-    border-radius: 100%;
-    margin: 2px 0px;
-    margin-left: 5px;
-    box-shadow: 2px -2px 3px 0px #000;
+  background-image: url("./pp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  border-radius: 100%;
+  margin: 2px 0px;
+  margin-left: 5px;
+  box-shadow: 2px -2px 3px 0px #000;
 }
 
 .time {
@@ -93,7 +93,7 @@
   border-radius: 8px;
   text-shadow: 0px 0px 3px #000000;
   box-shadow: 0px 0px 3px #000000;
-  border: 1.1px solid rgba($color8, 0.5);
+  border: $bar-border;
 }
 
 .time:hover {
@@ -107,7 +107,7 @@
   padding: 0 5;
   text-shadow: 0px 0px 3px #000000;
   box-shadow: 0px 0px 3px #000000;
-  border: 1.1px solid rgba($color8, 0.5);
+  border: $bar-border;
 }
 
 .settingsb {
