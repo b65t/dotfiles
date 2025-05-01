@@ -8,13 +8,13 @@
 # what i use
 
 - Arch linux `distro`
-- hyprland, gtkclok `window manager, lock screen`
+- swayfx, gtkclok `window manager, lock screen`
 - ewww `bar, notifications, powermenu, widgets`
 - Rofi `rofi-wayland`
 - foot `term`
 - swww, rofi `background`
 - fastfetch `fetch`
-- vim `text editor`
+- neovim `text editor`
 - grim and slurp `screen shot`
 - fish `shell`
 
