@@ -1,0 +1,53 @@
+;; vars
+
+(defpoll recording :interval "1s"
+  "if pgrep 'wf-recorder' >/dev/null; then echo true; else echo false; fi")
+
+(deflisten do-not-disturb :initial false
+  "~/.config/eww/scripts/notifications.sh getdnd")
+
+(deflisten network :initial
+  '{"essid": "lo", "signal": ""}' "scripts/network.sh")
+
+
+(defpoll volume_icon :interval "1s" "scripts/vol.sh icon")
+(defpoll volume_value :interval "1s" "scripts/vol.sh vol")
+(defpoll is_muted :interval "1s" "scripts/vol.sh muted")
+
+
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_month :interval "10h" "scripts/month.sh")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+
+
+(deflisten notifications :initial '{"count": 0, "notifications": [], "popups": []}'
+  "~/.config/eww/modules/notifications/scripts/notifications.sh current")
+
+
+(defpoll memory :interval "5s" "scripts/memory.sh")
+(defpoll cpu :interval "5s" "scripts/cpu.sh")
+(defpoll disk :interval "5s" "scripts/disk.sh")
+
+
+(deflisten workspacesArray :initial "${[1]}" 'scripts/workspaces.sh')
+
+
+(defvar open_sett false)
+(defvar open_calendar false)
+(defvar open_dock false)
+(defvar open_volume_osd false)
+(defvar open_wmusic false)
+
+
+;; include
+
+(include "modules/bar/bar.yuck")
+(include "modules/notifications/notifications.yuck")
+(include "modules/widgets/powermenu.yuck")
+(include "modules/widgets/calendar.yuck")
+(include "modules/widgets/settings.yuck")
+(include "modules/widgets/music.yuck")
+(include "modules/widgets/osd.yuck")
+(include "modules/widgets/dock.yuck")
+(include "modules/desktop/date.yuck")
+(include "modules/desktop/radius.yuck")

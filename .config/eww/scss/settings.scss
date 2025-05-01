@@ -1,0 +1,193 @@
+.sett-box {
+  @include window;
+  border: 1px solid rgba($foreground, 0.1);
+}
+
+.slogo {
+  background-image: $pp;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  border-radius: 100%;
+  margin: 3px 0 3px 10px;
+  box-shadow: 0px 0px 3px #000;
+  font-size: 0;
+  padding: 0;
+}
+
+.suser {
+  background: rgba($color8, 0.2);
+  margin: 1.2rem 0.3rem;
+  padding: 0 8px;
+  border-radius: 8px;
+  text-shadow: 0 0 3px #000;
+}
+
+.sbutton1 {
+  font-size: 1.2rem;
+  color: $color1;
+  text-shadow: 0 0 3px #000;
+  background: rgba($color8, 0.2);
+  margin: 1.2rem 0 1.2rem 0.8rem;
+  padding: 0 0 0 0.3;
+  border-radius: 0.6rem;
+
+  &:hover {
+    color: $foreground;
+  }
+}
+
+.sbutton2 {
+  font-size: 1.3rem;
+  color: $color1;
+  text-shadow: 0 0 3px #000;
+  background: rgba($color8, 0.2);
+  margin: 1.2rem 0.8rem 1.2rem 0;
+  border-radius: 8px;
+
+  &:hover {
+    color: $foreground;
+  }
+}
+
+.sbutton3 {
+  font-size: 1.2rem;
+  color: $color1;
+  text-shadow: 0 0 3px #000;
+  background: rgba($color8, 0.2);
+  margin: 1.2rem 0.4rem;
+  padding: 0 5;
+  border-radius: 0.6rem;
+
+  &:hover {
+    color: $foreground;
+  }
+}
+
+.stime {
+  font-size: 3rem;
+  text-shadow: 0 0 3px #000;
+  background: $color8;
+  min-height: 0px;
+}
+
+.suptime {
+  text-shadow: 0 0 3px #000;
+  font-size: 1.5rem;
+  background: rgba($color8, 0.2);
+  margin: 0.8rem 3rem 1.2rem 3rem;
+  border-radius: 5px;
+}
+
+.vol-slider { 
+  margin: 0.7rem;
+  border-radius: 50px;
+    .vol-label {
+      font-size: 1rem;
+      color: #000000;
+      margin-left: 1rem;
+  }
+    & scale trough {
+        all: unset;
+        border-radius: 30px;
+        background-color: #3A404C;
+        border: none;
+        min-height: 2rem;
+        min-width: 340px;
+        margin: 4 4;
+    & highlight {
+        all: unset;
+        background: $color1;
+        color: #000000;
+        border-radius: 30px;
+    }
+  }
+}
+
+.smembar {
+  color: $color1;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.siconmem {
+  color: $color1;
+  text-shadow: 0px 0px 3px #000; 
+  font-size: 1.7rem;
+}
+
+.smem_module {
+  background-color: rgba($color8, 0.2);
+  padding: 3px 0px 3px 0px;
+  margin: 0 12;
+  border-radius: 8px;
+}
+
+.scpubar {
+  color: $color1;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.siconcpu {
+  color: $color1;
+  text-shadow: 0px 0px 3px #000;
+  font-size: 1.7rem;
+}
+
+.scpu_module {
+  background-color: rgba($color8, 0.2);
+  padding: 3px 0px 3px 0px;
+  margin: 0 12;
+  border-radius: 8px;
+}
+
+.sdiskbar {
+  color: $color1;
+  background-color: $color8;
+  border-radius: 500px;
+}
+
+.sicondisk {
+  color: $color1;
+  text-shadow: 0px 0px 3px #000; 
+  font-size: 1.7rem;
+  padding: 15px;
+}
+
+.sdisk_module {
+  background-color: rgba($color8, 0.2);
+  padding: 3px 0px 3px 0px;
+  margin: 0 12;
+  border-radius: 8px;
+}
+
+.quick_settings_box {
+  margin: 0 5px 12px 5px;
+}
+
+.quick_settings_button {
+  transition: 500ms;
+  background-color: $color8;
+  color: $background;
+  border-radius: 25px;
+  padding: 0.7rem 0.75rem;
+  font-size: 1.05rem;
+  margin: 2 3px;
+
+  &:hover {
+    background: $foreground;
+  }
+}
+
+.quick_settings_button_toggled {
+  background-color: $color1;
+  color: $background;
+}
+
+.quick-settings-icon {
+  margin-right: 5px;
+  font-size: 1.3rem;
+}

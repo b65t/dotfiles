@@ -1,0 +1,25 @@
+(defwidget center []
+  (box :orientation "h"
+       :halign "center"
+       :space-evenly "false"
+       :spacing 0
+       (ra1)
+       (workspaces :array workspacesArray)
+       (ra2)
+ )
+)
+
+(defwidget workspaces [array]
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly false
+       :spacing 1
+       :halign "start"
+    (for entry in array
+      (button :onclick `swaymsg workspace "${entry.name}"`
+              :class {entry.focused ? "focused" : ""}
+              `${entry.name}`
+      )
+    )
+  )
+)

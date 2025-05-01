@@ -1,0 +1,22 @@
+.dtime-box {
+  @include window;
+  border-radius: 30 0 0 30;
+  box-shadow: NONE;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  background: transparent;
+}
+
+.ddate {
+  font-size: 20px;
+  padding: 10px 5px;
+  border-radius: 30 0 0 30;
+  background: $background;
+}
+
+.dtime {
+  background: $color8;
+  border-radius: 0 0 0 15;
+  margin-left: 20px;
+  font-size: 20px;
+}

@@ -1,0 +1,27 @@
+(defwindow calendar
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :anchor "top right"
+            )
+  (cal)
+)
+
+(defwidget cal []
+  (revealer :transition "slidedown"
+            :duration "500ms"
+            :reveal {open_calendar}
+
+    (box :class "cal-box"
+         :orientation "v"
+
+      (box :orientation "h" 
+           (calendar :class "cal"
+                     :day calendar_day
+                     :month calendar_month
+                     :year calendar_year
+           )
+      )
+    )
+  )
+)
