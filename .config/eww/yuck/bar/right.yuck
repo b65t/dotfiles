@@ -1,0 +1,67 @@
+(defwidget right []
+  (box :orientation "h"
+       :halign "end"
+       :space-evenly "false"
+       :spacing 0
+       (trayb)
+       (time)
+       (barbuttons)
+ )
+)
+
+(defwidget time []
+  (button :class "time"
+          :onclick
+          "${EWW_CONFIG_DIR}/scripts/open_calendar.sh"
+    (label :text {time_raw})
+  )
+)
+
+(defpoll time_raw :interval "10s"
+  "date '+%I:%M %p'")
+
+(defwidget barbuttons []
+  (box :class "barbuttons"
+       :orientation "h"
+       :spacing 5
+       (pickerb)
+       (musicb)
+       (notificationsb)
+       (settingsb)
+  )
+)
+
+(defwidget settingsb []
+  (button :class "settingsb" 
+          :onclick "${EWW_CONFIG_DIR}/scripts/open_sett.sh"
+          ""
+  )
+)
+
+(defwidget musicb []
+  (button :class "musicb"
+          :onclick "${EWW_CONFIG_DIR}/scripts/open_music_cont.sh"
+          ""
+  )
+)
+
+(defwidget pickerb []
+  (button :class "pickerb"
+          :onclick "sleep 0.1 && ~/.config/eww/scripts/picker.sh &"
+          ""
+  )
+)
+
+(defwidget notificationsb []
+  (button :class "notificationsb" 
+          :onclick "${EWW_CONFIG_DIR}/scripts/open_notifications-center.sh"
+          "󰂚"
+  )
+)
+
+(defwidget trayb []
+  (button :class "trayb" 
+          :onclick "${EWW_CONFIG_DIR}/scripts/open_tray.sh"
+          ""
+  )
+)
