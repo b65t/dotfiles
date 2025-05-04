@@ -9,11 +9,10 @@
 
 - Arch linux `distro`
 - swayfx, gtkclok `window manager, lock screen`
-- ewww `bar, notifications, powermenu, widgets`
+- ewww `bar, notifications, powermenu, wallpaper, sysinfo, widgets`
 - Rofi `rofi-wayland`
 - foot `term`
-- swww, rofi `background`
-- fastfetch `fetch`
+- eww, wofi `background changer`
 - neovim `text editor`
 - grim and slurp `screen shot`
 - fish `shell`
