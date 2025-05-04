@@ -1,0 +1,157 @@
+.sett-box {
+  @include window;
+  border: 1px solid rgba($foreground, 0.1);
+}
+
+.slogo {
+  background-image: $pp;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 1rem;
+  min-width: 3.6rem;
+  border-radius: 100%;
+  margin: 11px 0 11px 0;
+  box-shadow: 0px 0px 3px #000;
+  font-size: 0;
+  padding: 0;
+}
+
+.suser {
+  background: rgba($color8, 0.2);
+  margin: 1.8rem 0.3rem;
+  padding: 0 8px;
+  border-radius: $widget-radius;
+  text-shadow: 0 0 3px #000;
+}
+
+.sbutton1 {
+  @include sbuttons;
+
+  &:hover {
+    color: $foreground;
+  }
+}
+
+.sbutton2 {
+  @include sbuttons;
+
+  &:hover {
+    color: $foreground;
+  }
+}
+
+.sbutton3 {
+  @include sbuttons;
+  margin: 1.5rem 5px;
+
+  &:hover {
+    color: $foreground;
+  }
+}
+
+.stime {
+  font-size: 3rem;
+  text-shadow: 0 0 3px #000;
+  background: $color8;
+  min-height: 0px;
+}
+
+.suptime {
+  text-shadow: 0 0 3px #000;
+  font-size: 1.4rem;
+  background: rgba($color8, 0.2);
+  margin: 0.8rem 2rem 1.2rem 2rem;
+  padding: 4px;
+  border-radius: $widget-radius;
+}
+
+.vol-slider { 
+  margin: 0.7rem;
+  border-radius: 50px;
+    .vol-label {
+      font-size: 1rem;
+      color: #000000;
+      margin-left: 1rem;
+  }
+    & scale trough {
+        all: unset;
+        border-radius: $widget-radius2;
+        background-color: #3A404C;
+        border: none;
+        min-height: 2rem;
+        min-width: 340px;
+        margin: 4 4;
+    & highlight {
+        all: unset;
+        background: $color1;
+        color: #000000;
+        border-radius: $widget-radius2;
+    }
+  }
+}
+
+.smembar {
+  @include sbar;
+}
+
+.siconmem {
+  @include sicon;
+}
+
+.smem_module {
+  @include s_module;
+}
+
+.scpubar {
+  @include sbar;
+}
+
+.siconcpu {
+  @include sicon;
+}
+
+.scpu_module {
+  @include s_module;
+}
+
+.sdiskbar {
+  @include sbar;
+}
+
+.sicondisk {
+  @include sicon;
+}
+
+.sdisk_module {
+  @include s_module;
+  margin: 0 12;
+}
+
+.quick_settings_box {
+  margin: 0 5px 12px 5px;
+}
+
+.quick_settings_button {
+  transition: 500ms;
+  background-color: $color8;
+  color: $background;
+  border-radius: $widget-radius2;
+  padding: 0.7rem 0.75rem;
+  font-size: 1.05rem;
+  margin: 2 3px;
+
+  &:hover {
+    background: $foreground;
+  }
+}
+
+.quick_settings_button_toggled {
+  background-color: $color1;
+  color: $background;
+}
+
+.quick-settings-icon {
+  margin-right: 5px;
+  font-size: 1.3rem;
+}

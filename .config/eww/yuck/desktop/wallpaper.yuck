@@ -1,0 +1,12 @@
+(defwindow wallpaper :monitor 0
+	     :stacking "bg"
+	     :geometry (geometry :x 0
+                                 :y 0
+                                 :anchor "center center"
+                       )
+  (image :path {current-wallpaper}
+         :image-width 1366
+  )
+)
+
+(defvar current-wallpaper "/home/islam/Background/card_after_trainingasdasd.jpg")

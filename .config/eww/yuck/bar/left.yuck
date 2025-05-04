@@ -1,0 +1,72 @@
+(defwidget left []
+  (box :orientation "h"
+       :halign "start"
+       :space-evenly "false"
+       :spacing 0
+       (logo)
+       (cpu-mem)
+       (app-id)
+ )
+)
+
+(defwidget logo []
+  (button :class "logo"
+          :onclick "eww open powermenu"
+    (box :orientation "h"
+         :space-evenly false
+         :class "logo-image"
+    )
+  )
+)
+
+(defwidget cpu-mem []
+  (box :class "cpu-mem"
+       :orientation "h"
+       :spacing 5
+       (cpu)
+       (mem)
+  )
+)
+
+(defwidget mem []
+  (box :class "mem_module"
+       :vexpand "false"
+       :hexpand "false" 
+    (circular-progress :value memory
+                       :class "membar"
+                       :thickness 4
+      (button :class "iconmem"
+              :limit-width 2
+              :tooltip "using ${memory}% ram"
+              :show_truncated false
+              :wrap false
+              " "
+      )
+    )
+  )
+)
+
+(defwidget cpu []
+  (box :class "cpu_module"
+       :vexpand "false"
+       :hexpand "false"
+    (circular-progress :value cpu
+                       :class "cpubar"
+                       :thickness 4
+      (button :class "iconcpu"
+              :limit-width 2
+              :tooltip "using ${cpu}% cpu"
+              :show_truncated false
+              :wrap false
+              " "
+      )
+    )
+  )
+)
+
+(defwidget app-id []
+  (box :class "app-id"
+    (label :text {sway-app-id}
+    )
+  )
+)
