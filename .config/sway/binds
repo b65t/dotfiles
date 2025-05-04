@@ -21,8 +21,6 @@ bindsym {
     print exec $screenshot
     Shift+print exec $partial-screenshot
 
-    $mod+c exec $clipshist
- 
     $mod+o exec $volume_osd
 
     $mod+d exec $dock

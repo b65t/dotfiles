@@ -14,10 +14,10 @@ $right l
 $term foot
 
 # Your preferred application launcher
-$menu rofi -show drun
+$menu wofi
 
 # Background
-$swww ~/.config/scripts/swww-switcher.sh
+$swww ~/.config/eww/scripts/wallpaper.sh
 
 # Waybar
 $waybar exec ~/.config/scripts/waybar.sh 
@@ -26,9 +26,6 @@ $waybar exec ~/.config/scripts/waybar2.sh
 # ScreenShot
 $screenshot grim -| wl-copy && notify-send "Screenshot taken" "check your clipboard"
 $partial-screenshot grim -g "$(slurp)" - | wl-copy && notify-send "Screenshot taken" "check your clipboard"
-
-# clipshist
-$clipshist cliphist list | rofi -dmenu -p history | cliphist decode | wl-copy
 
 #eww
 $volume_osd $HOME/.config/eww/scripts/open_osd.sh
