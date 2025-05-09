@@ -52,7 +52,7 @@
 (include "yuck/widgets/settings.yuck")
 (include "yuck/widgets/music.yuck")
 ;;(include "yuck/widgets/osd.yuck")
-(include "yuck/widgets/dock.yuck")
+;;(include "yuck/widgets/dock.yuck")
 (include "yuck/widgets/tray.yuck")
 ;;(include "yuck/desktop/date.yuck")
 (include "yuck/desktop/radius.yuck")
