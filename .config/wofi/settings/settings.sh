@@ -1,0 +1,10 @@
+THEME=$(echo -e "colorscheme\nmain-color\nmain-color2\nwallpaper\neww-reload" | wofi --dmenu --prompt "Settings" --conf ~/.config/wofi/settings/config)
+
+case $THEME in
+    "colorscheme") ~/.config/wofi/settings/colorscheme-switcer.sh ;;
+    "main-color") ~/.config/wofi/settings/main-color.sh ;;
+    "main-color2") ~/.config/wofi/settings/main-color2.sh ;;
+    "wallpaper") ~/.config/eww/scripts/wallpaper.sh ;;
+    "eww-reload") pkill eww ; eww daemon ; eww open bar ; eww open wallpaper ; eww open rrradius ; eww open tra-top ; eww open tra-bottom ; eww open notifications_popup ; eww open ddtime ; eww open dock ;;
+    *) echo "No option selected" ;;
+esac

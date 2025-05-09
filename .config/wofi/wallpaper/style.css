@@ -19,7 +19,7 @@
   background-color: alpha(@color8, 0.3);
   color: @color8;
   border-radius: 25px;
-  border: 2px solid @color1;
+  /* border: 2px solid @color1; */
   box-shadow: 0 0 3px #000;
 }
 
@@ -47,7 +47,7 @@
 }
 
 #entry:selected {
-  background-color: @color1;
+  background-color: @color8;
   border-radius: 8px;
 }
 

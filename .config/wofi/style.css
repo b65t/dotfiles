@@ -1,11 +1,12 @@
 @import '../../.cache/wal/colors-waybar.css';
+/* @import './config.css'; */
 
 * {
   all: unset;
   font-family: "ubuntu nerd font";
   min-height: 0px;
   font-weight: bold;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 #window {
@@ -19,7 +20,7 @@
   background-color: alpha(@color8, 0.3);
   color: @color8;
   border-radius: 25px;
-  border: 2px solid @color1;
+  /* border: 2px solid @color1; */
   box-shadow: 0 0 3px #000;
 }
 
@@ -47,7 +48,8 @@
 }
 
 #entry:selected {
-  background-color: @color1;
+  background-color: @color7;
+  color: @background;
   border-radius: 8px;
 }
 
