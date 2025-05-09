@@ -1,0 +1,66 @@
+.cal-box {
+  @include window;
+  border: 1px solid rgba($foreground, 0.1);
+  padding: 1rem 1rem .2rem;
+
+  .calendar-box {
+    background: rgba($color8,0.1);
+    border-radius: $widget-radius;
+    margin: 10px 0;
+
+    .cal {
+      padding: .8rem .25rem 0rem;
+      margin-left: 10px;
+
+      &.highlight {
+        padding: 0rem
+      }
+    }
+
+  }
+}
+
+calendar:selected {
+  color: $background;
+  background: $main-color;
+  border-radius: 15px;
+}
+
+calendar.header {
+  color: $main-color;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $main-color;
+}
+
+calendar.highlight {
+  background: none;
+  color: $main-color;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: $color8;
+}
+
+.cal-separator {
+      background: linear-gradient($main-color, $main-color, $main-color2, $main-color2);
+  color: transparent;
+  font-size: 8px;
+  margin: 5px 8px;
+  border-radius: 8px;
+}
+
+.cal-time {
+  font-size: 50px;
+}
+
+.cal-date {
+  background: $main-color;
+  color: $background;
+  padding: 5px;
+  margin: 0 35px;
+  border-radius: $widget-radius;
+}

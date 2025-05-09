@@ -1,0 +1,86 @@
+(defwindow rrradius
+  :monitor 0
+  :stacking "bottom"
+  :exclusive false
+  :passthrough true
+  :space-evenly false
+  :geometry (geometry :width "100%"
+                      :height "100%"
+                      :y "-26"
+                      :x "0"
+            )
+  (box)
+)
+
+(defwindow tra-top 
+  :monitor 0
+  :stacking "bottom"
+  :exclusive false
+  :passthrough true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "99.29%"
+                      :height "30px"
+                      :anchor "top center"
+            )
+ (centerbox :orientation "h"
+             :space-evenly false
+             (tra2)
+             (box)
+             (tra1)
+ )
+)
+
+(defwindow tra-bottom
+  :monitor 0
+  :stacking "bottom"
+  :exclusive false
+  :passthrough true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "99.29%"
+                      :height "28px"
+                      :y "5.99"
+                      :anchor "bottom center"
+            )
+ (centerbox :orientation "h"
+             :space-evenly false
+             (tra4)
+             (box)
+             (tra3)
+ )
+)
+
+(defwidget tra1 []
+  (box :class "tra1"
+       :hexpand false
+       :vexpand false
+       :halign "end"
+  )
+)
+
+
+(defwidget tra2 []
+  (box :class "tra2"
+       :hexpand false
+       :vexpand false
+       :halign "start"
+  )
+)
+
+(defwidget tra3 []
+  (box :class "tra3"
+       :hexpand false
+       :vexpand false
+       :halign "end"
+  )
+)
+
+
+(defwidget tra4 []
+  (box :class "tra4"
+       :hexpand false
+       :vexpand false
+       :halign "start"
+  )
+)

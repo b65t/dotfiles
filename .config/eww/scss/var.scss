@@ -1,0 +1,65 @@
+// config
+
+$pp: url("./images/pp.jpg");
+
+$main-color: $color6;
+$main-color2: $color4;
+
+// vars
+
+@mixin window {
+  background-color: $background;
+  border-radius: $widget-radius;
+  padding: 0.5rem;
+  color: $foreground;
+  box-shadow: 0px 0px 4px 2px #000;
+  margin: 1rem;
+}
+
+// bar things
+
+$bar-radius: 9px;
+
+$bar-border: 1.3px solid rgba($color8, 0.5);
+
+@mixin bar-group {
+  background: rgba($color8, 0.4);
+  border-radius: $bar-radius;
+  padding: 0 5;
+  box-shadow: inset 0px 0px 0px 1.2px $background;
+  border: $bar-border;
+}
+
+// widgets
+
+$widget-radius: 12px;
+$widget-radius2: 18px;
+
+  // control-center
+
+@mixin sbuttons {
+  font-size: 1.2rem;
+  color: $main-color;
+  background: rgba($color8, 0.2);
+  margin: 1.5rem 0;
+  border-radius: $widget-radius;
+  padding: 5px;
+}
+
+@mixin sbar {
+  color: $main-color;
+  background-color: $color8;
+  border-radius: 100%;
+}
+
+@mixin sicon {
+  color: $foreground;
+  font-size: 1.7rem;
+  padding: 15px;
+}
+
+@mixin s_module {
+  background-color: rgba($color8, 0.2);
+  padding: 5px;
+  border-radius: $widget-radius;
+}

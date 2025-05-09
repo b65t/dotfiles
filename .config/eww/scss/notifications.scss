@@ -1,0 +1,110 @@
+.notifications-center {
+  @include window;
+  background: $background;
+  padding-top: 10px;
+  min-width: 300px;
+  min-height: 500px;
+  padding: 0;
+}
+
+.notification-box {
+  background-color: $background;
+  color: $foreground;
+  border-radius: $widget-radius;
+  margin: 1rem;
+  box-shadow: 0 0 4 3 #000;
+}
+
+.notification-info {
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+.notification-image {
+  margin-right: 1rem;
+}
+
+.notification-app {
+  font-weight: normal;
+  color: $foreground;
+}
+
+.notification-summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.notification-body {
+  color: $foreground;
+  font-weight: normal;
+}
+
+.notifications-scroll {
+  min-height: 500px;
+  margin-top: 1rem;
+}
+
+.notifications-header {
+  background: rgba($color8,0.3);
+  border-radius: $widget-radius $widget-radius 0 0;
+
+  .notifications-header-text {
+    font-size: 1.5rem;
+    color: $foreground;
+    margin: 5;
+  }
+
+  .notifications-clear-button {
+    color: $background;
+    background: $main-color;
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: $widget-radius;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $color7;
+    }
+  }
+}
+
+.notification-action {
+  background: rgba($color8, 0.2);
+  color: $foreground;
+  padding: 0.3rem 2rem;
+  margin: 7px 0.3rem 0 0.3rem;
+  transition: 0.3s;
+  border-radius: $widget-radius;
+
+  &:hover {
+    background: $main-color;
+  }
+}
+
+.notification-action-box {
+  margin-left: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.notification-close {
+  background: rgba($color8, 0.2);
+  color: $foreground;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 100%;
+  padding: 4px 5px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $color1;
+  }
+}
+
+.notifications-popup-body {
+  @include window;
+  min-width: 20rem;
+  min-height: 0;
+  background-color: $background;
+  color: $foreground;
+  padding: 0rem;
+}

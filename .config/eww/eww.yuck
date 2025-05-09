@@ -1,0 +1,60 @@
+;; vars
+
+(defpoll recording :interval "1s"
+  "if pgrep 'wf-recorder' >/dev/null; then echo true; else echo false; fi")
+
+(deflisten do-not-disturb :initial false
+  "~/.config/eww/scripts/notifications.sh getdnd")
+
+(deflisten network :initial
+  '{"essid": "lo", "signal": ""}' "scripts/network.sh")
+
+
+(defpoll volume_icon :interval "1s" "scripts/vol.sh icon")
+(defpoll volume_value :interval "1s" "scripts/vol.sh vol")
+(defpoll is_muted :interval "1s" "scripts/vol.sh muted")
+
+(defpoll mic_icon :interval "1s" "scripts/mic.sh icon")
+(defpoll mic_value :interval "1s" "scripts/mic.sh vol")
+
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_month :interval "10h" "scripts/month.sh")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+
+
+(deflisten notifications :initial '{"count": 0, "notifications": [], "popups": []}'
+  "~/.config/eww/scripts/notifications/scripts/notifications.sh current")
+
+
+(defpoll memory :interval "5s" "scripts/memory.sh")
+(defpoll cpu :interval "5s" "scripts/cpu.sh")
+(defpoll disk :interval "5s" "scripts/disk.sh")
+
+(deflisten workspacesArray :initial "${[1]}" 'scripts/workspaces.sh')
+(deflisten sway-app-id 'scripts/app_id.sh')
+
+
+(defvar open_sett false)
+(defvar open_calendar false)
+(defvar open_dock false)
+(defvar open_volume_osd false)
+(defvar open_wmusic false)
+(defvar open_tray false)
+(defvar open_notifications-center false)
+
+
+;; include
+
+(include "yuck/bar/bar.yuck")
+(include "yuck/notifications/notifications.yuck")
+(include "yuck/widgets/powermenu.yuck")
+(include "yuck/widgets/calendar.yuck")
+(include "yuck/widgets/settings.yuck")
+(include "yuck/widgets/music.yuck")
+;;(include "yuck/widgets/osd.yuck")
+(include "yuck/widgets/dock.yuck")
+(include "yuck/widgets/tray.yuck")
+;;(include "yuck/desktop/date.yuck")
+(include "yuck/desktop/radius.yuck")
+(include "yuck/desktop/wallpaper.yuck")
+;;(include "yuck/widgets/sysinfo.yuck")
