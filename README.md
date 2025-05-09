@@ -10,7 +10,7 @@
 - Arch linux `distro`
 - swayfx, gtkclok `window manager, lock screen`
 - ewww `bar, notifications, powermenu, wallpaper, sysinfo, widgets`
-- Rofi `rofi-wayland`
+- wofi `app launcher ; scripts`
 - foot `term`
 - eww, wofi `background changer`
 - neovim `text editor`
