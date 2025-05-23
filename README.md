@@ -7,10 +7,8 @@
 
 # crystals
 
-![Desktop](./assets/desktop.png)
-![Desktop2](./assets/desktop2.png)
-![Desktop3](./assets/desktop3.png)
-![Powermenu] (./assets/powermenu.png)
+![Desktop](./assets/desktop.png) | ![Desktop2](./assets/desktop2.png)
+![Desktop3](./assets/desktop3.png) | ![Powermenu](./assets/powermenu.png)
 
 # what i use
 
