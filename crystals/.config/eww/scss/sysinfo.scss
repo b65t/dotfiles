@@ -1,0 +1,17 @@
+@use "../themes/theme.scss" as theme;
+@use "var.scss" as var;
+
+.sysinfo-box {
+  @include var.window;
+  min-width: 500px;
+}
+
+.sysinfo-logo {
+  margin: 0 0 15px 0;
+}
+
+.sysinfo-info {
+  background: theme.$background-alt;
+  padding: 5px;
+  border-radius: var.$widget-radius;
+}

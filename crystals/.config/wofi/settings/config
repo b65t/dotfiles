@@ -1,0 +1,13 @@
+term=foot
+location=top
+#xoffset=180
+width=25%
+height=100%
+lines=10
+
+no_actions=false
+prompt=search
+show=drun
+insensitive=true
+allow_images=true
+hide_scroll=false

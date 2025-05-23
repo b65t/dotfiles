@@ -1,0 +1,73 @@
+(defwindow wmusic
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :anchor "top center"
+            )
+  (box :orientation "v"
+       (music_controls)
+  )
+)
+
+(defwidget music_controls []
+  (revealer :transition "slidedown"
+            :duration "500ms"
+            :reveal {open_wmusic}
+    (box :orientation "v"
+         :class "music"
+         :space-evenly false
+      (box :orientation "h"
+           :space-evenly false
+        (box :orientation "h"
+             :space-evenly false
+             :class "music-image" 
+             :style {musicartlink != "" ? `background-image: url('${musicartlink}');` : ""})
+        (box :orientation "v"
+             :space-evenly false
+             :class "music-text"
+             :hexpand true
+          (box :orientation "h"
+               :space-evenly false
+               :halign "start"
+               :class "music-name"
+            (label :text "Now Playing"))
+          (box :orientation "v"
+               :space-evenly false
+            (label :halign "start"
+                   :class "music-title"
+                   :limit-width 20
+                   :text {musictitle})
+            (label :halign "start"
+                   :class "music-artist"
+                   :limit-width 20
+                   :text {musicartist}))))
+      (box :orientation "v"
+           :space-evenly false
+           :class "music-scale-box"
+           :visible {musiclength != ""}
+        (scale :min 0
+               :max 100
+               :active true 
+               :value {musicpositionpercentage} 
+               :onchange "playerctl position {}" 
+               :class "music-scale")
+        (box :orientation "h"
+             :space-evenly false
+             :hexpand true
+          (label :hexpand true
+                 :class "music-strtime" 
+                 :text {musicposition} 
+                 :halign "start")
+          (label :hexpand true :class "music-strtime" 
+                 :text {musiclength} 
+                 :halign "end")))
+      (box :orientation "h"
+           :space-evenly false
+           :halign "center"
+           :class "music-actions-box"
+        (button :class "music-action"
+                :onclick "playerctl previous" "󰒮")
+        (button :class "music-action" :onclick "playerctl play-pause" 
+                {musicstatus == "Playing" ? "󰓛" : "󰐊"})
+        (button :class "music-action"
+                :onclick "playerctl next" "󰒭")))))

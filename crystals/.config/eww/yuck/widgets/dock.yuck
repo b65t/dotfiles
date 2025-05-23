@@ -1,0 +1,107 @@
+(defwindow dock
+  :monitor 0
+  :geometry (geometry :y "0px"
+                      :anchor "bottom center")
+  (dock-apps-box))
+
+(defwidget dock-apps-box []
+  (revealer :transition "slideup"
+            :duration "500ms"
+            :reveal {open_dock}
+    (box :class "dock-apps-box"
+         :space-evenly false
+         :orientation "h"
+         (dock-apps))))
+
+(defwidget dock-apps []
+  (box :orientation "h"
+       :space-evenly false
+       :class "dock-app"
+
+
+    (dock-search)
+
+    (button :class "dock-app-icon"
+            :onclick "librewolf &"
+      (image :path
+             "${EWW_CONFIG_DIR}/images/apps/librewolf.svg"
+             :image-width 42
+             :image-height 42
+      ))
+
+    (button :class "dock-app-icon"
+            :onclick "vesktop &"
+      (image :path "${EWW_CONFIG_DIR}/images/apps/discord.svg"
+             :image-width 42
+             :image-height 42
+      ))
+
+    (dock-separator)
+
+    (button :class "dock-app-icon"
+            :onclick "keepassxc &"
+      (image :path "${EWW_CONFIG_DIR}/images/apps/keepassxc.svg"
+             :image-width 42
+             :image-height 42
+      ))
+
+    (button :class "dock-app-icon"
+            :onclick "freetube &"
+      (image :path "${EWW_CONFIG_DIR}/images/apps/freetube.svg"
+             :image-width 42
+             :image-height 42
+      ))
+
+    (dock-separator)
+
+    (button :class "dock-app-icon"
+            :onclick "lutris &"
+      (image :path "${EWW_CONFIG_DIR}/images/apps/lutris.svg"
+             :image-width 42
+             :image-height 42
+      ))
+
+    (button :class "dock-app-icon"
+            :onclick "prismlauncher &"
+      (image :path "${EWW_CONFIG_DIR}/images/apps/prismlauncher.svg"
+             :image-width 42
+             :image-height 42
+      ))
+
+    (dock-separator)
+
+    (button :class "dock-app-icon"
+            :onclick "foot &"
+      (image :path "${EWW_CONFIG_DIR}/images/apps/foot.svg"
+             :image-width 42
+             :image-height 42
+      ))
+
+    (button :class "dock-app-icon"
+            :onclick "nemo &"
+      (image :path "${EWW_CONFIG_DIR}/images/apps/nemo.svg"
+             :image-width 42
+             :image-height 42
+      ))))
+
+(defwidget dock-separator []
+  (box :class "dock-separator"
+       "."))
+
+(defwidget dock-search []
+  (button :class "dock-search"
+          :onclick "sleep 0.1 && rofi -show drun &"
+          "󰙀"))
+
+(defwidget dock-tra1 []
+  (box :class "dock-tra1"
+       :hexpand false
+       :vexpand "end"
+       :halign "end"))
+
+
+(defwidget dock-tra2 []
+  (box :class "dock-tra2"
+       :hexpand false
+       :vexpand "end"
+       :halign "end"))

@@ -1,0 +1,109 @@
+(defwindow sysinfo
+  :monitor 0
+  :exclusive true
+  :space-evenly false
+  :windowtype "normal"
+  (sysinfo-box))
+
+(defwidget sysinfo-box []
+  (box :class "sysinfo-box"
+         :orientation "v"
+         :space-evenly false
+         (sysinfo-logo)
+         (sysinfo-info)))
+
+(defwidget sysinfo-info []
+  (box :class "sysinfo-info"
+         :orientation "v"
+         :space-evenly false
+         (sysinfo-user)
+         (sysinfo-os)
+         (sysinfo-kernel)
+         (sysinfo-shell)
+         (sysinfo-wayland-compositor)
+         (sysinfo-cpu)
+         (sysinfo-memory)))
+
+(defwidget sysinfo-user []
+  (box :orientation "h"
+       :class "sysinfo-user"
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         "user:")
+    (label :halign "end"
+           :text {sysinfo-user})))
+
+(defwidget sysinfo-os []
+  (box :orientation "h"
+       :class "sysinfo-user"
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         "os:")
+    (label :halign "end"
+           :text {sysinfo-os})))
+
+(defwidget sysinfo-kernel []
+  (box :orientation "h"
+       :class "sysinfo-kernel"
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         "kernel:")
+    (label :halign "end"
+           :text {sysinfo-kernel})))
+
+(defwidget sysinfo-shell []
+  (box :orientation "h"
+       :class "sysinfo-shell"
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         "shell:")
+    (label :halign "end"
+           :text {sysinfo-shell})))
+
+(defwidget sysinfo-wayland-compositor []
+  (box :orientation "h"
+       :class "sysinfo-wayland-compositor"
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         "wayland compositor:")
+    (label :halign "end"
+           :text {sysinfo-wayland-compositor})))
+
+(defwidget sysinfo-cpu []
+  (box :orientation "h"
+       :class "sysinfo-cpu"
+       :space-evenly false
+       :spacing "170"
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         "cpu:")
+    (label :halign "end"
+           :text {sysinfo-cpu})))
+
+(defwidget sysinfo-memory []
+  (box :orientation "h"
+       :class "sysinfo-memory"
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         "memory:")
+    (label :halign "end"
+           :text {sysinfo-memory})))
+
+(defwidget sysinfo-logo []
+  (image :class "sysinfo-logo"
+         :path "${EWW_CONFIG_DIR}/images/os.png"
+         :image-width 370))

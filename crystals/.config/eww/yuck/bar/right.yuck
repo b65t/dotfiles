@@ -1,0 +1,52 @@
+(defwidget right []
+  (box :orientation "h"
+       :halign "end"
+       :space-evenly "false"
+       :spacing 0
+       (tray)
+       (barbuttons)
+       (settingsb)))
+
+(defwidget barbuttons []
+  (box :class "barbuttons"
+       :orientation "h"
+       :spacing 5
+       (pickerb)
+       (musicb)
+       (notificationsb)))
+
+(defwidget settingsb []
+  (button :class "settingsb" 
+          :onclick "~/.config/eww/scripts/open-widget.sh settings"
+          ""))
+
+(defwidget pickerb []
+  (button :class "pickerb"
+          :onclick "sleep 0.1 && ~/.config/eww/scripts/picker.sh &"
+          ""))
+
+(defwidget notificationsb []
+  (button :class "notificationsb" 
+          :onclick "${EWW_CONFIG_DIR}/scripts/open-widget.sh notifications-center"
+          "󰂚"))
+
+(defwidget musicb []
+  (button :class "musicb" 
+          :onclick "eww open music-player"
+          ""))
+
+(defwidget tray []
+  (box :class "tray-box"
+       :orientation "h"
+       :space-evenly false
+  (button :onclick "eww update open_tray=${!open_tray}"
+    (label :class "tray-main"
+           :style "margin: 0px 1px;"
+           :text {!open_tray ? "" : ""}))
+  (revealer :transition "slideleft"
+            :duration "500ms"
+            :reveal {open_tray}
+    (box :class "tray-icon"
+      (systray :icon-size 16
+               :orientation "h"
+               :spacing 5)))))

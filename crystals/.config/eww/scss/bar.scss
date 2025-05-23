@@ -1,0 +1,188 @@
+@use "../themes/theme.scss" as theme;
+@use "var.scss" as var;
+
+.bar {
+  background-color: theme.$background;
+  color: theme.$foreground;
+}
+
+.cpu-mem {
+  @include var.bar-group;
+  border-radius: var.$bar-radius 5px 5px var.$bar-radius;
+  margin: 3px 0 3px 5px;
+
+  .mem_module {
+    border-radius: 0px;
+    padding: 0 0;
+    border-radius: 8px 0px 0px 8px;
+    .membar {
+      color: theme.$main-color2;
+      background-color: theme.$background-alt;
+      border-radius: 100%;
+      .iconmem {
+        color: theme.$main-color;
+        font-size: 0rem;
+        margin: 0.6rem;
+      }
+    }
+  }
+
+  .cpu_module {
+    border-radius: 0px;
+    .cpubar {
+      color: theme.$main-color;
+      background-color: theme.$background-alt;
+      border-radius: 100%;
+      .iconcpu {
+        color: theme.$main-color2;
+        font-size: 0rem;
+        margin: 0.6rem;
+      }
+    }
+  }
+}
+
+.workspaces {
+  background-color: theme.$background-alt;
+  padding: 5px 5px;
+  margin: 3px;
+  border-radius: var.$bar-radius;
+
+  button {
+    padding: 0px 8px;
+    margin: 1px 3px;
+    font-size: 0px;
+    border-radius: var.$bar-radius;
+    min-height: 0px;
+    background-color: rgba(theme.$foreground, 0.5);
+    transition: 0.3s;
+    &.focused {
+      color: theme.$foreground;
+      background-color: theme.$main-color;
+      margin: 1px 1px;
+      padding: 0 15px;
+    }
+    &.empty {
+      padding: 0px 5px;
+    }
+    &:hover {
+      background: theme.$main-color;
+    }
+  }
+}
+
+.logo-image {
+  background-image: var.$pp;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  border-radius: 100%;
+  margin: 2px 0 2px 12px;
+  box-shadow: 2px -2px 2px 0px #000;
+}
+
+.time {
+  @include var.bar-group;
+  margin: 3px 0 3px 5px;
+  border-radius: 5px var.$widget-radius var.$widget-radius 5px;
+
+  &:hover {
+    color: theme.$main-color;
+  }
+}
+
+.barbuttons {
+  @include var.bar-group;
+  margin: 3px 0 3px 0;
+  // border-radius: 5px $bar-radius $bar-radius 5px;
+
+  .pickerb {
+    color: theme.$main-color2;
+    transition: 0.3s;
+
+    &:hover {
+      color: theme.$foreground;
+    }
+  }
+
+  .notificationsb {
+    color: theme.$main-color2;
+    transition: 0.3s;
+
+    &:hover {
+      color: theme.$foreground;
+    }
+  }
+
+    .musicb {
+    color: theme.$main-color2;
+    transition: 0.3s;
+
+    &:hover {
+      color: theme.$foreground;
+    }
+  }
+}
+
+.settingsb {
+  @include var.bar-group;
+  color: theme.$main-color;
+  padding: 0 3px;
+  border-radius: var.$widget-radius2;
+  margin: 3px 12px 3px 5px;
+  transition: 0.3s;
+
+  &:hover {
+    color: theme.$foreground;
+  }
+}
+
+.music-bar {
+  min-height: 0rem;
+}
+
+.music-bar-title {
+  font-size: 5px;
+}
+
+.music-bar-artist {
+  font-size: 5px;
+}
+
+.music-bar-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: theme.$background-alt;
+  //min-height: 1.5rem;
+  min-width: 1.5rem;
+  border-radius: var.$widget-radius;
+  margin: 2px 0px 2px 5px;
+}
+
+.music-bar-actions-box {
+  background: theme.$background-alt;
+  border-radius: var.$bar-radius 0 0 var.$bar-radius;
+  margin: 3px 0;
+}
+
+.music-bar-action {
+  font-size: 15px;
+  color: theme.$main-color2;
+
+  &:hover {
+    color: theme.$main-color;
+  }
+}
+
+.tray-icon {
+  background: transparent;
+  margin-right: 5px;
+  -gtk-icon-shadow: 0px 0px 3px #000000;
+}
+
+.bar-time-arrow {
+  margin: 2px 0 0 3px;
+}

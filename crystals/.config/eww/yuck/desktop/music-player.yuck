@@ -1,0 +1,66 @@
+(defwindow music-player
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :anchor "bottom left"
+            )
+  :stacking "bottom"
+  (box :orientation "v"
+       (music-player-box)))
+
+(defwidget music-player-box []
+  (box :orientation "v"
+       :class "music-player-box"
+       :space-evenly false
+    (box :orientation "v"
+         :space-evenly false
+      (box :class "music-player-top"
+        (label :text "eww music player"))
+        (box :orientation "h"
+             :space-evenly true
+             ;;:halign "center"
+             :class "music-player-name"
+          (label :text "Now Playing"
+                 :halign "start"
+                 :class "music-player-status")
+          (label :text {music-app-name}
+                 :halign "end"
+                 :class "music-player-client"))
+      (box :orientation "h"
+           :space-evenly false
+           :class "music-player-image" 
+           :style {musicartlink != "" ? `background-image: url('${musicartlink}');` : ""})
+      (box :orientation "v"
+           :space-evenly false
+           :class "music-player-text"
+           :hexpand true
+        (box :orientation "v"
+             :space-evenly false
+          (label :halign "center"
+                 :class "music-player-title"
+                 :limit-width 20
+                 :text {musictitle})
+          (label :halign "center"
+                 :class "music-player-artist"
+                 :limit-width 20
+                 :text {musicartist}))))
+    (box :orientation "v"
+         :space-evenly false
+         :class "music-player-scale-box"
+         :visible {musiclength != ""}
+      (scale :min 0
+             :max 100
+             :active true 
+             :value {musicpositionpercentage} 
+             :onchange "playerctl position {}" 
+             :class "music-scale")
+      (box :orientation "h"
+           :space-evenly false
+           :halign "center"
+           :class "music-player-actions-box"
+        (button :class "music-player-action"
+                :onclick "playerctl previous" "󰼨")
+        (button :class "music-player-action" :onclick "playerctl play-pause" 
+                {musicstatus == "Playing" ? "" : ""})
+        (button :class "music-player-action"
+                :onclick "playerctl next" "󰼧")))))

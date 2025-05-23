@@ -1,0 +1,64 @@
+(defwidget left []
+  (box :orientation "h"
+       :halign "start"
+       :space-evenly "false"
+       :spacing 0
+       (logo)
+       (cpu-mem)
+       (time)))
+
+(defwidget logo []
+  (button :class "logo"
+          :onclick "eww open powermenu"
+    (box :orientation "h"
+         :space-evenly false
+         :class "logo-image")))
+
+(defwidget cpu-mem []
+  (box :class "cpu-mem"
+       :orientation "h"
+       :spacing 5
+       (cpu)
+       (mem)))
+
+(defwidget mem []
+  (box :class "mem_module"
+       :vexpand "false"
+       :hexpand "false" 
+    (circular-progress ;;:value memory
+                       :value {EWW_RAM.used_mem_perc}
+                       :class "membar"
+                       :thickness 4
+      (button :class "iconmem"
+              :limit-width 2
+              ;;:tooltip "using ${memory}% ram"
+              :tooltip "MEM ${round(EWW_RAM.used_mem_perc, 0)}%"
+              :show_truncated false
+              :wrap false
+              " "))))
+
+(defwidget cpu []
+  (box :class "cpu_module"
+       :vexpand "false"
+       :hexpand "false"
+    (circular-progress :value {EWW_CPU.avg}
+                       :class "cpubar"
+                       :thickness 4
+      (button :class "iconcpu"
+              :limit-width 2
+              :tooltip "CPU ${round(EWW_CPU.avg,0)}%"
+              :show_truncated false
+              :wrap false
+              " "))))
+
+(defwidget time []
+  (button :class "time"
+          :onclick
+          "${EWW_CONFIG_DIR}/scripts/open-widget.sh calendar"
+  (box :space-evenly false
+    (label :text {time_raw})
+    (label :class "bar-time-arrow"
+           :text {!open_calendar ? "" : ""}))))
+
+(defpoll time_raw :interval "10s"
+  "date '+%I:%M %p'")

@@ -1,0 +1,34 @@
+set {
+
+# Logo key. Use Mod1 for Alt.
+$mod Mod4
+
+# Home row direction keys, like vim
+
+$left h
+$down j
+$up k
+$right l
+
+# Your preferred terminal emulator
+$term foot
+
+# Your preferred application launcher
+$menu wofi
+
+# Background
+$bg-changer ~/.config/eww/scripts/wallpaper.sh
+
+#colorscheme
+$setting ~/.config/wofi/settings/settings.sh
+
+# ScreenShot
+$screenshot grim -| wl-copy && notify-send "Screenshot taken" "check your clipboard"
+$partial-screenshot grim -g "$(slurp)" - | wl-copy && notify-send "Screenshot taken" "check your clipboard"
+
+#eww
+$volume-osd-up $HOME/.config/eww/bin/crystals.sh osd volume-up
+$volume-osd-down $HOME/.config/eww/bin/crystals.sh osd volume-down
+$dock $HOME/.config/eww/scripts/open-widget.sh dock
+
+}

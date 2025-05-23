@@ -1,0 +1,11 @@
+(defwindow wallpaper :monitor 0
+	     :stacking "bg"
+	     :wm-ignore false
+	     :windowtype "desktop"
+	     :geometry (geometry :x 0
+                                 :y 0
+                                 :anchor "center center")
+  (image :path {current-wallpaper}
+         :image-width 1366))
+
+(defvar current-wallpaper "/home/islam/Background/993443.jpg")

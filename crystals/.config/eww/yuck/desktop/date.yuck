@@ -1,0 +1,35 @@
+(defwindow ddtime
+  :monitor 0
+  :stacking "bottom"
+  :geometry (geometry :x "80.4%"
+                      :y "8%" 
+                      :width "270px" 
+                      :height "60px")
+  (dtime-box))
+
+(defwidget dtime-box []
+  (box :orientation "v"
+       :class "dtime-box"
+       :space-evenly true
+    (box  
+       :orientation "h"
+       (ddate))
+    (box
+      :orientation "h"
+      (dtime))))
+
+(defwidget ddate []
+  (label :class "ddate"
+         :text {ddate_raw}
+         :wrap true))
+
+(defpoll ddate_raw :interval "10s"
+  "date '+%A %d, %b'")
+
+(defwidget dtime []
+  (label :class "dtime"
+         :text {dtime_raw}
+         :wrap true))
+
+(defpoll dtime_raw :interval "10s"
+  "date '+%I:%M %p'")

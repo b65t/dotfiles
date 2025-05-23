@@ -1,0 +1,11 @@
+set $background #dde1e6
+set $foreground #161616
+set $base00 #dde1e6
+set $base01 #ee5396
+set $base02 #42be65
+set $base03 #ffe97b
+set $base04 #33b1ff
+set $base05 #be95ff
+set $base06 #3ddbd9
+set $base07 #f2f4f8
+set $base08 #262626

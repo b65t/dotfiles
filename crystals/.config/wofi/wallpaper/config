@@ -1,0 +1,15 @@
+term=foot
+#location=left
+yoffset=0
+width=20%
+height=90%
+columns=1
+
+show=drun
+insensitive=true
+hide_scroll=false
+no_actions=true
+always_parse_args=true
+
+allow_images=true
+image_size=250

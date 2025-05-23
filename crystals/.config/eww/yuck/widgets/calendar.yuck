@@ -1,0 +1,56 @@
+(defwindow calendar
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :anchor "top left")
+  (cal))
+
+(defwidget cal []
+  (revealer :transition "slidedown"
+            :duration "500ms"
+            :reveal {open_calendar}
+
+    (box :class "cal-box"
+         :orientation "v"
+           :space-evenly false
+           (cal-time)
+           (cal-date)
+           (box :orientation "v"
+                :class "calendar-box"
+             (calendar :class "cal"
+                       :day calendar_day
+                       :month calendar_month
+                       :year calendar_year)))))
+
+(defwidget cal-separator []
+  (box :class "cal-separator"
+       "."))
+
+(defwidget cal-time []
+  (box :class "cal-time-box"
+       :orientation "v"
+       :space-evenly false
+    (box :class "cal-time"
+         :orientation "h"
+         :space-evenly false
+         :halign "center"
+         :valign "center"
+      (label :text {cal-time1}
+             :wrap true)
+      (cal-separator)
+      (label :text {cal-time2}
+             :wrap true))))
+
+(defwidget cal-date []
+  (label :class "cal-date"
+         :text {cal-date}
+         :wrap true))
+
+(defpoll cal-date :interval "10s"
+  "date '+%A, %d %b'")
+
+(defpoll cal-time1 :interval "10s"
+  "date '+%I'")
+
+(defpoll cal-time2 :interval "10s"
+  "date '+%M'")

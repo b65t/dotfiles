@@ -1,0 +1,6 @@
+@forward "everblush.scss";
+@use "everblush.scss" as color;
+
+$main-color: color.$base04;
+$main-color2: color.$base01;
+$background-alt: rgba(color.$base08, 0.4);

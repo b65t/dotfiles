@@ -1,0 +1,355 @@
+(defwindow settings
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :anchor "top right")
+  (control-center-box))
+
+(defwidget control-center-box []
+  (revealer :transition "slideleft"
+            :duration "500ms"
+            :reveal {open_sett}
+
+    (box :class "control-center-box"
+         :orientation "v"
+         :space-evenly false
+         (control-center-head)
+         (control-center-uptime)
+         (cc-sysinfo)
+         (cc-sliders-fetch)
+         (cc-quick-settings))))
+
+(defwidget control-center-head []
+  (box :class "control-center-head" 
+       :orientation "h"
+
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         (cc-logo)
+         (cc-user))
+    (box :orientation "h"
+         :halign "end"
+         :space-evenly false
+         (cc-button1)
+         (cc-button3)
+         (cc-button2))))
+
+(defwidget cc-sysinfo []
+  (box :class "s_sysinfo" 
+       :orientation "h"
+       :space-evenly false
+       :valign "center"
+       :halign "center"
+       (cc-mem)
+       (cc-swap)
+       (cc-disk)
+       (cc-cpu)))
+
+(defwidget cc-sliders-fetch []
+  (box :class "s_slider-infos"
+       :orientation "h"
+       :space-evenly false
+       :halign "center"
+    (box :orientation "v"
+         :space-evenly false
+         (cc-volume)
+         (cc-microphone))
+         (cc-fetch)))
+
+
+(defwidget cc-logo []
+    (box :orientation "h"
+         :space-evenly false
+         :class "cc-logo"))
+
+(defwidget cc-button1 []
+   (button :class "cc-button1" 
+           :onclick "eww open powermenu"
+           "⏻"))
+
+(defwidget cc-button2 []
+   (button :class "cc-button2" 
+           :onclick "${EWW_CONFIG_DIR}/scripts/open-widget.sh settings"
+           ""))
+
+(defwidget cc-button3 []
+   (button :class "cc-button3" 
+           :onclick "sleep 0.1 && gtklock &"
+           ""))
+
+(defwidget cc-user []
+  (label :class "cc-user"
+         :text {sysinfo-user}))
+
+(defwidget control-center-uptime []
+  (label :class "cc-uptime"
+         :text {uptime_raw}))
+
+(defwidget cc-volume []
+  (box :orientation "h"
+       :space-evenly "false"
+       :class "cc-vol-slider"
+    (overlay
+      (scale :value volume_value
+             :orientation "v"
+             :onchange "${EWW_CONFIG_DIR}/scripts/vol.sh set {}"
+             :min 0
+             :max 101
+             :flipped true)
+
+    (box :hexpand true
+         :vexpand true
+         :class "cc-sliders-box")
+
+      (label :class "cc-vol-label"
+             :text "${volume_icon} "
+             :valign "top"
+             :halign "start")
+      (label :class "cc-vol-percentage"
+             :text "${volume_percentage}"
+             :valign "down"
+             :halgin "end"))))
+
+(defwidget cc-microphone []
+  (box :orientation "h"
+       :space-evenly "false"
+       :class "cc-mic-slider"
+    (overlay
+      (scale :value mic_value
+             :orientation "v"
+             :onchange "${EWW_CONFIG_DIR}/scripts/mic.sh set {}"
+             :min 0
+             :max 101
+             :flipped true)
+
+    (box :hexpand true
+         :vexpand true
+         :class "cc-sliders-box")
+
+      (label :class "cc-mic-label"
+             :text "${mic_icon} "
+             :valign "top"
+             :halign "start")
+      (label :class "cc-mic-percentage"
+             :text "${mic_percentage}"
+             :valign "down"
+             :halgin "end"))))
+
+(defwidget cc-mem []
+  (box :class "cc-mem-module"
+       :orientation "v"
+       :space-evenly "false"
+       :vexpand "false"
+       :hexpand "false"
+    (circular-progress :value {EWW_RAM.used_mem_perc}
+                       :class "cc-mem-bar"
+                       :thickness 7
+
+      (button :class "cc-icon-mem"
+              :limit-width 2
+              :tooltip "MEM ${round(EWW_RAM.used_mem_perc, 0)}%"
+              :show_truncated false
+              :wrap false
+              ""))))
+
+(defwidget cc-cpu []
+  (box :class "cc-cpu-module"
+       :orientation "v"
+       :space-evenly "false"
+       :vexpand "false"
+       :hexpand "false"
+    (circular-progress :value {EWW_CPU.avg}
+                       :class "cc-cpu-bar"
+                       :thickness 7
+
+      (button :class "cc-icon-cpu"
+              :limit-width 2
+              :tooltip "CPU ${round(EWW_CPU.avg,0)}%"
+              :show_truncated false
+              :wrap false
+              ""))))
+
+(defwidget cc-disk []
+  (box :class "cc-disk-module"
+       :space-evenly "false"
+       :orientation "v"
+       :vexpand "false"
+       :hexpand "false"
+    (circular-progress :value {EWW_DISK["/"].used_perc}
+                       :class "cc-disk-bar"
+                       :thickness 8
+
+      (button :class "cc-icon-disk"
+              :tooltip "DISK used ${round(EWW_DISK['/'].used_perc,0)}% | free ${round((EWW_DISK['/'].free / EWW_DISK['/'].total) * 100, 0)}%"
+              :show_truncated false
+              :wrap false
+              "󰋊"))))
+
+(defwidget cc-swap []
+  (box :class "cc-swap-module"
+       :space-evenly "false"
+       :orientation "v"
+       :vexpand "false"
+       :hexpand "false"
+    (circular-progress :value {(EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap * 100}
+                       :class "cc-swap-bar"
+                       :thickness 7
+
+      (button :class "cc-icon-swap"
+              :limit-width 2
+              :tooltip "SWAP: ${round((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap * 100, 0)}%"
+              :show_truncated false
+              :wrap false
+              ""))))
+
+(defwidget cc-quick-settings []
+  (box :orientation "v" :class "cc-quick-settings-box" :space-evenly true
+    (box :orientation "h"
+         :space-evenly true
+         (cc-network)
+         (cc-recorder))
+    (box :orientation "h" :space-evenly true
+         (cc-wallpaper)
+         (cc-do-not-disturb_mode))))
+
+(defwidget cc-network []
+  (cc-quick-settings-button :condition {network.essid == "lo"} 
+                         :action {network.essid == "lo" ? "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &"
+                         : "nmcli connection down id '${network.essid}'"}
+                         :icon {network.essid == "lo" ? "󰤭" : network.signal == "" ? "󰤩"
+                         : network.signal < 25 ? "󰤟"
+                         : network.signal < 50 ? "󰤢"
+                         : network.signal < 75 ? "󰤥"
+                         : "󰤨"}
+                         :label {network.essid == "lo" ? "Not connected" : network.essid}
+                         :class "cc-network"))
+
+(defwidget cc-recorder []
+  (cc-quick-settings-button :condition {recording == "false"}
+                         :action {recording == "false" ?
+                         "wf-recorder -f ~/Videos/recording_$(date +%Y-%m-%d_%H-%M-%S).mp4 &"
+                         : "pkill -INT wf-recorder; notify-send 'Recording saved'"}
+                         :icon ""
+                         :label "Recording"
+                         :class "cc-recorder"))
+
+(defwidget cc-do-not-disturb_mode []
+  (cc-quick-settings-button :condition {do-not-disturb == false}
+                         :action "${EWW_CONFIG_DIR}/scripts/notifications.sh toggle"
+                         :icon " "
+                         :label "Do not disturb"
+                         :class "cc-dnd"))
+
+(defwidget cc-wallpaper []
+  (cc-quick-settings-button :condition true
+                         :class "swallapepr"
+                         :action "${EWW_CONFIG_DIR}/scripts/wallpaper.sh &"
+                         :icon "󰋩"
+                         :label "wallpaper"))
+
+(defwidget cc-quick-settings-button [condition action icon label class]
+  (button :onclick {action}
+          :class {condition ? "cc-quick-settings-button ${class}"
+          : "cc-quick-settings-button cc-quick-settings-button-toggled ${class}"}
+    (box :orientation "h"
+         :space-evenly false
+      (box :orientation "h"
+           :space-evenly false
+           :halign "start"
+        (label :class "cc-quick-settings-icon"
+               :text {icon}))
+      (box :orientation "v"
+           :class "cc-quick-settings-info"
+           :space-evenly false
+           :halign "end"
+           :valign "center"
+        (box :orientation "h"
+             :space-evenly false
+             :halign "start"
+          (label :class "cc-quick-settings-text"
+                 :text {label}))))))
+
+(defwidget cc-fetch []
+  (box :class "cc-fetch"
+        :orientation "v"
+        :space-evenly false
+        :valign "center"
+        (cc-fetch-os)
+        (cc-fetch-kernel)
+        (cc-fetch-shell)
+        (cc-fetch-wayland-compositor)
+        (cc-fetch-cpu)
+        (cc-fetch-mem)))
+
+(defwidget cc-fetch-os []
+  (box :orientation "h"
+       :space-evenly false
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         :class "cc-fetch-title"
+         "os: ")
+    (label :halign "end"
+           :text {sysinfo-os})))
+
+(defwidget cc-fetch-kernel []
+  (box :orientation "h"
+       :space-evenly false
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         :class "cc-fetch-title"
+         "ke: ")
+    (label :halign "end"
+           :text {sysinfo-kernel})))
+
+(defwidget cc-fetch-wayland-compositor []
+  (box :orientation "h"
+       :space-evenly false
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         :class "cc-fetch-title"
+         "wc: ")
+    (label :halign "end"
+           :text {sysinfo-wayland-compositor})))
+
+(defwidget cc-fetch-shell []
+  (box :orientation "h"
+       :space-evenly false
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         :class "cc-fetch-title"
+         "sh: ")
+    (label :halign "end"
+           :text {sysinfo-shell})))
+
+(defwidget cc-fetch-cpu []
+  (box :orientation "h"
+       :space-evenly false
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         :class "cc-fetch-title"
+         "cp: ")
+    (label :halign "end"
+           :text {sysinfo-cpu})))
+
+(defwidget cc-fetch-mem []
+  (box :orientation "h"
+       :space-evenly false
+    (box :orientation "h"
+         :halign "start"
+         :space-evenly false
+         :valign "center"
+         :class "cc-fetch-title"
+         "me: ")
+    (label :halign "end"
+           :text {sysinfo-memory})))

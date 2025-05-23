@@ -1,0 +1,15 @@
+input * {
+    xkb_layout "us,ara"
+    xkb_options "grp:alt_shift_toggle"
+    repeat_rate 90
+    repeat_delay 440
+}
+
+#output "VGA-1" {
+#    scale 1
+#    scale_filter smart
+#}
+
+seat * hide_cursor 10000
+
+xwayland enable

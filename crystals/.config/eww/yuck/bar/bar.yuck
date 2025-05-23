@@ -1,0 +1,28 @@
+(include "yuck/bar/left.yuck")
+(include "yuck/bar/center.yuck")
+(include "yuck/bar/right.yuck")
+
+(defwindow bar
+  :monitor 0
+  :space-evenly true
+  :exclusive true
+  ;; :reserve (struts :distance "30px" :side "top")
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  (centerbox :orientation "h"
+             (left)
+             (center)
+             (right)))
+
+(defwidget ra1 []
+  (box :class "ra1"
+       :hexpand false
+       :vexpand false))
+
+(defwidget ra2 []
+  (box :class "ra2"
+       :hexpand false
+       :vexpand false))

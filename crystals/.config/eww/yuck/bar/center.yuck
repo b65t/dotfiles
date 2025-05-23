@@ -1,0 +1,50 @@
+(defwidget center []
+  (box :orientation "h"
+       :halign "center"
+       :space-evenly "false"
+       :spacing 0
+       ;;(ra1)
+       ;;(music-bar-controls)
+       (workspaces :array workspacesArray)
+       (music-bar)
+       ;;(ra2)
+       ))
+
+(defwidget workspaces [array]
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly false
+    (for entry in array
+        (button :onclick `swaymsg workspace "${entry.name}"`
+                :class {
+                  entry.focused ? "focused" :
+                  entry.empty ? "empty" :
+                  ""
+                }
+                `${entry.name}`))))
+
+(defwidget music-bar []
+  (button :onclick "${EWW_CONFIG_DIR}/scripts/open-widget.sh music"
+    (box :orientation "h"
+         :class "music-bar"
+         :space-evenly false
+         :onclick "${EWW_CONFIG_DIR}/scripts/open_music_cont.sh"
+      (box :orientation "h"
+           :space-evenly false
+           :class "music-bar-image" 
+           :style {musicartlink != "" ? `background-image: url('${musicartlink}');` : ""}))))
+
+(defwidget music-bar-controls []
+  (box :orientation "h"
+       :space-evenly false
+       :halign "center"
+       :class "music-bar-actions-box"
+    (button :class "music-bar-action"
+            :onclick "playerctl previous"
+            "󰒮")
+    (button :class "music-bar-action" 
+            :onclick "playerctl play-pause" 
+            {musicstatus == "Playing" ? "" : ""})
+    (button :class "music-bar-action"
+            :onclick "playerctl next"
+            "󰒭")))

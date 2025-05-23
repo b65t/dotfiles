@@ -1,0 +1,26 @@
+@use "../themes/theme.scss" as theme;
+@use "var.scss" as var;
+
+.dtime-box {
+  @include var.window;
+  border-radius: 30 0 0 30;
+  box-shadow: NONE;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  background: transparent;
+}
+
+.ddate {
+  font-size: 20px;
+  padding: 10px 5px;
+  color: theme.$main-color;
+  border-radius: var.$widget-radius2 0 0 var.$widget-radius2;
+  background: theme.$background;
+}
+
+.dtime {
+  background: theme.$base08;
+  border-radius: 0 0 0 var.$widget-radius;
+  margin-left: 20px;
+  font-size: 20px;
+}

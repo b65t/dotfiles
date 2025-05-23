@@ -1,0 +1,104 @@
+(defwindow notifications_popup
+    :monitor 0
+    :stacking "overlay"
+    :geometry (geometry
+                    :anchor "top right"
+                    :width "2px"
+                    :height "2px")
+    :namespace "eww"
+    (notifications_popup_widget))
+
+(defwindow notification-center
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :anchor "top right")
+  (notifications))
+
+(defwidget notification [notify]
+  (box :orientation "v"
+       :space-evenly false
+       :hexpand true
+    (box :orientation "h"
+         :space-evenly false
+         :hexpand true
+         :class "notification-info"
+      (image :valign "start"
+             :class "notification-image"
+             :visible {notify.image != "null" ? true :false}
+             :path {notify.image}
+             :image-width 48
+             :image-height 48)
+      (box :orientation "v"
+           :space-evenly false
+           :hexpand true
+        (box :orientation "h"
+             :space-evenly false
+          (label :halign "start"
+                 :class "notification-app"
+                 :visible {notify.app != "null" ? true :false}
+                 :text {notify.app})
+          (button :hexpand true
+                  :halign "end"
+                  :class "notification-close"
+                  :onclick "${EWW_CONFIG_DIR}/scripts/notifications.sh close ${notify.id}"
+                  "󰅖"))
+        (label :halign "start"
+               :class "notification-summary"
+               :visible {notify.summary != "null" ? true :false}
+               :wrap true 
+               :markup {notify.summary})
+        (label :halign "start"
+               :class "notification-body"
+               :visible {notify.body != "null" ? true :false}
+               :wrap true 
+               :markup {notify.body})))
+        (box :orientation "h"
+             :space-evenly false
+             :class "notification-action-box"
+          (for action in {notify.actions}
+            (button :class "notification-action"
+                    :onclick "${EWW_CONFIG_DIR}/scripts/notifications.sh action ${notify.id} ${action[0]}" {action[1]})))))
+
+(defwidget notifications []
+  (revealer :transition "slideleft"
+            :duration "500ms"
+            :reveal {open_notifications-center}
+    (box :orientation "v"
+         :space-evenly false
+         :class "notifications-center"
+      (box :orientation "h"
+           :space-evenly true
+           :class "notifications-header"
+        (label :class "notifications-header-text"
+               :halign "start"
+               :text "Notifications")
+        (button :halign "end"
+                 :class "notifications-clear-button"
+                 :onclick "${EWW_CONFIG_DIR}/scripts/notifications.sh clear"
+                 " Clear all"))
+      (scroll :vscroll true
+              :class "notifications-scroll"
+        (box :orientation "v"
+             :space-evenly false
+          (for notify in {notifications.notifications}
+            (box :orientation "h"
+                 :space-evenly false
+                 :class "notification-box"
+                 (notification :notify {notify})))
+          (label :vexpand true
+                 :valign "center"
+                 :text "No notifications :("
+                 :visible {notifications.notifications != "[]" ? false : true}))))))
+
+(defwidget notifications_popup_widget []
+  (box :orientation "v"
+       :space-evenly false
+    (for i in "[2, 1, 0]"
+      (revealer :transition "slidedown"
+                :reveal {notifications.popups[i] == "null" ? false : true}
+                :duration "500ms"
+        (box :orientation "h"
+             :space-evenly false
+             :class "notifications-popup-body"
+             (notification :notify {notifications.popups[i]}))))))

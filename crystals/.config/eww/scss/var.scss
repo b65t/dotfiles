@@ -1,0 +1,96 @@
+// config
+
+@use "../themes/theme.scss" as theme;
+
+$pp: url("./images/pp.jpg");
+
+// vars
+
+@mixin window {
+  background-color: theme.$background;
+  border-radius: $widget-radius;
+  padding: 0.5rem;
+  color: theme.$foreground;
+  box-shadow: 0px 0px 3px 0px #000;
+  margin: 1rem;
+}
+
+// bar things
+
+$bar-radius: 9px;
+
+$bar-border: 1.3px solid rgba(theme.$base08, 0.5);
+
+@mixin bar-group {
+  background: theme.$background-alt;
+  border-radius: $bar-radius;
+  padding: 0 5;
+  transition: 0.3s;
+  // box-shadow: inset 0px 0px 0px 1.2px $background;
+  // border: $bar-border;
+}
+
+// widgets
+
+$widget-radius: 12px;
+$widget-radius2: 8px;
+$widget-radius3: 18px;
+
+  // control-center
+
+@mixin sbuttons {
+  font-size: 1.2rem;
+  color: theme.$main-color;
+  background: theme.$background-alt;
+  margin: 1.5rem 0;
+  border-radius: $widget-radius;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+@mixin cc-bar {
+  color: theme.$main-color;
+  background-color: theme.$base08;
+  border-radius: 100%;
+}
+
+@mixin cc-icon {
+  color: theme.$foreground;
+  font-size: 1.7rem;
+  padding: 15px;
+}
+
+@mixin cc-module {
+  background-color: theme.$background-alt;
+  padding: 5px;
+  border-radius: $widget-radius;
+}
+
+@mixin control-center-sliders {
+  scale trough {
+    border-radius: $widget-radius3;
+    background-color: theme.$background-alt;
+    min-height: 70px;
+    min-width: 75px;
+    margin: 5px;
+
+    highlight {
+      background: theme.$main-color;
+      border-radius: $widget-radius2;
+    }
+  }
+}
+
+@mixin control-center-sliders-label($top: false, $bottom: false) {
+  font-size: 1rem;
+  color: rgba(theme.$base07, 0.7);
+
+  @if $top {
+      margin-left: 0.7rem;
+      margin-bottom: 2rem;
+  }
+  @if $bottom {
+      margin-left: 2rem;
+      margin-top: 2rem;
+  }
+}

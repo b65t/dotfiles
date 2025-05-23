@@ -1,0 +1,27 @@
+# client.class          <border>     <background> <text>      <indicator>  <child_border>
+client.focused          $background  $background  $foreground $background  $background
+client.focused_inactive $base08      $base08      $foreground $base08      $base08
+client.unfocused        $base08      $base08      $foreground $base08      $base08
+
+default_border normal 0
+default_floating_border normal 0
+corner_radius 15
+
+blur enable
+blur_xray enable
+blur_passes 4
+blur_radius 7
+blur_noise 0.02
+blur_saturation 1.1796
+blur_contrast 0.92
+
+shadows enable
+shadow_color #000000
+shadow_offset 0 0 0 0
+shadow_blur_radius 7
+
+gaps inner 10
+
+title_align center
+font "ubuntu Nerd Font Bold 10"
+titlebar_border_thickness 0

@@ -1,0 +1,12 @@
+for_window {
+    [app_id="nemo"] floating enable
+    [app_id="LibreWolf"] border none
+}
+
+assign {
+    [app_id="LibreWolf"] 2
+    [app_id="Equibop"] 4
+    [app_id="io.bassi.Amberol"] 5
+    [app_id="net.lutris.Lutris"] 6
+}
+

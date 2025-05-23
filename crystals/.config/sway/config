@@ -1,0 +1,12 @@
+include {
+    "~/.config/sway/themes/everblush"
+
+    "~/.config/sway/var"
+    "~/.config/sway/binds"
+    "~/.config/sway/style"
+    "~/.config/sway/settings"
+    "~/.config/sway/rules"
+    "~/.config/sway/autostart"
+}
+
+include /etc/sway/config.d/*

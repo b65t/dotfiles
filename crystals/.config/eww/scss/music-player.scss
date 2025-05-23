@@ -1,0 +1,60 @@
+@use "../themes/theme.scss" as theme;
+@use "var.scss" as var;
+
+.music-player-box {
+  @include var.window;
+  padding: 0px;
+  min-height: 250px;
+  min-width: 250px;
+}
+
+.music-player-top {
+  background: rgba(theme.$base08, 0.3);
+  padding: 10px 0;
+  border-radius: var.$widget-radius var.$widget-radius 0 0;
+}
+
+.music-player-image {
+  min-height: 200px;
+  border-radius: var.$widget-radius3;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.music-player-actions-box {
+  background: rgba(theme.$base08,0.3);
+  padding: 0;
+  margin: 10px 0;
+  font-size: 30px;
+  border-radius: var.$widget-radius;
+  .music-player-action {
+    color: theme.$foreground;
+    font-size: 2rem;
+    margin: 0 3px;
+    padding: 3px;
+    &:hover {
+      color: theme.$main-color;
+    }
+  }
+}
+
+.music-player-title {
+  font-size: 20px;
+}
+
+.music-player-artist {
+  color: theme.$base08;
+}
+
+.music-player-name {
+  margin: 10px 10px 0 10px;
+}
+
+.music-player-client {
+  background: theme.$main-color;
+  color: theme.$background;
+  padding: 0 5px;
+  border-radius: var.$widget-radius;
+}

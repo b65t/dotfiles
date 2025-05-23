@@ -1,0 +1,56 @@
+@use "../themes/theme.scss" as theme;
+@use "var.scss" as var;
+
+.powermenu {
+  background: theme.$background;
+}
+
+.powermenu-box {
+  background: theme.$background-alt;
+  padding: 20 50;
+  border-radius: var.$widget-radius3;
+  box-shadow: 0px 0px 4px #000;
+}
+
+.power-button {
+  background: rgba(theme.$base08, 0.8);
+  padding: 15 20;
+  margin: 0px 10px;
+  font-size: 50px;
+  border-radius: var.$widget-radius3;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: theme.$main-color;
+  }
+}
+
+.power-text {
+  margin-top: 5px;
+  color: theme.$foreground;
+}
+
+.powermenu-start {
+  background: theme.$background-alt;
+  margin: 0 0 15px 0;
+  padding: 10px;
+  border-radius: var.$widget-radius3;
+  box-shadow: 0px 0px 4px #000;
+}
+
+.powermenu-uptime {
+  font-size: 30px;
+  margin: 0 0 0 40px;
+  color: theme.$foreground;
+}
+
+.powermenu-logo {
+  background-image: var.$pp;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 5rem;
+  min-width: 5rem;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px #000;
+}

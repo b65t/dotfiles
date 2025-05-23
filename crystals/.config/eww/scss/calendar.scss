@@ -1,0 +1,71 @@
+@use "../themes/theme.scss" as theme;
+@use "var.scss" as var;
+
+.cal-box {
+  @include var.window;
+  padding: 1rem 1rem .2rem;
+
+  .calendar-box {
+    background: rgba(theme.$base08,0.1);
+    border-radius: var.$widget-radius;
+    margin: 10px 0;
+
+    .cal {
+      padding: .3rem .2rem 0rem 0rem;
+      margin-left: 10px;
+
+      &.highlight {
+        padding: 0rem
+      }
+    }
+
+  }
+}
+
+calendar:selected {
+  color: theme.$background;
+  background: theme.$main-color;
+  border-radius: var.$widget-radius2;
+}
+
+calendar.header {
+  color: theme.$main-color;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: theme.$main-color;
+}
+
+calendar.highlight {
+  background: none;
+  color: theme.$main-color;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: theme.$base08;
+}
+
+.cal-separator {
+  background: linear-gradient( theme.$main-color 50%,
+                               theme.$main-color 0%,
+                               theme.$main-color2 50%,
+                               theme.$main-color2 50%,
+                             );
+  color: transparent;
+  font-size: 8px;
+  margin: 5px 8px;
+}
+
+.cal-time {
+  font-size: 50px;
+}
+
+.cal-date {
+  background: theme.$main-color;
+  color: theme.$background;
+  padding: 5px;
+  margin: 0 35px;
+  border-radius: var.$widget-radius;
+}

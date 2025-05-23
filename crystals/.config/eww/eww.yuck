@@ -1,0 +1,82 @@
+;; vars
+
+(defpoll recording :interval "1s"
+  "if pgrep 'wf-recorder' >/dev/null; then echo true; else echo false; fi")
+
+(deflisten do-not-disturb :initial false
+  "~/.config/eww/scripts/notifications.sh getdnd")
+
+(deflisten network :initial
+  '{"essid": "lo", "signal": ""}' "scripts/network.sh")
+
+
+(defpoll volume_icon :interval "1s" "scripts/vol.sh icon")
+(defpoll volume_value :interval "1s" "scripts/vol.sh vol")
+(defpoll volume_percentage :interval "1s" "scripts/vol.sh percentage")
+
+(defpoll mic_icon :interval "1s" "scripts/mic.sh icon")
+(defpoll mic_value :interval "1s" "scripts/mic.sh vol")
+(defpoll mic_percentage :interval "1s" "scripts/mic.sh percentage")
+
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_month :interval "10h" "scripts/month.sh")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+
+(deflisten notifications :initial '{"count": 0, "notifications": [], "popups": []}'
+  "~/.config/eww/scripts/notifications.sh current")
+
+(deflisten workspacesArray :initial "${[1]}" 'scripts/workspaces.sh')
+
+
+(defpoll sysinfo-os :interval "24h" "grep -w 'NAME' /etc/os-release | cut -d '\"' -f 2")
+(defpoll sysinfo-kernel :interval "24h" "uname -sr")
+(defpoll sysinfo-wayland-compositor :interval "24h" "ps -e --format cmd | grep -E 'hyprland|sway|river|dwl|niri' | grep -v grep | head -n1 | awk '{print $1}'")
+(defpoll sysinfo-shell :interval "24h" "basename $(echo $SHELL)")
+(defpoll sysinfo-cpu :interval "24h" "lscpu | grep 'Model name' | sed -e 's/^.*: *//' -e 's/ CPU//' -e 's/ @.*//'")
+(defpoll sysinfo-memory :interval "24h" "free -h | awk '/Mem:/ {print $2}'")
+(defpoll sysinfo-user :interval "24h" "echo \"$(whoami)@$(cat /etc/hostname)\"")
+
+(defpoll uptime_raw :interval "60" "echo 󰅶 \"$(uptime -p)\"")
+
+(defpoll musicartlink :interval "1s"
+  `playerctl metadata --format "{{ mpris:artUrl }}"`)
+(defpoll musicposition :interval "1s"
+  `playerctl metadata --format "{{ duration(position) }}"`)
+(defpoll musiclength :interval "1s"
+  `playerctl metadata --format "{{ duration(mpris:length)}}"`)
+(defpoll musicpositionpercentage :interval "1s"
+  `playerctl metadata --format "{{ position / (mpris:length / 100) }}"`)
+(defpoll playingorpaused :interval "1s"
+  `playerctl status`)
+(defpoll musictitle :interval "1s"
+  `playerctl metadata --format "{{ title }}"`)
+(defpoll music-app-name :interval "1s"
+  `playerctl metadata --format "{{ playerName }}"`)
+(defpoll musicartist :interval "1s"
+  `playerctl metadata --format "{{ artist }}"`)
+(defpoll musicstatus :interval "1s"
+  `playerctl metadata --format "{{ status }}"`)
+
+(defvar open_sett false)
+(defvar open_calendar false)
+(defvar open_dock false)
+(defvar open_volume_osd false)
+(defvar open_wmusic false)
+(defvar open_tray false)
+(defvar open_notifications-center false)
+
+;; include
+
+(include "yuck/bar/bar.yuck")
+(include "yuck/notifications/notifications.yuck")
+(include "yuck/widgets/powermenu.yuck")
+(include "yuck/widgets/calendar.yuck")
+(include "yuck/widgets/control-center.yuck")
+(include "yuck/widgets/music.yuck")
+(include "yuck/widgets/osd.yuck")
+(include "yuck/widgets/dock.yuck")
+;;(include "yuck/desktop/date.yuck")
+(include "yuck/desktop/radius.yuck")
+(include "yuck/desktop/wallpaper.yuck")
+;;(include "yuck/widgets/sysinfo.yuck")
+(include "yuck/desktop/music-player.yuck")

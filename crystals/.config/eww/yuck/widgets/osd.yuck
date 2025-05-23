@@ -1,0 +1,45 @@
+(defwindow osd-volume
+  :monitor 0
+  :stacking "overlay"
+  :geometry (geometry :x "0px"
+                      :anchor "center left")
+  (volume-osd-box))
+
+(defwidget volume-osd-box []
+  (revealer :transition "slideright"
+            :duration "500ms"
+            :reveal {open_volume_osd}
+    (box :class "volume-osd-box"
+         :space-evenly "false"
+         :orientation "v"
+         (volume-osd))))
+
+(defwidget volume-osd []
+  (box :orientation "h"
+       :space-evenly "false"
+       :class "vol-slider-osd"
+    (overlay
+      (scale :value volume_value
+             :onchange "${EWW_CONFIG_DIR}/scripts/vol.sh set {}"
+             :min 0
+             :max 101
+             :orientation "v"
+             :flipped true)
+
+      (label :class "vol-label-osd"
+             :text "${volume_icon}"
+             :valign "top"
+             :halign "center"))))
+
+(defwidget osd-tra1 []
+  (box :class "osd-tra1"
+       :hexpand false
+       :vexpand "end"
+       :halign "end"))
+
+
+(defwidget osd-tra2 []
+  (box :class "osd-tra2"
+       :hexpand false
+       :vexpand "start"
+       :halign "start"))

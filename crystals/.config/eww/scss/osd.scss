@@ -1,0 +1,43 @@
+@use "../themes/theme.scss" as theme;
+@use "var.scss" as var;
+
+.volume-osd-box {
+  @include var.window;
+}
+
+.vol-slider-osd {
+  margin: 0rem;
+  background: theme.$background;
+  border-radius: 0 var.$widget-radius var.$widget-radius 0;
+    .vol-label-osd {
+      font-size: 1rem;
+      color: rgba(#000, 0.7);
+  }
+    & scale trough {
+       all: unset;
+       border-radius: var.$widget-radius;
+       background-color: theme.$base08;
+       min-height: 220px;
+       min-width: 1.6rem;
+    & highlight {
+       all: unset;
+       background: theme.$main-color;
+       color: #000000;
+       border-radius: var.$widget-radius;
+    }
+  }
+}
+
+.osd-tra1 {
+  background-color: transparent;
+  padding: 28px 25px;
+  border-radius: 100%;
+  box-shadow: -26px -26px 0 2px theme.$background;
+}
+
+.osd-tra2 {
+  background-color: transparent;
+  padding: 28px 25px;
+  border-radius: 100%;
+  box-shadow: -28px 24px 0 2 theme.$background;
+}
