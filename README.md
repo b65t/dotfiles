@@ -31,6 +31,14 @@
 - playerctl
 - mpd-mpris
 
+# install
+
+```sh
+git clone https://github.com/b65t/dotfiles.git ~/dotfiles
+stow ~/dotfiles/common/
+stow ~/dotfiles/crystals/
+```
+
 
 # To Do
 
