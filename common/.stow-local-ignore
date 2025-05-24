@@ -24,3 +24,4 @@ _darcs
 
 \.config/mpd/mpdstate
 \.config/mpd/mpd.db
+\.config/ncmpcpp/error.log
