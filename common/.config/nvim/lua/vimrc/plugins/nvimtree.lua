@@ -20,6 +20,12 @@ return {
             folder = {
               default = "",
             },
+            git = {
+              unstaged = "",
+              unmerged = "",
+              renamed = "",
+              untracked = ""
+            },
           },
         },
       },
