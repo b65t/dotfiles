@@ -1,7 +1,7 @@
 exec {
     ~/.config/eww/scripts/start.sh
-    mpd
-    mpd-mpris
+    mpd &
+    mpd-mpris &
 }
 
  exec swayidle -w \

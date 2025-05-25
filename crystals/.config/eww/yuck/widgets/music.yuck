@@ -4,20 +4,19 @@
                       :y "0%"
                       :anchor "top center"
             )
-  (box :orientation "v"
-       (music_controls)
-  )
+  (music_controls)
 )
 
 (defwidget music_controls []
   (revealer :transition "slidedown"
             :duration "500ms"
             :reveal {open_wmusic}
-    (box :orientation "v"
+    (box :orientation "h"
          :class "music"
          :space-evenly false
       (box :orientation "h"
            :space-evenly false
+           :class "music-box"
         (box :orientation "h"
              :space-evenly false
              :class "music-image" 
@@ -35,39 +34,30 @@
                :space-evenly false
             (label :halign "start"
                    :class "music-title"
-                   :limit-width 20
+                   :limit-width 30
                    :text {musictitle})
             (label :halign "start"
                    :class "music-artist"
-                   :limit-width 20
+                   :limit-width 30
                    :text {musicartist}))))
-      (box :orientation "v"
-           :space-evenly false
-           :class "music-scale-box"
-           :visible {musiclength != ""}
-        (scale :min 0
-               :max 100
-               :active true 
-               :value {musicpositionpercentage} 
-               :onchange "playerctl position {}" 
-               :class "music-scale")
+     (box :orientation "v"
+          :space-evenly true
+          :valign "center"
+          :halign "start"
+          :class "music-end-box"
+       (box :space-evenly true
+            :class "close-music-box"
+            :halign "end"
+          (button :class "close-music"
+                  :onclick "${EWW_CONFIG_DIR}/scripts/open-widget.sh music"
+                  ""))
         (box :orientation "h"
-             :space-evenly false
-             :hexpand true
-          (label :hexpand true
-                 :class "music-strtime" 
-                 :text {musicposition} 
-                 :halign "start")
-          (label :hexpand true :class "music-strtime" 
-                 :text {musiclength} 
-                 :halign "end")))
-      (box :orientation "h"
-           :space-evenly false
-           :halign "center"
-           :class "music-actions-box"
-        (button :class "music-action"
-                :onclick "playerctl previous" "󰒮")
-        (button :class "music-action" :onclick "playerctl play-pause" 
-                {musicstatus == "Playing" ? "󰓛" : "󰐊"})
-        (button :class "music-action"
-                :onclick "playerctl next" "󰒭")))))
+             :space-evenly true
+             :halign "end"
+             :class "music-actions-box"
+          (button :class "music-action"
+                  :onclick "playerctl previous" "󰒮")
+          (button :class "music-action" :onclick "playerctl play-pause" 
+                  {musicstatus == "Playing" ? "" : ""})
+          (button :class "music-action"
+                  :onclick "playerctl next" "󰒭"))))))

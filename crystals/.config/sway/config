@@ -1,5 +1,5 @@
 include {
-    "~/.config/sway/themes/everblush"
+    "~/.config/sway/themes/yoru"
 
     "~/.config/sway/var"
     "~/.config/sway/binds"

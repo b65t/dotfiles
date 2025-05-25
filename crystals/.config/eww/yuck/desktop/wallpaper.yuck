@@ -8,4 +8,4 @@
   (image :path {current-wallpaper}
          :image-width 1366))
 
-(defvar current-wallpaper "/home/islam/Background/993443.jpg")
+(defvar current-wallpaper "/home/islam/Background/wallpaper.png")
