@@ -13,7 +13,7 @@
             :reveal {open_wmusic}
     (box :orientation "h"
          :class "music"
-         :space-evenly false
+         :space-evenly true
       (box :orientation "h"
            :space-evenly false
            :class "music-box"
@@ -43,7 +43,7 @@
      (box :orientation "v"
           :space-evenly true
           :valign "center"
-          :halign "start"
+          :halign "end"
           :class "music-end-box"
        (box :space-evenly true
             :class "close-music-box"
