@@ -4,7 +4,7 @@
 .music {
   @include var.window;
   // border: 1px solid rgba($foreground, 0.1);
-  min-width: 35rem;
+  min-width: 30rem;
   padding: 7px;
 }
 
@@ -19,15 +19,16 @@
 }
 
 .music-text {
-  margin: 0.1rem 0 0 0;
+  margin: 0.8rem 0 0 0;
 }
 
 .music-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .music-artist {
   color: theme.$base08;
+  font-size: 0.8rem;
 }
 
 .music-name {
